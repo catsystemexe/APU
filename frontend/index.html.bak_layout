@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>APU – Chat</title>
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <div class="title">
+          <div class="name">APU</div>
+          <div class="sub">ZUŠ P1 · test UI</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="btnPersonal" class="btn ghost" title="personal">personal</button>
+        <button id="btnClear" class="btn ghost" title="Vymazat chat">clear</button>
+      </div>
+    </header>
+
+    <main class="chat" id="chat"></main>
+
+    <footer class="composer">
+      <div class="composerInner">
+        <textarea id="input" rows="1" placeholder="Napište zprávu… (Enter = odeslat, Shift+Enter = nový řádek)"></textarea>
+        <button id="send" class="btn primary">Odeslat</button>
+      </div>
+      <div class="hint">
+        U1: bez ukládání konverzací · Backend: <code>/api/chat</code>
+        <span class="sep"> · </span>
+        <span id="sessionStats">Session: —</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/static/app-dev.js"></script>
+</body>
+</html>

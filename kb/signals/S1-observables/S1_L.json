@@ -1,0 +1,276 @@
+[
+  {
+    "id": "OBS_L1_NOISE_REGULATION_LOSS_001",
+    "category": "body_sensory_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "nesnáší hluk",
+      "zakrývá si uši",
+      "při větším ruchu se rozpadá",
+      "hluk ho úplně rozhodí",
+      "ve třídě to nezvládá"
+    ],
+    "patterns": [
+      "nesnasi hluk",
+      "zakryva si usi",
+      "pri vetsim ruchu se rozpada",
+      "hluk ho uplne rozhodi",
+      "ve tride to nezvlada"
+    ],
+    "observable": "při hluku nebo silném zvukovém podnětu rychle ztrácí regulaci",
+    "observable_anchor": "Při zvýšeném auditivním zatížení dítě vykazuje výraznou regulační reakci, zakrývá si uši, stahuje se, nebo rychle ztrácí funkční zapojení do situace.",
+    "context_hotspots": [
+      "ranní kruh",
+      "hlučná třída",
+      "jídelna",
+      "přechody celé skupiny",
+      "náhlý hlasitý zvuk"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "risk": "LOW",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Nejde o „přecitlivělost“ ve smyslu rozmazlenosti, ale o reálné zatížení nervového systému.",
+    "alternative_explanations": [
+      "auditivní hypersenzitivita",
+      "senzorické přetížení",
+      "oslabený filtr stimulů",
+      "rychlé zahlcení nervového systému",
+      "nižší tolerance hlukového chaosu"
+    ],
+    "disambiguation_questions": [
+      "Vadí hlavně náhlý hluk, nebo i běžný ruch?",
+      "Je rozdíl mezi třídou a venkovním prostředím?",
+      "Pomáhá předvídatelnost nebo klidové místo?",
+      "Dochází i k následnému afektu nebo stažení?"
+    ]
+  },
+  {
+    "id": "OBS_L2_TEXTURE_TOUCH_REFUSAL_001",
+    "category": "body_sensory_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "nechce sahat na určité věci",
+      "vadí mu špína, lepidlo, barvy",
+      "některé dotyky nesnáší",
+      "nechce se dotknout materiálu"
+    ],
+    "patterns": [
+      "nechce sahat na urcite veci",
+      "vadi mu spina lepidlo barvy",
+      "nektere dotyky nesnasi",
+      "nechce se dotknout materialu"
+    ],
+    "observable": "odmítá konkrétní materiály, textury nebo fyzický kontakt",
+    "observable_anchor": "Při kontaktu s konkrétní texturou, materiálem nebo dotykem dítě reaguje výrazným odporem, stažením nebo odmítnutím vstupu do činnosti.",
+    "context_hotspots": [
+      "výtvarná činnost",
+      "jídlo",
+      "oblékání",
+      "hygiena",
+      "fyzický kontakt ve skupině"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1"
+    ],
+    "zone_tendency": [
+      "Z1"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Často bývá čteno jako vybíravost nebo vzdor, ale může jít o reálnou senzorickou zátěž.",
+    "alternative_explanations": [
+      "taktilní hypersenzitivita",
+      "senzorická obrana",
+      "úzkost při nepředvídatelném kontaktu",
+      "nízká tolerance určité textury"
+    ],
+    "disambiguation_questions": [
+      "Jde o konkrétní materiály nebo obecně?",
+      "Reakce je odpor, úzkost nebo fyzické stažení?",
+      "Týká se to i jídla a oblékání?",
+      "Zlepší se situace při postupném bezpečném přiblížení?"
+    ]
+  },
+  {
+    "id": "OBS_L3_MOVEMENT_FOR_REGULATION_001",
+    "category": "body_sensory_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "pořád se hýbe",
+      "nevydrží v klidu",
+      "houpe se, vrtí se, vstává",
+      "tělo musí být pořád v pohybu"
+    ],
+    "patterns": [
+      "porad se hybe",
+      "nevydrzi v klidu",
+      "houpe se vrti se vstava",
+      "telo musi byt porad v pohybu"
+    ],
+    "observable": "pro udržení regulace potřebuje tělo stálý pohyb nebo rytmickou aktivaci",
+    "observable_anchor": "Dítě opakovaně využívá pohyb, houpání, změnu polohy nebo rytmickou aktivaci těla jako způsob udržení regulace a funkčního zapojení.",
+    "context_hotspots": [
+      "klidové činnosti",
+      "poslech instrukce",
+      "čekání",
+      "ranní kruh",
+      "delší strukturovaná aktivita"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Není totéž co „zlobení“ — pohyb může být regulační potřeba.",
+    "alternative_explanations": [
+      "zvýšená potřeba motorické regulace",
+      "proprioceptivní potřeba",
+      "oslabená tolerance statické pozice",
+      "tělesná autoregulace",
+      "přetížení pasivní situací"
+    ],
+    "disambiguation_questions": [
+      "Pomáhá krátký řízený pohyb?",
+      "Zhoršuje se to při klidových aktivitách?",
+      "Umí se regulovat při vysokém zájmu?",
+      "Je pohyb funkční, nebo přechází do chaosu?"
+    ]
+  },
+  {
+    "id": "OBS_L4_CHRONIC_FATIGUE_LOW_ENERGY_001",
+    "category": "body_sensory_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "je pořád unavené",
+      "rychle odpadá",
+      "nemá energii",
+      "působí vyčerpaně",
+      "nevydrží tempo dne"
+    ],
+    "patterns": [
+      "je porad unavene",
+      "rychle odpada",
+      "nema energii",
+      "pusobi vycerpane",
+      "nevydrzi tempo dne"
+    ],
+    "observable": "působí dlouhodobě unaveně, energeticky oslabeně nebo vyčerpaně",
+    "observable_anchor": "Během dne dítě opakovaně vykazuje nízkou energetickou kapacitu, rychlé vyčerpání nebo výrazné oslabení funkčního zapojení bez zjevné okamžité příčiny.",
+    "context_hotspots": [
+      "dopolední blok",
+      "po obědě",
+      "delší náročná aktivita",
+      "sociálně intenzivní den",
+      "období změny režimu"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Může souviset s režimem, spánkem, zdravím i psychickým přetížením — nelze rychle interpretovat.",
+    "alternative_explanations": [
+      "spánkový deficit",
+      "somatické zatížení",
+      "dlouhodobé přetížení",
+      "vysoká senzorická zátěž",
+      "emoční vyčerpání",
+      "adaptační únava"
+    ],
+    "disambiguation_questions": [
+      "Je to nové, nebo dlouhodobé?",
+      "Týká se všech částí dne?",
+      "Co říkají rodiče o spánku a režimu?",
+      "Je rozdíl mezi školkou a víkendem?"
+    ]
+  },
+  {
+    "id": "OBS_L5_PHYSIOLOGY_DEPENDENT_BEHAVIOR_001",
+    "category": "body_sensory_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "před obědem je úplně jiné",
+      "když je unavené, rozpadá se",
+      "hlad výrazně mění chování",
+      "bez svačiny je velký problém"
+    ],
+    "patterns": [
+      "pred obedem je uplne jine",
+      "kdyz je unavene rozpada se",
+      "hlad vyrazne meni chovani",
+      "bez svaciny je velky problem"
+    ],
+    "observable": "chování se výrazně mění podle hladu, žízně, únavy nebo jiné fyziologické potřeby",
+    "observable_anchor": "Regulační stabilita dítěte je silně navázaná na fyziologický stav, a při hladu, únavě, žízni nebo vyčerpání dochází k výrazné změně chování.",
+    "context_hotspots": [
+      "před jídlem",
+      "konec dopoledne",
+      "po špatném spánku",
+      "konec dne",
+      "dlouhé čekání bez regulační pauzy"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "risk": "LOW",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Nejde o „nevychovanost“, ale často o regulační limit těla.",
+    "alternative_explanations": [
+      "nízká fyziologická rezerva",
+      "vysoká citlivost na tělesný dyskomfort",
+      "oslabená autoregulace při únavě",
+      "rychlé vyčerpání kapacity"
+    ],
+    "disambiguation_questions": [
+      "Objevuje se pravidelně ve stejnou dobu?",
+      "Zlepší se po jídle nebo odpočinku?",
+      "Je vzorec předvídatelný?",
+      "Je změna chování náhlá, nebo postupná?"
+    ]
+  }
+]

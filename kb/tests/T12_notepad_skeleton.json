@@ -1,0 +1,30 @@
+[
+  {
+    "id": "T12_NOTEPAD_LOW_DATA_001",
+    "input": "je problemovy",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "notepad_min_uncertain_observations": 1,
+      "notepad_min_open_questions": 1,
+      "notepad_min_next_steps": 1
+    }
+  },
+  {
+    "id": "T12_NOTEPAD_OBSERVABLE_001",
+    "input": "pri rannim kruhu lita po tride a vykřikuje odpovědi",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_zones": ["Z2"],
+      "notepad_min_confirmed_observations": 1
+    }
+  },
+  {
+    "id": "T12_NOTEPAD_SAFETY_001",
+    "input": "utika ze tridy a nejde zastavit",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z3",
+      "notepad_min_safety_notes": 1
+    }
+  }
+]

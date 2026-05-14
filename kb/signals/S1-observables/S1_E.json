@@ -1,0 +1,238 @@
+[
+  {
+    "id": "OBS_E1_PEER_GROUP_WITHDRAWAL_001",
+    "category": "social_functioning_relationships",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "je pořád samo",
+      "nechce mezi děti",
+      "drží se stranou",
+      "stojí bokem",
+      "nepřidá se"
+    ],
+    "patterns": [
+      "je porad samo",
+      "nechce mezi deti",
+      "drzi se stranou",
+      "stoji bokem",
+      "neprida se"
+    ],
+    "observable": "opakovaně zůstává mimo vrstevnickou skupinu a spontánně se nezapojuje",
+    "observable_anchor": "Dítě se opakovaně spontánně nezapojuje do vrstevnického kontaktu, zůstává mimo skupinu a samo aktivně nevyhledává společnou hru nebo sociální vstup.",
+    "context_hotspots": [
+      "volná hra",
+      "ranní příchod",
+      "pobyt venku",
+      "přechod do nové skupiny",
+      "skupinová spontánní aktivita"
+    ],
+    "candidate_blocks": ["B", "A", "D"],
+    "candidate_zones": ["Z1"],
+    "zone_tendency": ["Z1"],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Samota není automaticky problém ani důkaz sociální poruchy.",
+    "alternative_explanations": [
+      "introvertní styl",
+      "adaptační fáze",
+      "sociální nejistota",
+      "přetížení skupinou",
+      "preference individuální hry",
+      "zkušenost s odmítáním"
+    ],
+    "disambiguation_questions": [
+      "Je dítě samo rádo, nebo trpí odmítnutím?",
+      "Zapojí se při bezpečné nabídce?",
+      "Má alespoň jedno stabilní spojení?",
+      "Je rozdíl mezi známou a novou skupinou?"
+    ]
+  },
+  {
+    "id": "OBS_E2_PEER_CONFLICT_PATTERN_001",
+    "category": "social_functioning_relationships",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "pořád se s někým hádá",
+      "stále konflikty",
+      "děti si na něj stěžují",
+      "opakované střety",
+      "furt je nějaký problém"
+    ],
+    "patterns": [
+      "porad se s nekym hada",
+      "stale konflikty",
+      "deti si na nej stezuji",
+      "opakovane strety",
+      "furt je nejaky problem"
+    ],
+    "observable": "opakovaně vstupuje do konfliktu s vrstevníky a vztahy jsou nestabilní",
+    "observable_anchor": "Ve vrstevnických vztazích opakovaně vznikají konflikty, střety nebo sociální napětí, a dítě obtížně udržuje stabilní vztahové fungování ve skupině.",
+    "context_hotspots": [
+      "sdílení hraček",
+      "pravidlové hry",
+      "soutěžní situace",
+      "role ve skupině",
+      "odmítnutí vrstevníkem"
+    ],
+    "candidate_blocks": ["B", "A", "D"],
+    "candidate_zones": ["Z2", "Z3"],
+    "zone_tendency": ["Z2", "Z3"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o agresivní dítě ani problémového žáka.",
+    "alternative_explanations": [
+      "slabší čtení sociálních situací",
+      "nízká tolerance frustrace",
+      "obranné vstupy",
+      "vysoká citlivost na odmítnutí",
+      "impulzivní reakce",
+      "potřeba kontroly"
+    ],
+    "disambiguation_questions": [
+      "Jde o konflikt s každým, nebo selektivně?",
+      "Co konflikt typicky spouští?",
+      "Vstupuje do konfliktu aktivně, nebo obranně?",
+      "Jak dítě samo situaci interpretuje?"
+    ]
+  },
+  {
+    "id": "OBS_E3_SHARED_PLAY_BREAKDOWN_001",
+    "category": "social_functioning_relationships",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "nevydrží si hrát s ostatními",
+      "hra se vždy rozpadne",
+      "rychle vzniká konflikt",
+      "společná hra dlouho nevydrží"
+    ],
+    "patterns": [
+      "nevydrzi si hrat s ostatnimi",
+      "hra se vzdy rozpadne",
+      "rychle vznika konflikt",
+      "spolecna hra dlouho nevydrzi"
+    ],
+    "observable": "nedaří se mu udržet sdílenou hru a společná aktivita se opakovaně rozpadá",
+    "observable_anchor": "Dítě obtížně udržuje sdílenou hru, společná aktivita se opakovaně rozpadá a vztahové zapojení nevydrží stabilně pokračovat.",
+    "context_hotspots": [
+      "volná hra",
+      "role-play hra",
+      "pravidlové hry",
+      "sdílené rozhodování",
+      "malá skupina vrstevníků"
+    ],
+    "candidate_blocks": ["B", "C", "D"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o neschopnost socializace.",
+    "alternative_explanations": [
+      "oslabené sociální čtení",
+      "impulzivita",
+      "potřeba kontroly",
+      "slabší tolerance pravidel",
+      "nejistota v navazování vztahu"
+    ],
+    "disambiguation_questions": [
+      "Rozpadne se hra kvůli pravidlům, impulzivitě, nebo kontrole?",
+      "Je problém ve volné hře i ve strukturované aktivitě?",
+      "Funguje lépe ve dvojici než ve skupině?",
+      "Dochází k rozpadu po konkrétním triggeru?"
+    ]
+  },
+  {
+    "id": "OBS_E4_SINGLE_ADULT_REGULATION_ANCHOR_001",
+    "category": "social_functioning_relationships",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "chce jen jednu paní učitelku",
+      "drží se jednoho dospělého",
+      "bez něj nefunguje",
+      "potřebuje pořád tu samou osobu"
+    ],
+    "patterns": [
+      "chce jen jednu pani ucitelku",
+      "drzi se jednoho dospeleho",
+      "bez nej nefunguje",
+      "potrebuje porad tu samou osobu"
+    ],
+    "observable": "pro regulaci potřebuje silnou a opakovanou oporu jednoho konkrétního dospělého",
+    "observable_anchor": "Dítě výrazně vyhledává jednoho konkrétního dospělého jako hlavní regulační oporu a bez této vztahové jistoty se jeho fungování výrazně zhoršuje.",
+    "context_hotspots": [
+      "ranní příchod",
+      "separace od rodiče",
+      "změna pedagoga",
+      "nejistá situace",
+      "emoční zátěž"
+    ],
+    "candidate_blocks": ["A", "B"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o rozmazlenost ani manipulaci.",
+    "alternative_explanations": [
+      "potřeba bezpečné vazby",
+      "regulační kotva",
+      "vztahová nejistota",
+      "adaptační obtíž",
+      "vysoká citlivost na změnu vztahového pole"
+    ],
+    "disambiguation_questions": [
+      "Funguje bez této osoby vůbec?",
+      "Zhoršuje se to hlavně při nejistotě?",
+      "Jde o bezpečnou vazbu, nebo rigidní závislost?",
+      "Přenáší se jistota postupně i na jiné dospělé?"
+    ]
+  },
+  {
+    "id": "OBS_E5_SOCIAL_REJECTION_DESTABILIZATION_001",
+    "category": "social_functioning_relationships",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "nesnese když ho nevezmou",
+      "rozpadne se při odmítnutí",
+      "velmi těžce nese nepřijetí",
+      "když ho nevezmou do hry, je velký problém"
+    ],
+    "patterns": [
+      "nesnese kdyz ho nevezmou",
+      "rozpadne se pri odmitnuti",
+      "velmi tezce nese neprijeti",
+      "kdyz ho nevezmou do hry je velky problem"
+    ],
+    "observable": "na sociální odmítnutí reaguje silnou emoční destabilizací",
+    "observable_anchor": "Při sociálním odmítnutí, nepřijetí nebo ztrátě vztahové pozice dítě rychle přechází do silné emoční reakce, stažení nebo obranné eskalace.",
+    "context_hotspots": [
+      "nepřijetí do hry",
+      "odmítnutí vrstevníkem",
+      "ztráta role ve skupině",
+      "výběr partnera",
+      "sociální porovnávání"
+    ],
+    "candidate_blocks": ["A", "B", "D"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o přehnanou citlivost ani manipulativní reakci.",
+    "alternative_explanations": [
+      "vysoká citlivost na odmítnutí",
+      "vztahová nejistota",
+      "slabá tolerance frustrace",
+      "obranná reakce na stud",
+      "potřeba potvrzení vztahové bezpečnosti"
+    ],
+    "disambiguation_questions": [
+      "Reaguje pláčem, útokem, nebo stažením?",
+      "Jde o skutečné odmítnutí, nebo interpretaci situace?",
+      "Je citlivost obecná, nebo selektivní vůči konkrétním dětem?",
+      "Uklidní se po obnovení vztahové jistoty?"
+    ]
+  }
+]

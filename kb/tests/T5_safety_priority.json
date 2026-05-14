@@ -1,0 +1,12 @@
+[
+  {
+    "id": "T5_SAFETY_001",
+    "input": "utika ze tridy, neda se zastavit a bezi ke dverim ven",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z3",
+      "must_include_zones": ["Z3"],
+      "must_have_flags": ["LEAVES_SAFE_AREA", "SAFETY_CONTEXT", "HARD_TO_INTERRUPT"]
+    }
+  }
+]

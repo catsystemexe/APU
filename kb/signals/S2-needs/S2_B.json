@@ -1,0 +1,312 @@
+[
+  {
+    "id": "NEED_002_UNDERSTAND_CAUSE",
+    "label": "Porozumět možné příčině projevu",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Pedagog vidí opakovaný nebo nejasný projev, ale neví, proč vzniká. Cílem není okamžitý zásah, ale funkční pochopení mechanismu.",
+    "typical_triggers": [
+      "dítě kouká jinam",
+      "dítě odmítá činnost",
+      "dítě se stahuje",
+      "dítě reaguje přehnaně",
+      "dítě se rozruší jen někdy",
+      "dítě funguje jinak doma a jinak ve školce"
+    ],
+    "trigger_patterns": [
+      "proc to dela",
+      "nechapu proc",
+      "co je za tim",
+      "jaka je pricina",
+      "chci porozumet projevu",
+      "opakuje se to ale nevim proc"
+    ],
+    "observable_bias": [],
+    "block_bias": ["A", "B", "C", "E"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "FUNCTIONAL_ANALYSIS",
+    "safety_override": false,
+    "notepad_label": "porozumět možné příčině projevu"
+  },
+  {
+    "id": "NEED_008_DEVELOPMENT_OR_LOAD",
+    "label": "Ověřit charakter vývojové odlišnosti",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Není jasné, zda jde o běžnou vývojovou variabilitu, nebo o významnější zátěž. Cílem je nepatologizovat běžný vývoj a současně nepřehlédnout skutečnou obtíž.",
+    "typical_triggers": [
+      "je to ještě normální?",
+      "dítě je výrazně jiné než vrstevníci",
+      "vývoj je nerovnoměrný",
+      "některé oblasti fungují dobře, jiné výrazně ne",
+      "obtíž trvá déle než očekávaně"
+    ],
+    "trigger_patterns": [
+      "je to jeste normalni",
+      "vyvojova varianta nebo problem",
+      "je to bezne",
+      "je to uz zatez",
+      "vyrazne jine nez vrstevnici",
+      "mam se znepokojovat"
+    ],
+    "observable_bias": [],
+    "block_bias": ["A", "C", "D", "E"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "DEVELOPMENTAL_CHECK",
+    "safety_override": false,
+    "notepad_label": "ověřit charakter vývojové odlišnosti"
+  },
+  {
+    "id": "NEED_016_SITUATIONAL_OR_STABLE",
+    "label": "Ověřit, zda jde o situační nebo stabilní vzorec",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Není jasné, zda jde o dlouhodobý pattern, nebo reakci na konkrétní situaci. Cílem je nevyvozovat stabilní závěr z jedné epizody.",
+    "typical_triggers": [
+      "dítě reaguje výrazně jen někdy",
+      "obtíž vznikla náhle",
+      "problém je jen u jednoho učitele",
+      "problém je jen při určité činnosti",
+      "jinak dítě funguje dobře"
+    ],
+    "trigger_patterns": [
+      "jen nekdy",
+      "jen s jednim ucitelem",
+      "jen v urcite situaci",
+      "je to dlouhodobe nebo ne",
+      "nahla zmena",
+      "situacni nebo stabilni"
+    ],
+    "observable_bias": [
+      "OBS_F4_ONLY_ONE_ADULT_RELATION_001",
+      "OBS_K4_FEAR_TENSION_WITH_AUTHORITY_001",
+      "OBS_M5_SUDDEN_BEHAVIOR_CHANGE_001"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "PATTERN_VALIDATION",
+    "safety_override": false,
+    "notepad_label": "ověřit, zda jde o situační nebo stabilní vzorec"
+  },
+  {
+    "id": "NEED_022_GET_BETTER_OBSERVATION",
+    "label": "Potřebuji přesnější pozorování situace",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Pedagog má silný dojem, ale chybí konkrétní popis. Cílem je převést interpretaci na pozorovatelné chování.",
+    "typical_triggers": [
+      "je problémový",
+      "nezvládá kolektiv",
+      "je agresivní",
+      "je líný",
+      "něco je špatně"
+    ],
+    "trigger_patterns": [
+      "neumim to presne popsat",
+      "je problemovy",
+      "je agresivni",
+      "je lini",
+      "neco je spatne",
+      "potrebuji presnejsi pozorovani"
+    ],
+    "observable_bias": [
+      "OBS_N1_LAZY_LABEL_GUARD",
+      "OBS_N2_NAUGHTY_LABEL_GUARD",
+      "OBS_N4_ON_PURPOSE_LABEL_GUARD"
+    ],
+    "block_bias": [],
+    "zone_bias": [],
+    "response_mode_bias": "OBSERVABLE_REFINEMENT",
+    "safety_override": false,
+    "notepad_label": "potřebuji přesnější pozorování situace"
+  },
+  {
+    "id": "NEED_031_SEPARATE_BEHAVIOR_FROM_INTENT",
+    "label": "Ověřit, zda jde o úmysl nebo regulační obtíž",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Dospělí rychle připisují dítěti záměr typu schválně, manipuluje nebo provokuje. Cílem je oddělit observable behavior od interpretace úmyslu.",
+    "typical_triggers": [
+      "dělá to naschvál",
+      "provokuje mě",
+      "zkouší kam až může",
+      "silná reakce je vykládána jako vzdor"
+    ],
+    "trigger_patterns": [
+      "dela to naschval",
+      "provokuje schvalne",
+      "manipuluje",
+      "zkousi me",
+      "dela pravy opak schvalne",
+      "je to umysl nebo ne"
+    ],
+    "observable_bias": [
+      "OBS_N4_ON_PURPOSE_LABEL_GUARD"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "INTENT_GUARD",
+    "safety_override": false,
+    "notepad_label": "ověřit, zda jde o úmysl nebo regulační obtíž"
+  },
+  {
+    "id": "NEED_039_STOP_PREMATURE_LABELING",
+    "label": "Oddělit pozorování od předčasné nálepky",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Okolí směřuje k rychlému vysvětlení typu ADHD, autismus nebo nevýchova bez dostatečné opory. Cílem je vrátit práci k hypotéze místo nálepky.",
+    "typical_triggers": [
+      "to je určitě ADHD",
+      "to je autismus",
+      "to je nevýchova",
+      "diagnóza nahrazuje pozorování"
+    ],
+    "trigger_patterns": [
+      "to je urcite adhd",
+      "to je autismus",
+      "to je nevychova",
+      "rychla diagnoza",
+      "predcasne nalepkovani",
+      "label misto pozorovani"
+    ],
+    "observable_bias": [
+      "OBS_N1_LAZY_LABEL_GUARD",
+      "OBS_N2_NAUGHTY_LABEL_GUARD",
+      "OBS_N3_SPOILED_LABEL_GUARD",
+      "OBS_N5_PARENT_TEACHER_PERSPECTIVE_GUARD"
+    ],
+    "block_bias": [],
+    "zone_bias": [],
+    "response_mode_bias": "LABEL_GUARD",
+    "safety_override": false,
+    "notepad_label": "oddělit pozorování od předčasné nálepky"
+  },
+  {
+    "id": "NEED_042_CHILD_OR_SYSTEM",
+    "label": "Ověřit vliv prostředí a nastavení systému",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Projev dítěte může být zesílen nebo vytvářen samotným prostředím, nikoli primárně dítětem.",
+    "typical_triggers": [
+      "přetížená třída",
+      "dlouhé čekání bez činnosti",
+      "nepřehledný režim",
+      "vysoká hlučnost",
+      "chaos ve třídě"
+    ],
+    "trigger_patterns": [
+      "je problem v diteti nebo v systemu",
+      "pretizena trida",
+      "chaoticke prostredi",
+      "dlouhe cekani",
+      "neprehledny rezim",
+      "vliv prostredi"
+    ],
+    "observable_bias": [
+      "OBS_L1_NOISE_DYSREGULATION_001",
+      "OBS_J2_TRANSITION_REGULATION_DIFFICULTY_001"
+    ],
+    "block_bias": ["E", "A"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "SYSTEM_CHECK",
+    "safety_override": false,
+    "notepad_label": "ověřit vliv prostředí a nastavení systému"
+  },
+  {
+    "id": "NEED_044_FIND_REAL_TRIGGER",
+    "label": "Potřebuji najít skutečný spouštěč situace",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Viditelný problém je až následek a skutečný trigger leží dříve nebo jinde. Cílem je najít začátek řetězce místo řešení pouze vrcholu problému.",
+    "typical_triggers": [
+      "afekt přichází až po sérii drobných podnětů",
+      "konflikt vzniká zdánlivě najednou",
+      "situace se opakuje ve stejném vzorci",
+      "dospělí řeší následek, ne začátek"
+    ],
+    "trigger_patterns": [
+      "co je skutecny spoustec",
+      "trigger",
+      "vzdy predtim neco je",
+      "nevim co to spousti",
+      "resime nasledek ne pricinu",
+      "co tomu predchazi"
+    ],
+    "observable_bias": [],
+    "block_bias": ["A", "B", "E"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "TRIGGER_ANALYSIS",
+    "safety_override": false,
+    "notepad_label": "potřebuji najít skutečný spouštěč situace"
+  },
+  {
+    "id": "NEED_052_SEPARATE_FATIGUE_FROM_RESISTANCE",
+    "label": "Ověřit vliv únavy na chování dítěte",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Dítě působí jako vzdorující nebo líné, ale hlavním faktorem může být únava nebo vyčerpání.",
+    "typical_triggers": [
+      "odpolední prudké zhoršení spolupráce",
+      "rozpad až po delší zátěži",
+      "po odpočinku se fungování zlepší",
+      "jednoduchý úkol vyvolá odpor až při únavě"
+    ],
+    "trigger_patterns": [
+      "je to unava nebo odpor",
+      "odpoledne horsi",
+      "po odpocinku lepsi",
+      "prudke zhorseni spoluprace",
+      "mozna je jen unavene"
+    ],
+    "observable_bias": [
+      "OBS_L4_LOW_ENERGY_FATIGUE_001",
+      "OBS_L5_PHYSIOLOGICAL_STATE_BEHAVIOR_SHIFT_001"
+    ],
+    "block_bias": ["E", "A"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "FATIGUE_CHECK",
+    "safety_override": false,
+    "notepad_label": "ověřit vliv únavy na chování dítěte"
+  },
+  {
+    "id": "NEED_057_IMMATURITY_NOT_MALICE",
+    "label": "Ověřit vliv vývojové nezralosti na situaci",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Dítě je hodnoceno podle očekávání, která přesahují jeho aktuální vývojovou kapacitu. Cílem je neplést nezralost s morálním selháním.",
+    "typical_triggers": [
+      "impulzivní reakce jsou brány jako záměrné",
+      "nezvládá odklad odpovídající starším dětem",
+      "regulace je očekávána nad vývojovou kapacitu"
+    ],
+    "trigger_patterns": [
+      "je to nezralost nebo schvalnost",
+      "na tohle je jeste male",
+      "cekame moc",
+      "vyvojova nezralost",
+      "neni to zamer ale kapacita"
+    ],
+    "observable_bias": [
+      "OBS_N4_ON_PURPOSE_LABEL_GUARD"
+    ],
+    "block_bias": ["A", "C"],
+    "zone_bias": ["Z1"],
+    "response_mode_bias": "DEVELOPMENTAL_REALITY_CHECK",
+    "safety_override": false,
+    "notepad_label": "ověřit vliv vývojové nezralosti na situaci"
+  },
+  {
+    "id": "NEED_064_DEFINE_REAL_PROBLEM",
+    "label": "Potřebuji zpřesnit, co přesně řešíme",
+    "belongs_to_core": "CORE_2_UNDERSTAND_FUNCTION",
+    "description": "Všichni řeší něco, ale není jasné co přesně. Cílem je definovat skutečný pracovní problém místo obecného napětí.",
+    "typical_triggers": [
+      "mnoho emocí, málo konkrétních faktů",
+      "různí lidé popisují jiný problém",
+      "zásahy míří vedle"
+    ],
+    "trigger_patterns": [
+      "co je vlastne problem",
+      "kazdy resi neco jineho",
+      "malo faktu hodne emoci",
+      "potrebuji zpresnit problem",
+      "nevim co presne resime"
+    ],
+    "observable_bias": [],
+    "block_bias": [],
+    "zone_bias": [],
+    "response_mode_bias": "PROBLEM_DEFINITION",
+    "safety_override": false,
+    "notepad_label": "potřebuji zpřesnit, co přesně řešíme"
+  }
+]

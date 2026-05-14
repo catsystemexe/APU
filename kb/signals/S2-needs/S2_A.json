@@ -1,0 +1,341 @@
+[
+  {
+    "id": "NEED_001_CURRENT_DEESCALATION",
+    "label": "Aktuálně zklidnit situaci",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Chování dítěte právě narušuje skupinu, bezpečí nebo průběh činnosti a pedagog potřebuje okamžitě stabilizovat situaci.",
+    "typical_triggers": [
+      "dítě vykřikuje",
+      "dítě ruší ostatní",
+      "dítě utíká od činnosti",
+      "dítě se rozbíhá po třídě",
+      "dítě se rozpláče a eskaluje",
+      "dítě odmítá přestat",
+      "dítě fyzicky zasahuje do prostoru ostatních",
+      "dítě se dostává do konfliktu"
+    ],
+    "trigger_patterns": [
+      "co mam udelat hned",
+      "co ted",
+      "potrebuji rychle poradit",
+      "aktualne se to deje",
+      "dite prave eskaluje",
+      "dite rusi ostatni",
+      "dite odmita prestat",
+      "dite se rozbiha po tride"
+    ],
+    "observable_bias": [
+      "OBS_C1_IMPULSE_VERBAL_ENTRY_001",
+      "OBS_B2_BODY_RUNNING_WAITING_001",
+      "OBS_D2_RAPID_ANGER_ESCALATION_001",
+      "OBS_H1_LEAVES_SAFE_SPACE_001",
+      "OBS_H3_ENDANGERS_OTHERS_PHYSICALLY_001"
+    ],
+    "block_bias": ["A", "E", "B"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "FAST_INTERVENTION",
+    "safety_override": false,
+    "notepad_label": "aktuálně zklidnit situaci"
+  },
+  {
+    "id": "NEED_003_KEEP_GROUP_ROUTINE",
+    "label": "Udržet funkční režim skupiny",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Projev dítěte nenarušuje jen jeho vlastní fungování, ale rozbíjí skupinovou dynamiku nebo režim celé třídy.",
+    "typical_triggers": [
+      "dítě přerušuje ranní kruh",
+      "ostatní děti začnou reagovat stejně",
+      "skupina ztrácí pozornost kvůli jednomu dítěti",
+      "dítě rozkládá pravidla skupiny"
+    ],
+    "trigger_patterns": [
+      "udrzet skupinu",
+      "udrzet rezim",
+      "rozklada skupinu",
+      "ostatni deti se pridavaji",
+      "kvuli nemu se rozpadne kruh",
+      "skupina ztraci pozornost",
+      "narušuje režim skupiny",
+      "narusuje rezim skupiny"
+    ],
+    "observable_bias": [
+      "OBS_C1_IMPULSE_VERBAL_ENTRY_001",
+      "OBS_C2_INTERRUPTS_OTHERS_001",
+      "OBS_C5_CANNOT_WAIT_TURN_001",
+      "OBS_B2_BODY_RUNNING_WAITING_001"
+    ],
+    "block_bias": ["B", "E", "C"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "GROUP_MANAGEMENT",
+    "safety_override": false,
+    "notepad_label": "udržet funkční režim skupiny"
+  },
+  {
+    "id": "NEED_010_CHECK_SAFETY_RISK",
+    "label": "Ověřit a zajistit bezpečnost situace",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Je potřeba rychle rozlišit běžnou pedagogickou situaci od bezpečnostního rizika.",
+    "typical_triggers": [
+      "dítě utíká z prostoru",
+      "dítě ohrožuje sebe",
+      "dítě ohrožuje ostatní",
+      "výrazná fyzická agrese",
+      "nebezpečné impulzivní jednání",
+      "ztráta základní kontroly nad situací"
+    ],
+    "trigger_patterns": [
+      "ohrozuje sebe",
+      "ohrozuje ostatni",
+      "utika z prostoru",
+      "bezpecnostni riziko",
+      "fyzicky utoci",
+      "hazi veci",
+      "bije deti",
+      "jde do rizika",
+      "nebezpecne eskaluje"
+    ],
+    "observable_bias": [
+      "OBS_H1_LEAVES_SAFE_SPACE_001",
+      "OBS_H2_SELF_ENDANGERMENT_IN_AFFECT_001",
+      "OBS_H3_ENDANGERS_OTHERS_PHYSICALLY_001",
+      "OBS_H5_REPEATED_SAFETY_BOUNDARY_BREAKING_001",
+      "OBS_M1_LEAVES_SAFE_SPACE_001",
+      "OBS_M2_SELF_SAFETY_RISK_001",
+      "OBS_M3_PHYSICAL_DANGER_TO_OTHERS_001"
+    ],
+    "block_bias": ["A", "E", "B"],
+    "zone_bias": ["Z3", "Z4"],
+    "response_mode_bias": "SAFETY_ESCALATION",
+    "safety_override": true,
+    "notepad_label": "ověřit a zajistit bezpečnost situace"
+  },
+  {
+    "id": "NEED_015_STOP_REPEATED_ESCALATION",
+    "label": "Zastavit opakující se eskalaci",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Stejný problém se opakuje stále dokola a krátkodobé zásahy pouze hasí jednotlivé epizody.",
+    "typical_triggers": [
+      "stejné konflikty každý den",
+      "stejný čas nebo místo",
+      "stejný spouštěč",
+      "intervence funguje jen krátce",
+      "situace se vrací i přes opakované řešení"
+    ],
+    "trigger_patterns": [
+      "opakuje se to porad",
+      "kazdy den stejny problem",
+      "stale stejna eskalace",
+      "intervence funguje jen chvili",
+      "porad hasime stejny problem",
+      "stejny spoustec",
+      "situace se vraci"
+    ],
+    "observable_bias": [],
+    "block_bias": ["A", "B", "E"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "PATTERN_PREVENTION",
+    "safety_override": false,
+    "notepad_label": "zastavit opakující se eskalaci"
+  },
+  {
+    "id": "NEED_024_BOUNDARIES_WITHOUT_POWER_STRUGGLE",
+    "label": "Nastavit hranice bez eskalace konfliktu",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Dítě odporuje pravidlům hlavně skrze vztahový střet a situace se mění v mocenské přetlačování.",
+    "typical_triggers": [
+      "dítě reaguje hlavně na konkrétní autoritu",
+      "zákaz automaticky vyvolá odpor",
+      "čím větší tlak, tím větší odpor",
+      "učitel se dostává do boje o kontrolu"
+    ],
+    "trigger_patterns": [
+      "mocensky boj",
+      "pretlacovani",
+      "cim vetsi tlak tim vetsi odpor",
+      "hranice bez eskalace",
+      "zákaz vyvola odpor",
+      "zakaz vyvola odpor",
+      "bojujeme o kontrolu"
+    ],
+    "observable_bias": [
+      "OBS_F2_REPEATS_FORBIDDEN_BEHAVIOR_001",
+      "OBS_D4_ESCALATES_AFTER_CORRECTION_001",
+      "OBS_K2_ADULT_REQUEST_CONFLICT_PATTERN_001"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "BOUNDARY_DEESCALATION",
+    "safety_override": false,
+    "notepad_label": "nastavit hranice bez eskalace konfliktu"
+  },
+  {
+    "id": "NEED_025_SUPPORT_EMOTIONAL_REGULATION",
+    "label": "Podpořit emoční regulaci dítěte",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Hlavní obtíž je ve schopnosti dítěte zvládnout emoční aktivaci, frustraci, afekt nebo návrat do klidu.",
+    "typical_triggers": [
+      "dítě rychle přechází do afektu",
+      "dítě nezvládá frustraci",
+      "silná reakce na drobný podnět",
+      "dítě se neumí vrátit do klidu",
+      "emoce přebírají řízení situace"
+    ],
+    "trigger_patterns": [
+      "podporit emocni regulaci",
+      "nezvlada frustraci",
+      "rychle jde do afektu",
+      "neumi se vratit do klidu",
+      "silna emocni reakce",
+      "emoce prebiraji rizeni",
+      "co delat pri afektu"
+    ],
+    "observable_bias": [
+      "OBS_D1_CRIES_AFTER_SMALL_FRUSTRATION_001",
+      "OBS_D2_RAPID_ANGER_ESCALATION_001",
+      "OBS_D5_LONG_RETURN_FROM_AFFECT_001",
+      "OBS_G2_COLLAPSES_AFTER_FAILURE_001"
+    ],
+    "block_bias": ["A"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "REGULATION_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "podpořit emoční regulaci dítěte"
+  },
+  {
+    "id": "NEED_048_SAFE_CONFLICT_CLOSURE",
+    "label": "Bezpečně uzavřít konflikt a vrátit vztah",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Problém není jen samotný konflikt, ale způsob jeho zakončení — dítě i dospělí zůstávají uvnitř boje.",
+    "typical_triggers": [
+      "konflikt skončí formálně, ale napětí zůstává",
+      "dítě odchází ve studu nebo odporu",
+      "dospělý situaci uzavře jen mocensky",
+      "další konflikt přichází rychle znovu"
+    ],
+    "trigger_patterns": [
+      "bezpecne uzavrit konflikt",
+      "vratit vztah",
+      "napeti zustava",
+      "dite odchazi ve studu",
+      "konflikt se rychle vraci",
+      "po konfliktu zustava odpor",
+      "uzavrit konflikt bez ponizeni"
+    ],
+    "observable_bias": [
+      "OBS_D4_ESCALATES_AFTER_CORRECTION_001",
+      "OBS_F5_WITHDRAWS_AFTER_CORRECTION_001",
+      "OBS_K4_FEAR_TENSION_WITH_AUTHORITY_001"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "REPAIR_AFTER_CONFLICT",
+    "safety_override": false,
+    "notepad_label": "bezpečně uzavřít konflikt a vrátit vztah"
+  },
+  {
+    "id": "NEED_061_GAIN_TIME",
+    "label": "Získat čas a stabilizovat situaci",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Pedagog potřebuje krátce zastavit tempo situace, aby mohl bezpečně přemýšlet nebo rozhodnout.",
+    "typical_triggers": [
+      "situace se rychle rozbíhá",
+      "učitel potřebuje nejdřív zastavit tempo",
+      "nelze hned řešit příčinu"
+    ],
+    "trigger_patterns": [
+      "potrebuji ziskat cas",
+      "ziskat cas",
+      "zastavit tempo",
+      "nemuzu ted resit pricinu",
+      "nejdriv stabilizovat",
+      "rychle se to rozbiha"
+    ],
+    "observable_bias": [],
+    "block_bias": ["A", "E"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "MICRO_STABILIZATION",
+    "safety_override": false,
+    "notepad_label": "potřebuji získat čas a stabilizovat situaci"
+  },
+  {
+    "id": "NEED_062_REDUCE_GROUP_PRESSURE",
+    "label": "Snížit tlak ve skupině",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Napětí ve třídě je tak vysoké, že další tlak zhoršuje celý systém.",
+    "typical_triggers": [
+      "skupina je rozjitřená",
+      "více dětí reaguje současně",
+      "atmosféra je přetížená"
+    ],
+    "trigger_patterns": [
+      "snizit tlak ve skupine",
+      "skupina je rozjitrena",
+      "vice deti reaguje",
+      "atmosfera je pretizena",
+      "trida je pretizena",
+      "napeti ve tride"
+    ],
+    "observable_bias": [],
+    "block_bias": ["A", "B", "E"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "GROUP_DECOMPRESSION",
+    "safety_override": false,
+    "notepad_label": "potřebuji snížit tlak ve skupině"
+  },
+  {
+    "id": "NEED_063_PROTECT_OTHER_CHILDREN",
+    "label": "Chránit bezpečí ostatních dětí",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Řešení jednoho dítěte nesmí destabilizovat bezpečí ostatních dětí ve skupině.",
+    "typical_triggers": [
+      "ostatní děti jsou ohrožené",
+      "skupina přebírá destruktivní vzorec",
+      "ostatní děti ztrácí pocit bezpečí"
+    ],
+    "trigger_patterns": [
+      "ochranit ostatni deti",
+      "chranit bezpeci ostatnich deti",
+      "ostatni deti jsou ohrozene",
+      "deti se boji",
+      "skupina ztraci pocit bezpeci",
+      "bezpeci ostatnich"
+    ],
+    "observable_bias": [
+      "OBS_H3_ENDANGERS_OTHERS_PHYSICALLY_001",
+      "OBS_M3_PHYSICAL_DANGER_TO_OTHERS_001",
+      "OBS_E2_PEER_CONFLICT_PATTERN_001"
+    ],
+    "block_bias": ["A", "B", "E"],
+    "zone_bias": ["Z3", "Z4"],
+    "response_mode_bias": "SAFETY_GROUP_PROTECTION",
+    "safety_override": true,
+    "notepad_label": "potřebuji chránit bezpečí ostatních dětí"
+  },
+  {
+    "id": "NEED_065_STOP_TEACHER_IMPULSE",
+    "label": "Zastavit vlastní impulzivní reakci",
+    "belongs_to_core": "CORE_1_STABILIZE_SITUATION",
+    "description": "Pedagog cítí, že okamžitá reakce by byla spíš z afektu než z profesionálního rozhodnutí.",
+    "typical_triggers": [
+      "silný vztek",
+      "pocit osobního napadení",
+      "únava a poslední kapka",
+      "hrozí impulzivní reakce dospělého"
+    ],
+    "trigger_patterns": [
+      "potrebuji zastavit vlastni reakci",
+      "jsem nastvany",
+      "mam chut vybuchnout",
+      "uz to nezvladam",
+      "posledni kapka",
+      "nechci reagovat z afektu",
+      "potrebuji odstup"
+    ],
+    "observable_bias": [],
+    "block_bias": [],
+    "zone_bias": [],
+    "response_mode_bias": "TEACHER_SELF_REGULATION",
+    "safety_override": false,
+    "notepad_label": "potřebuji zastavit vlastní impulzivní reakci"
+  }
+]

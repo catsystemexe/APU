@@ -1,0 +1,213 @@
+[
+  {
+    "id": "NEED_003_KEEP_GROUP_REGIME",
+    "label": "Udržet funkční režim skupiny",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Projev dítěte nenarušuje jen jeho vlastní fungování, ale rozbíjí skupinovou dynamiku. Cílem je chránit společný režim a funkčnost celé třídy.",
+    "typical_triggers": [
+      "dítě neustále přerušuje kruh",
+      "ostatní děti začnou reagovat stejně",
+      "dítě rozkládá pravidla skupiny",
+      "skupina ztrácí pozornost kvůli jednomu dítěti"
+    ],
+    "trigger_patterns": [
+      "rozbija skupinu",
+      "nejde udrzet kruh",
+      "cela trida je kvuli tomu mimo",
+      "ostatni to prebiraji",
+      "potrebuji udrzet rezim skupiny"
+    ],
+    "observable_bias": [
+      "OBS_C1_LOUD_ENTRY_WITHOUT_WAITING_001",
+      "OBS_C2_INTERRUPTS_OTHERS_SPACE_001",
+      "OBS_C5_CANNOT_WAIT_TURN_001"
+    ],
+    "block_bias": ["B", "E"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "GROUP_STABILIZATION",
+    "safety_override": false,
+    "notepad_label": "udržet funkční režim skupiny"
+  },
+  {
+    "id": "NEED_011_CLARIFY_RULES_AND_BOUNDARIES",
+    "label": "Ujasnit hranice a pravidla",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Problém nevzniká jen z projevu dítěte, ale z nejasného nebo nekonzistentního rámce pravidel. Cílem je zvýšit předvídatelnost a stabilitu hranic.",
+    "typical_triggers": [
+      "dítě stále testuje hranice",
+      "reaguje jen na některé dospělé",
+      "pravidla jsou různě vyžadována",
+      "skupina neví, co je ještě přijatelné"
+    ],
+    "trigger_patterns": [
+      "testuje hranice",
+      "pravidla nejsou jasna",
+      "kazdy dospely to ma jinak",
+      "nekonzistentni pravidla",
+      "potrebuji ujasnit hranice"
+    ],
+    "observable_bias": [
+      "OBS_F2_REPEATS_FORBIDDEN_BEHAVIOR_001",
+      "OBS_K5_USES_ADULT_INCONSISTENCY_001"
+    ],
+    "block_bias": ["B"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "BOUNDARY_FRAMEWORK",
+    "safety_override": false,
+    "notepad_label": "ujasnit hranice a pravidla"
+  },
+  {
+    "id": "NEED_017_ADULT_TEAM_ALIGNMENT",
+    "label": "Sjednotit postup dospělých kolem dítěte",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Obtíž není jen mezi učitelem a dítětem, ale i mezi dospělými kolem něj. Cílem je zvýšit konzistenci reakcí a zabránit chaosu.",
+    "typical_triggers": [
+      "každý pedagog situaci chápe jinak",
+      "asistent a učitel reagují rozdílně",
+      "dítě dostává protichůdné signály",
+      "předávání informací nefunguje"
+    ],
+    "trigger_patterns": [
+      "kazdy reaguje jinak",
+      "tym neni sjednoceny",
+      "asistent a ucitel jinak",
+      "protichudne signaly",
+      "sjednotit postup dospelych"
+    ],
+    "observable_bias": [
+      "OBS_K5_USES_ADULT_INCONSISTENCY_001"
+    ],
+    "block_bias": ["B"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "TEAM_ALIGNMENT",
+    "safety_override": false,
+    "notepad_label": "sjednotit postup dospělých kolem dítěte"
+  },
+  {
+    "id": "NEED_026_PROTECT_FROM_NEGATIVE_ROLE_FIXATION",
+    "label": "Zabránit fixaci negativní role dítěte",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Dítě začíná být vnímáno skrze jednu negativní identitu. Cílem je oddělit dítě od projevu a zabránit stabilizaci škodlivé role.",
+    "typical_triggers": [
+      "to je ten zlobivý",
+      "je automaticky první podezřelé",
+      "ostatní děti ho odmítají předem",
+      "učitel očekává problém ještě před situací"
+    ],
+    "trigger_patterns": [
+      "to je ten problemovy",
+      "negativni role ditete",
+      "vsichni uz cekaji problem",
+      "automaticky podezrely",
+      "fixace role"
+    ],
+    "observable_bias": [
+      "OBS_N2_NAUGHTY_LABEL_GUARD"
+    ],
+    "block_bias": ["B"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "ROLE_PROTECTION",
+    "safety_override": false,
+    "notepad_label": "zabránit fixaci negativní role dítěte"
+  },
+  {
+    "id": "NEED_033_STOP_TENSION_TRANSFER_TO_GROUP",
+    "label": "Zabránit přenosu napětí na skupinu",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Napětí mezi dítětem a dospělým se začíná šířit na ostatní děti a ovlivňuje klima celé třídy.",
+    "typical_triggers": [
+      "ostatní děti přebírají konflikt",
+      "skupina čeká co zase udělá",
+      "dítě se stává centrem napětí celé třídy",
+      "děti se polarizují pro a proti"
+    ],
+    "trigger_patterns": [
+      "napeti se siri do tridy",
+      "ostatni deti to prebiraji",
+      "cela skupina je v konfliktu",
+      "prenos napeti",
+      "ochrana klimatu tridy"
+    ],
+    "observable_bias": [],
+    "block_bias": ["B", "E"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "GROUP_CLIMATE_PROTECTION",
+    "safety_override": false,
+    "notepad_label": "zabránit přenosu napětí na skupinu"
+  },
+  {
+    "id": "NEED_055_FAIRNESS_IN_GROUP_SUPPORT",
+    "label": "Udržet spravedlivé vnímání podpory ve skupině",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Ostatní děti začínají vnímat podporu jednoho dítěte jako nespravedlnost nebo privilegium. Cílem je chránit klima fairness ve skupině.",
+    "typical_triggers": [
+      "proč on může a já ne",
+      "skupina reaguje závistí",
+      "podpora jednoho dítěte narušuje klima fairness",
+      "dítě získává negativní pozici kvůli odlišné podpoře"
+    ],
+    "trigger_patterns": [
+      "proc on muze a ja ne",
+      "nespravedlnost ve skupine",
+      "ostatni to berou spatne",
+      "fairness problem",
+      "spravedlive vnimani podpory"
+    ],
+    "observable_bias": [],
+    "block_bias": ["B"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "GROUP_FAIRNESS_MANAGEMENT",
+    "safety_override": false,
+    "notepad_label": "udržet spravedlivé vnímání podpory ve skupině"
+  },
+  {
+    "id": "NEED_062_REDUCE_GROUP_PRESSURE",
+    "label": "Potřebuji snížit tlak ve skupině",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Napětí ve třídě je už tak vysoké, že další tlak zhoršuje celý systém. Cílem je nejdřív snížit celkové napětí.",
+    "typical_triggers": [
+      "skupina je rozjitřená",
+      "více dětí reaguje současně",
+      "atmosféra je přetížená"
+    ],
+    "trigger_patterns": [
+      "trida je pretizena",
+      "vysoke napeti ve skupine",
+      "vsichni reaguji najednou",
+      "potrebuji snizit tlak ve skupine"
+    ],
+    "observable_bias": [],
+    "block_bias": ["E"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "PRESSURE_REDUCTION",
+    "safety_override": false,
+    "notepad_label": "potřebuji snížit tlak ve skupině"
+  },
+  {
+    "id": "NEED_063_PROTECT_OTHER_CHILDREN",
+    "label": "Potřebuji chránit bezpečí ostatních dětí",
+    "belongs_to_core": "CORE_3_GROUP_AND_SYSTEM",
+    "description": "Řešení jednoho dítěte nesmí destabilizovat bezpečí ostatních. Cílem je chránit celek, nejen řešit jednotlivce.",
+    "typical_triggers": [
+      "ostatní děti jsou ohrožené",
+      "skupina přebírá destruktivní vzorec",
+      "ostatní děti ztrácí pocit bezpečí"
+    ],
+    "trigger_patterns": [
+      "ostatni deti jsou ohrozene",
+      "musim chranit ostatni",
+      "bezpeci skupiny",
+      "ostatni se boji",
+      "ochrana ostatnich deti"
+    ],
+    "observable_bias": [
+      "OBS_M3_PHYSICAL_RISK_TO_OTHERS_001",
+      "OBS_H3_HIGH_ACTIVATION_ENDANGERS_OTHERS_001"
+    ],
+    "block_bias": ["A", "E"],
+    "zone_bias": ["Z3"],
+    "response_mode_bias": "GROUP_SAFETY_PRIORITY",
+    "safety_override": true,
+    "notepad_label": "potřebuji chránit bezpečí ostatních dětí"
+  }
+]

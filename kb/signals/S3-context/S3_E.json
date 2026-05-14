@@ -1,0 +1,188 @@
+{
+  "schema": "APU_CONTEXT_V1",
+  "category": "S3E_context_performance_authority",
+  "description": "Výkonové situace, autorita dospělého, korekce, hranice a hodnocení",
+  "items": [
+    {
+      "id": "CTX_013",
+      "label": "Pouze u konkrétního dospělého",
+      "notepad": "obtíž se objevuje jen u konkrétního dospělého",
+      "typical_situations": [
+        "problém vzniká jen s jedním pedagogem",
+        "jiný dospělý stejnou obtíž nepopisuje",
+        "selektivní vztahová reaktivita"
+      ],
+      "typical_signals": [
+        "selektivní odpor",
+        "selektivní spolupráce",
+        "konflikt vázaný na konkrétní osobu"
+      ],
+      "meaning": "nutné ověřit vztahovou a systémovou složku místo rychlého závěru o dítěti"
+    },
+    {
+      "id": "CTX_019",
+      "label": "Při požadavku na výkon",
+      "notepad": "při požadavku na výkon",
+      "typical_situations": [
+        "úkol s hodnocením",
+        "dokončení práce",
+        "kreslení podle zadání",
+        "vystoupení před skupinou"
+      ],
+      "typical_signals": [
+        "odpor",
+        "únik",
+        "znehodnocení úkolu",
+        "zlobení místo výkonu",
+        "kolaps při neúspěchu"
+      ],
+      "meaning": "často nejde o lenost, ale o zátěž výkonové situace"
+    },
+    {
+      "id": "CTX_020",
+      "label": "Při opravě / hranici od dospělého",
+      "notepad": "při korekci nebo nastavení hranice",
+      "typical_situations": [
+        "napomenutí",
+        "zákaz",
+        "korekce chování",
+        "stanovení hranice",
+        "odmítnutí požadavku dítěte"
+      ],
+      "typical_signals": [
+        "prudká obranná reakce",
+        "vzdor",
+        "útok",
+        "kolaps",
+        "vyhrocení konfliktu"
+      ],
+      "meaning": "důležité odlišit emoční regulaci od schválnosti nebo boje o moc"
+    },
+    {
+      "id": "CTX_027",
+      "label": "Při nutnosti dokončit úkol",
+      "notepad": "při požadavku dokončit úkol",
+      "typical_situations": [
+        "dokončení rozdělané práce",
+        "přechod k méně atraktivní části",
+        "požadavek ještě to dokonči"
+      ],
+      "typical_signals": [
+        "odpor",
+        "odchod",
+        "sabotáž",
+        "ztráta motivace",
+        "afekt při tlaku na dokončení"
+      ],
+      "meaning": "nutné rozlišit kapacitu dokončení od odporu k autoritě"
+    },
+    {
+      "id": "CTX_031",
+      "label": "Při pocitu nespravedlnosti",
+      "notepad": "při vnímané nespravedlnosti",
+      "typical_situations": [
+        "jiný spolužák může víc",
+        "dítě vnímá odlišné zacházení",
+        "sankce není vnímána jako spravedlivá"
+      ],
+      "typical_signals": [
+        "prudký odpor",
+        "argumentace",
+        "afekt",
+        "konflikt s autoritou",
+        "dlouhé ulpění na situaci"
+      ],
+      "meaning": "často nejde o vzdor, ale o silnou potřebu předvídatelné fairness"
+    },
+    {
+      "id": "CTX_032",
+      "label": "Při ztrátě kontroly nad situací",
+      "notepad": "při ztrátě kontroly nad situací",
+      "typical_situations": [
+        "někdo rozhoduje za dítě",
+        "změna bez možnosti ovlivnění",
+        "náhlé ukončení oblíbené činnosti"
+      ],
+      "typical_signals": [
+        "prudký odpor",
+        "rigidita",
+        "afekt",
+        "vyjednávání za každou cenu",
+        "kolaps regulace"
+      ],
+      "meaning": "často souvisí s potřebou kontroly jako formy bezpečí"
+    },
+    {
+      "id": "CTX_035",
+      "label": "Při konfliktu s konkrétním dospělým",
+      "notepad": "ve vztahu ke konkrétnímu dospělému",
+      "typical_situations": [
+        "opakované střety s jedním pedagogem",
+        "selektivní problém ve vztahu",
+        "odlišná reakce na různé dospělé"
+      ],
+      "typical_signals": [
+        "odpor pouze vůči konkrétní osobě",
+        "selektivní spolupráce",
+        "zvýšená obrannost",
+        "vztahové napětí"
+      ],
+      "meaning": "neinterpretovat automaticky jako obecný problém dítěte"
+    },
+    {
+      "id": "CTX_038",
+      "label": "Při příliš vysoké kontrole",
+      "notepad": "při příliš vysoké kontrole a direktivitě",
+      "typical_situations": [
+        "mnoho zákazů",
+        "vysoká direktivita",
+        "minimální autonomie",
+        "neustálé korekce"
+      ],
+      "typical_signals": [
+        "vzdor",
+        "odpor",
+        "pasivní sabotáž",
+        "afekt",
+        "únik"
+      ],
+      "meaning": "někdy problém nevzniká z nedostatku hranic, ale z jejich přetlaku"
+    },
+    {
+      "id": "CTX_041",
+      "label": "Při nadměrné potřebě perfekce",
+      "notepad": "při vysoké potřebě dokonalosti",
+      "typical_situations": [
+        "úkol musí být správně",
+        "dítě těžko snáší chybu",
+        "silná kontrola vlastního výkonu"
+      ],
+      "typical_signals": [
+        "zablokování při nejistotě",
+        "odmítání začít",
+        "afekt při chybě",
+        "mazání a opakování",
+        "kolaps při neúspěchu"
+      ],
+      "meaning": "často nejde o pečlivost, ale o úzkost z nedokonalosti"
+    },
+    {
+      "id": "CTX_053",
+      "label": "Přijetí chyby bez ohrožení sebehodnoty",
+      "notepad": "podpořit bezpečné přijetí chyby",
+      "typical_situations": [
+        "dítě se po chybě rozpláče",
+        "raději nic nezkusí než riskovat chybu",
+        "oprava je prožívána jako selhání"
+      ],
+      "typical_signals": [
+        "pláč po chybě",
+        "afekt při opravě",
+        "útěk od úkolu",
+        "silná obranná reakce",
+        "výkonové stažení"
+      ],
+      "meaning": "chyba je prožívána jako ohrožení identity, ne jako běžná součást učení"
+    }
+  ]
+}

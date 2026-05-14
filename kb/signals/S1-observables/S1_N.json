@@ -1,0 +1,241 @@
+[
+  {
+    "id": "FPG_N1_LAZY_CHILD",
+    "category": "false_positive_guard",
+    "type": "interpretation_guard",
+    "label": "dítě je líné",
+    "teacher_phrases": [
+      "nechce se mu",
+      "je pohodlné",
+      "nechce pracovat",
+      "všechno odkládá",
+      "prostě se mu nechce"
+    ],
+    "patterns": [
+      "nechce se mu",
+      "je pohodlne",
+      "vsechno odklada",
+      "proste se mu nechce",
+      "je line",
+      "je line dite",
+      "je liny",
+      "je linej",
+      "je líné",
+      "line dite",
+      "líné dítě"
+    ],
+    "false_positive_risk": "CRITICAL",
+    "problem": "Lenost není observable. Je to interpretace bez funkční analýzy.",
+    "common_real_causes": [
+      "nízká jistota v úkolu",
+      "strach ze selhání",
+      "oslabené porozumění zadání",
+      "exekutivní přetížení",
+      "výkonová úzkost",
+      "únava",
+      "nízká regulační kapacita",
+      "přetížení požadavkem"
+    ],
+    "not_assume": [
+      "automaticky nechuť k práci"
+    ],
+    "control_questions": [
+      "Ví dítě skutečně co má dělat?",
+      "Začne samo v jednodušší variantě?",
+      "Co se stane těsně před odmítnutím?",
+      "Je problém ve výkonu, nebo v zahájení?"
+    ],
+    "do_not_infer": [
+      "profile",
+      "block",
+      "zone",
+      "diagnosis"
+    ]
+  },
+  {
+    "id": "FPG_N2_NAUGHTY_CHILD",
+    "category": "false_positive_guard",
+    "type": "interpretation_guard",
+    "label": "dítě je zlobivé",
+    "teacher_phrases": [
+      "pořád zlobí",
+      "schválně narušuje",
+      "je problémové",
+      "stále vyrušuje",
+      "pořád něco dělá"
+    ],
+    "patterns": [
+      "porad zlobi",
+      "schvalne narusuje",
+      "je problemove",
+      "stale vyrusuje",
+      "porad neco dela",
+      "je zlobive",
+      "je zlobivy"
+    ],
+    "false_positive_risk": "CRITICAL",
+    "problem": "Zlobení není popis chování. Je to hodnotící souhrn bez dat.",
+    "required_first_step": "Nejdřív musí zaznít: Co přesně dítě dělá?",
+    "common_real_causes": [
+      "potřeba pohybu",
+      "senzorické přetížení",
+      "hledání kontaktu",
+      "slabá regulace impulzu",
+      "nepochopení sociální situace",
+      "úniková reakce",
+      "přetížení čekáním"
+    ],
+    "not_assume": [
+      "automaticky problémové dítě"
+    ],
+    "control_questions": [
+      "Co přesně dítě dělá?",
+      "Kdy se to děje nejčastěji?",
+      "Co se změní, když dostane jiný typ podpory?",
+      "Je problém ve všech situacích stejně?"
+    ],
+    "do_not_infer": [
+      "profile",
+      "block",
+      "zone",
+      "diagnosis"
+    ]
+  },
+  {
+    "id": "FPG_N3_SPOILED_CHILD",
+    "category": "false_positive_guard",
+    "type": "interpretation_guard",
+    "label": "dítě je rozmazlené",
+    "teacher_phrases": [
+      "všechno chce hned",
+      "nevydrží čekat",
+      "je moc fixované na dospělé",
+      "pořád něco potřebuje",
+      "bez učitelky nefunguje"
+    ],
+    "patterns": [
+      "vsechno chce hned",
+      "nevydrzi cekat",
+      "je moc fixovane na dospele",
+      "porad neco potrebuje",
+      "bez ucitelky nefunguje",
+      "je rozmazlene"
+    ],
+    "false_positive_risk": "HIGH",
+    "problem": "Moralizace místo analýzy regulační kapacity.",
+    "common_real_causes": [
+      "separační nejistota",
+      "nízká frustrační tolerance",
+      "vývojová nezralost",
+      "vysoká potřeba jistoty",
+      "oslabená emoční regulace",
+      "vztahová nejistota",
+      "nízká autonomní kapacita"
+    ],
+    "not_assume": [
+      "automaticky špatně nastavená výchova"
+    ],
+    "control_questions": [
+      "Je problém ve všech situacích, nebo jen při změně?",
+      "Pomáhá předvídatelnost?",
+      "Jak dítě reaguje při klidném vedení?",
+      "Jde o potřebu bezpečí, nebo kontrolu situace?"
+    ],
+    "do_not_infer": [
+      "profile",
+      "block",
+      "zone",
+      "family_judgment"
+    ]
+  },
+  {
+    "id": "FPG_N4_DOES_IT_ON_PURPOSE",
+    "category": "false_positive_guard",
+    "type": "intent_guard",
+    "label": "dítě to dělá naschvál",
+    "teacher_phrases": [
+      "provokuje schválně",
+      "dobře ví, co dělá",
+      "dělá to jen aby mě vytočilo",
+      "dělá pravý opak"
+    ],
+    "patterns": [
+      "provokuje schvalne",
+      "dobre vi co dela",
+      "dela to jen aby me vytocilo",
+      "dela pravy opak",
+      "dela naschval",
+      "dela to naschval"
+    ],
+    "false_positive_risk": "CRITICAL",
+    "problem": "Připsání záměru bez důkazu. Záměr je inference, ne observable.",
+    "common_real_causes": [
+      "hledání pozornosti",
+      "obranná reakce",
+      "testování hranic",
+      "dysregulace ve stresu",
+      "slabé čtení sociálních důsledků",
+      "přetížení",
+      "stud nebo vztahová obrana"
+    ],
+    "not_assume": [
+      "automaticky manipulace"
+    ],
+    "control_questions": [
+      "Má dítě skutečně kapacitu situaci reflektovat?",
+      "Děje se to i bez publika?",
+      "Jak reaguje po zklidnění?",
+      "Je to strategie, nebo kolaps regulace?"
+    ],
+    "do_not_infer": [
+      "intent",
+      "profile",
+      "block",
+      "zone"
+    ]
+  },
+  {
+    "id": "FPG_N5_PARENT_TEACHER_OVERREACTION",
+    "category": "false_positive_guard",
+    "type": "perspective_guard",
+    "label": "rodič přehání / učitel přehání",
+    "teacher_phrases": [
+      "doma to tak není",
+      "ve školce to vidí moc dramaticky",
+      "rodiče tomu nerozumí",
+      "učitelka z toho dělá problém"
+    ],
+    "patterns": [
+      "doma to tak neni",
+      "ve skolce to vidi moc dramaticky",
+      "rodice tomu nerozumi",
+      "ucitelka z toho dela problem"
+    ],
+    "false_positive_risk": "HIGH",
+    "problem": "Předčasné znehodnocení druhé perspektivy. Rozdíl mezi prostředími není chyba.",
+    "core_principle": "Rozdíl mezi prostředími bývá často nejcennější diagnostická informace.",
+    "common_real_causes": [
+      "setting difference",
+      "jiná náročnost prostředí",
+      "jiná struktura vztahu",
+      "jiné nároky na regulaci",
+      "odlišné pozorovací okno",
+      "jiná míra bezpečí"
+    ],
+    "not_assume": [
+      "automaticky nepravdivá výpověď druhé strany"
+    ],
+    "control_questions": [
+      "V jakém prostředí se projev objevuje?",
+      "Co je mezi prostředími jiné?",
+      "Nejde právě rozdíl mezi prostředími o klíčovou informaci?",
+      "Kdo dítě vidí při nejvyšší zátěži?"
+    ],
+    "do_not_infer": [
+      "invalid_source",
+      "profile",
+      "block",
+      "zone"
+    ]
+  }
+]

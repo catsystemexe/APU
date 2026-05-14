@@ -1,0 +1,287 @@
+[
+  {
+    "id": "OBS_C1_IMPULSE_VERBAL_ENTRY_001",
+    "category": "impulsive_disruption_social_entry",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "vykřikuje",
+      "mluví bez vyzvání",
+      "skáče do řeči",
+      "hlasitě vstupuje do situace",
+      "odpovídá bez čekání"
+    ],
+    "patterns": [
+      "vykrikuje",
+      "mluvi bez vyzvani",
+      "skace do reci",
+      "hlasitě vstupuje do situace",
+      "hlasite vstupuje do situace",
+      "odpovida bez cekani"
+    ],
+    "observable": "do společné situace vstupuje hlasitě a bez čekání na prostor",
+    "observable_anchor": "Během společné aktivity dítě opakovaně vstupuje verbálně bez vyčkání, přerušuje strukturu situace a obtížně udrží čekání na vlastní prostor.",
+    "context_hotspots": [
+      "ranní kruh",
+      "skupinová diskuse",
+      "společné odpovídání",
+      "čekání na instrukci",
+      "pravidlové hry"
+    ],
+    "candidate_blocks": [
+      "B",
+      "E",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o nevychovanost ani poruchu pozornosti.",
+    "alternative_explanations": [
+      "impulzivní vstup",
+      "potřeba sociálního kontaktu",
+      "úzkost z čekání",
+      "slabá inhibice",
+      "potřeba jistoty",
+      "nízká tolerance odložení"
+    ],
+    "disambiguation_questions": [
+      "Děje se to hlavně při čekání?",
+      "Potřebuje hlavně pozornost dospělého?",
+      "Pomáhá jasná struktura střídání?",
+      "Zvládá čekání lépe individuálně?"
+    ]
+  },
+  {
+    "id": "OBS_C2_INTERRUPTS_OTHERS_001",
+    "category": "impulsive_disruption_social_entry",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "nenechá ostatní domluvit",
+      "přerušuje děti",
+      "vstupuje do hry",
+      "narušuje průběh činnosti",
+      "mluví přes ostatní"
+    ],
+    "patterns": [
+      "nenecha ostatni domluvit",
+      "prerusuje deti",
+      "vstupuje do hry",
+      "narusuje prubeh cinnosti",
+      "mluvi pres ostatni"
+    ],
+    "observable": "nerespektuje komunikační prostor druhých a opakovaně je přerušuje",
+    "observable_anchor": "Dítě opakovaně vstupuje do komunikace nebo hry druhých, aniž respektuje jejich prostor, a narušuje plynulost sociální situace.",
+    "context_hotspots": [
+      "rozhovor vrstevníků",
+      "společná hra",
+      "skupinová práce",
+      "sdílené rozhodování",
+      "společné vyprávění"
+    ],
+    "candidate_blocks": [
+      "B",
+      "C",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o bezohlednost ani schválnost.",
+    "alternative_explanations": [
+      "oslabená inhibice",
+      "sociální impulzivita",
+      "slabší čtení sociálních signálů",
+      "vysoká potřeba kontaktu",
+      "nejistota v navazování vztahu"
+    ],
+    "disambiguation_questions": [
+      "Chápe sociální pravidlo, nebo ho neudrží?",
+      "Děje se to i v klidných situacích?",
+      "Reaguje na jasné připomenutí?",
+      "Je rozdíl mezi dospělými a vrstevníky?"
+    ]
+  },
+  {
+    "id": "OBS_C3_REACTION_SEEKING_001",
+    "category": "impulsive_disruption_social_entry",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "schválně provokuje",
+      "popichuje",
+      "dělá naschvály",
+      "hledá reakci ostatních",
+      "pořád někoho rozjíždí"
+    ],
+    "patterns": [
+      "schvalne provokuje",
+      "popichuje",
+      "dela naschvaly",
+      "hleda reakci ostatnich",
+      "porad nekoho rozjizdi"
+    ],
+    "observable": "aktivně vyvolává reakci druhých rušivým nebo hraničním chováním",
+    "observable_anchor": "Dítě opakovaně vytváří situace, které vyvolávají silnou reakci druhých, často přes rušivý vstup, hranici nebo sociální tlak.",
+    "context_hotspots": [
+      "vrstevnický konflikt",
+      "soutěž",
+      "vztahová nejistota",
+      "hledání pozice ve skupině",
+      "přítomnost publika"
+    ],
+    "candidate_blocks": [
+      "B",
+      "A",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z3"
+    ],
+    "zone_tendency": [
+      "Z2",
+      "Z3"
+    ],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "„Provokace“ je často interpretace, ne observable. Nejdřív je nutné zjistit, co dítě skutečně dělá.",
+    "alternative_explanations": [
+      "hledání kontaktu",
+      "obranná strategie",
+      "potřeba kontroly",
+      "testování vztahové bezpečnosti",
+      "reakce na odmítnutí",
+      "sociální nejistota"
+    ],
+    "disambiguation_questions": [
+      "Hledá kontakt, kontrolu, nebo obranu?",
+      "Děje se to vůči všem, nebo selektivně?",
+      "Co situaci obvykle spouští?",
+      "Je chování silnější před publikem?"
+    ]
+  },
+  {
+    "id": "OBS_C4_TAKES_OTHERS_THINGS_001",
+    "category": "impulsive_disruption_social_entry",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "bere dětem věci",
+      "sahá do cizí práce",
+      "vezme hračku bez domluvy",
+      "bere bez zeptání"
+    ],
+    "patterns": [
+      "bere detem veci",
+      "saha do cizi prace",
+      "vezme hracku bez domluvy",
+      "bere bez zeptani"
+    ],
+    "observable": "bere věci druhým bez domluvy a narušuje hranice vlastnictví",
+    "observable_anchor": "Dítě vstupuje do prostoru druhých, bere jejich předměty bez souhlasu a opakovaně narušuje vlastnické nebo vztahové hranice.",
+    "context_hotspots": [
+      "volná hra",
+      "sdílené hračky",
+      "výtvarná práce",
+      "nová atraktivní pomůcka",
+      "přetížená skupinová situace"
+    ],
+    "candidate_blocks": [
+      "B",
+      "C",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o schválnost ani kradení.",
+    "alternative_explanations": [
+      "impulzivní vstup",
+      "slabší čtení hranic",
+      "vysoká potřeba stimulace",
+      "sociální neporozumění",
+      "hledání kontaktu přes objekt"
+    ],
+    "disambiguation_questions": [
+      "Chápe pravidlo vlastnictví?",
+      "Vrací věc po upozornění?",
+      "Děje se to při vysoké aktivaci nebo stabilně?",
+      "Jde o konkrétní atraktivní věci, nebo obecně?"
+    ]
+  },
+  {
+    "id": "OBS_C5_CANNOT_WAIT_TURN_001",
+    "category": "impulsive_disruption_social_entry",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "předbíhá",
+      "nevydrží čekat",
+      "chce hned",
+      "nerespektuje řadu",
+      "tlačí se dopředu"
+    ],
+    "patterns": [
+      "predbiha",
+      "nevydrzi cekat",
+      "chce hned",
+      "nerespektuje radu",
+      "tlaci se dopredu"
+    ],
+    "observable": "při čekání nebo střídání nerespektuje pořadí a vyžaduje okamžité uspokojení",
+    "observable_anchor": "Při nutnosti čekání nebo střídání dítě obtížně toleruje odklad, nereaguje stabilně na pořadí a snaží se získat okamžitý přístup k aktivitě nebo pozornosti.",
+    "context_hotspots": [
+      "fronta",
+      "čekání na jídlo",
+      "střídání aktivit",
+      "sdílení hraček",
+      "pořadí při odpovídání"
+    ],
+    "candidate_blocks": [
+      "C",
+      "E",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o rozmazlenost ani neúctu k pravidlům.",
+    "alternative_explanations": [
+      "nízká tolerance odložení",
+      "oslabená inhibice",
+      "vysoká aktivace při očekávání",
+      "slabá časová anticipace",
+      "přetížení nečinností"
+    ],
+    "disambiguation_questions": [
+      "Zhoršuje se to při dlouhém čekání?",
+      "Pomáhá jasná vizualizace pořadí?",
+      "Je problém i při oblíbených aktivitách?",
+      "Pomáhá aktivní role během čekání?"
+    ]
+  }
+]

@@ -1,0 +1,238 @@
+{
+  "schema": "APU_TREND_INTENSITY_V1",
+  "category": "S4D_intensity_severity",
+  "description": "Intenzita, závažnost, funkční dopad, rychlost návratu z dysregulace a rozsah přenosu napříč situacemi",
+  "global_rules": [
+    "Vysoká intenzita zvyšuje prioritu zásahu, ale automaticky nepotvrzuje příčinu.",
+    "Bezpečnost má přednost před interpretací.",
+    "Funkční dopad je důležitější než přesný název problému."
+  ],
+  "items": [
+    {
+      "id": "T31_LOW_INTENSITY",
+      "label": "Nízká intenzita",
+      "teacher_phrases": [
+        "je to spíš drobnost",
+        "zvládáme to běžně",
+        "není to velký problém",
+        "jen lehce narušuje fungování"
+      ],
+      "patterns": [
+        "je to spis drobnost",
+        "zvladame to bezne",
+        "neni to velky problem",
+        "jen lehce narusuje fungovani"
+      ],
+      "meaning": "Nízká intenzita projevu bez výrazného dopadu na fungování.",
+      "inference_effect": "nižší priorita zásahu",
+      "confidence_effect": "nezvyšuje potřebu silného závěru",
+      "false_positive_risk": "HIGHER",
+      "validation_flags": [
+        "LOW_INTENSITY"
+      ],
+      "recommendation": "Nepřeinferovat. Sledovat trend, ne izolovaný detail."
+    },
+    {
+      "id": "T32_MODERATE_INTENSITY",
+      "label": "Střední intenzita",
+      "teacher_phrases": [
+        "opakovaně narušuje běžné fungování",
+        "už je potřeba to řešit",
+        "není to kritické, ale zasahuje to provoz"
+      ],
+      "patterns": [
+        "opakovane narusuje bezne fungovani",
+        "uz je potreba to resit",
+        "neni to kriticke ale zasahuje to provoz"
+      ],
+      "meaning": "Střední intenzita s funkčním dopadem na pedagogickou realitu.",
+      "inference_effect": "vhodná pracovní intervence",
+      "confidence_effect": "standardní pracovní relevance",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": [
+        "MODERATE_INTENSITY"
+      ],
+      "recommendation": "Řešit funkčně bez dramatického přeskoku do silné interpretace."
+    },
+    {
+      "id": "T33_HIGH_INTENSITY",
+      "label": "Vysoká intenzita",
+      "teacher_phrases": [
+        "zásadně narušuje fungování",
+        "situace je velmi náročná",
+        "opakovaně destabilizuje skupinu"
+      ],
+      "patterns": [
+        "zasadne narusuje fungovani",
+        "situace je velmi narocna",
+        "opakovane destabilizuje skupinu"
+      ],
+      "meaning": "Vysoká intenzita s významným dopadem na dítě i prostředí.",
+      "inference_effect": "vysoká priorita intervence",
+      "confidence_effect": "vyšší priorita neznamená automaticky vyšší jistotu příčiny",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": [
+        "HIGH_INTENSITY"
+      ],
+      "recommendation": "Rychlé řešení ano, zkratková diagnóza ne."
+    },
+    {
+      "id": "T34_CRISIS_LEVEL",
+      "label": "Krizová úroveň",
+      "teacher_phrases": [
+        "situace je neudržitelná",
+        "bezpečnost je ohrožená",
+        "akutní krizový stav",
+        "musíme řešit hned"
+      ],
+      "patterns": [
+        "situace je neudrzitelna",
+        "bezpecnost je ohrozena",
+        "akutni krizovy stav",
+        "musime resit hned"
+      ],
+      "meaning": "Akutní stav vysoké zátěže vyžadující okamžité bezpečnostní řešení.",
+      "inference_effect": "bezpečnostní priorita nad interpretací",
+      "confidence_effect": "diagnostická inference je sekundární",
+      "false_positive_risk": "LOW_FOR_URGENCY_HIGH_FOR_CAUSE",
+      "validation_flags": [
+        "CRISIS_LEVEL",
+        "SAFETY_CONTEXT"
+      ],
+      "recommendation": "Nejdřív stabilizace a bezpečí, až potom analýza příčiny."
+    },
+    {
+      "id": "T35_FUNCTIONAL_IMPACT_HIGH",
+      "label": "Vysoký funkční dopad",
+      "teacher_phrases": [
+        "kvůli tomu nemůže běžně fungovat",
+        "brání to běžnému zapojení",
+        "výrazně to omezuje denní provoz"
+      ],
+      "patterns": [
+        "kvuli tomu nemuze bezne fungovat",
+        "brani to beznemu zapojeni",
+        "vyrazne to omezuje denni provoz"
+      ],
+      "meaning": "Projev má vysoký funkční dopad bez ohledu na jeho název.",
+      "inference_effect": "zvyšuje prioritu podpory i bez přesné interpretace",
+      "confidence_effect": "vyšší relevance praktického řešení než přesného labelu",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "FUNCTIONAL_IMPACT_HIGH"
+      ],
+      "recommendation": "Řešit dopad, nečekat na perfektní vysvětlení."
+    },
+    {
+      "id": "T36_RAPID_RECOVERY",
+      "label": "Rychlý návrat do regulace",
+      "teacher_phrases": [
+        "rychle se uklidní",
+        "za chvíli je zase v pohodě",
+        "epizoda je silná, ale krátká"
+      ],
+      "patterns": [
+        "rychle se uklidni",
+        "za chvili je zase v pohode",
+        "epizoda je silna ale kratka"
+      ],
+      "meaning": "Intenzivní reakce s rychlým návratem do baseline.",
+      "inference_effect": "nižší pravděpodobnost dlouhodobé destabilizace",
+      "confidence_effect": "snižuje závažnost globální interpretace",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": [
+        "RAPID_RECOVERY"
+      ],
+      "recommendation": "Neposuzovat dítě pouze podle vrcholové epizody."
+    },
+    {
+      "id": "T37_SLOW_RECOVERY",
+      "label": "Pomalý návrat do regulace",
+      "teacher_phrases": [
+        "dlouho se vrací zpět",
+        "po situaci je rozhozené dlouho",
+        "regulace trvá velmi dlouho"
+      ],
+      "patterns": [
+        "dlouho se vraci zpet",
+        "po situaci je rozhodene dlouho",
+        "regulace trva velmi dlouho"
+      ],
+      "meaning": "Oslabená schopnost návratu z dysregulace.",
+      "inference_effect": "vyšší význam regulační podpory",
+      "confidence_effect": "vyšší relevance zátěžového mechanismu",
+      "false_positive_risk": "LOWER",
+      "validation_flags": [
+        "SLOW_RECOVERY"
+      ],
+      "recommendation": "Sledovat nejen spouštěč, ale i délku obnovy."
+    },
+    {
+      "id": "T38_REQUIRES_ADULT_CO_REGULATION",
+      "label": "Vyžaduje ko-regulaci dospělého",
+      "teacher_phrases": [
+        "samo se nevrátí",
+        "bez dospělého to nezvládne",
+        "potřebuje aktivní pomoc ke zklidnění"
+      ],
+      "patterns": [
+        "samo se nevrati",
+        "bez dospeleho to nezvladne",
+        "potrebuje aktivni pomoc ke zklidneni"
+      ],
+      "meaning": "Regulace je závislá na externí ko-regulaci.",
+      "inference_effect": "zvyšuje význam vztahové a regulační podpory",
+      "confidence_effect": "snižuje relevanci výroku mělo by to zvládnout samo",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "CO_REGULATION_REQUIRED"
+      ],
+      "recommendation": "Hodnotit kapacitu regulace, ne morální výkon dítěte."
+    },
+    {
+      "id": "T39_MULTI_CONTEXT_PERSISTENCE",
+      "label": "Napříč více kontexty",
+      "teacher_phrases": [
+        "děje se to všude",
+        "ve všech situacích podobné",
+        "napříč prostředími je vzorec stejný"
+      ],
+      "patterns": [
+        "deje se to vsude",
+        "ve vsech situacich podobne",
+        "napric prostredimi je vzorec stejny"
+      ],
+      "meaning": "Projev není vázán na jednu situaci nebo setting.",
+      "inference_effect": "vyšší pravděpodobnost stabilního vývojového vzorce",
+      "confidence_effect": "vyšší síla inference než u čistě situační vazby",
+      "false_positive_risk": "LOWER",
+      "validation_flags": [
+        "MULTI_CONTEXT_PERSISTENCE"
+      ],
+      "recommendation": "Vyšší relevance dlouhodobé podpory než jednorázové úpravy prostředí."
+    },
+    {
+      "id": "T40_ONLY_SITUATIONAL",
+      "label": "Pouze situačně omezené",
+      "teacher_phrases": [
+        "jen v jedné konkrétní situaci",
+        "jinak funguje dobře",
+        "mimo tento kontext problém není"
+      ],
+      "patterns": [
+        "jen v jedne konkretni situaci",
+        "jinak funguje dobre",
+        "mimo tento kontext problem neni"
+      ],
+      "meaning": "Úzce situačně omezený projev bez generalizace.",
+      "inference_effect": "silné omezení přehnané inference",
+      "confidence_effect": "cap LOW_MEDIUM",
+      "false_positive_risk": "VERY_HIGH_IF_GENERALIZED",
+      "validation_flags": [
+        "ONLY_SITUATIONAL",
+        "SITUATIONAL_LIMITED"
+      ],
+      "recommendation": "Řešit situaci, ne dítě jako celek."
+    }
+  ]
+}

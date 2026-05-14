@@ -1,0 +1,526 @@
+[
+  {
+    "id": "CAND_P1_COMM_001",
+    "profile": "P1",
+    "observable": "nereaguje adekvátně na instrukci",
+    "patterns": [
+      "nereaguje adekvatne na instrukci",
+      "nereaguje na instrukci",
+      "nereaguje na pokyn",
+      "nereaguje na zadani"
+    ],
+    "candidate_blocks": [
+      "D",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z1"
+    ],
+    "risk": "MEDIUM",
+    "notes": "Nutno odlišit neporozumění, pozornost a záměrné ignorování."
+  },
+  {
+    "id": "CAND_P1_COMM_002",
+    "profile": "P1",
+    "observable": "odpovídá mimo kontext",
+    "patterns": [
+      "odpovida mimo kontext",
+      "reaguje mimo kontext",
+      "mluvi mimo tema",
+      "odpoved nesouvisi se zadanim"
+    ],
+    "candidate_blocks": [
+      "D",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z1"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P1_COMM_003",
+    "profile": "P1",
+    "observable": "používá chování místo řeči",
+    "patterns": [
+      "bere misto aby reklo",
+      "tlaci misto aby reklo",
+      "ukazuje misto mluveni",
+      "resí situaci telem misto reci",
+      "v konfliktu bere",
+      "v konfliktu tlaci"
+    ],
+    "candidate_blocks": [
+      "D",
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z3"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P2_ACT_001",
+    "profile": "P2",
+    "observable": "pobíhá, vstává a přerušuje činnost",
+    "patterns": [
+      "pobiha",
+      "vstava",
+      "vstava od stolu",
+      "odbíhá od stolu",
+      "odbiha od stolu",
+      "odchazi od stolu",
+      "odchazi od cinnosti",
+      "odbiha od cinnosti",
+      "prerusuje cinnost"
+    ],
+    "candidate_blocks": [
+      "E",
+      "C",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z1"
+    ],
+    "risk": "LOW",
+    "notes": "Kryje aktuální false negative: odbíhá od stolu."
+  },
+  {
+    "id": "CAND_P2_ACT_002",
+    "profile": "P2",
+    "observable": "skáče do řeči nebo vstupuje ostatním do řeči",
+    "patterns": [
+      "skace do reci",
+      "vstupuje do reci",
+      "vstupuje ostatnim do reci",
+      "prerusuje ostatni",
+      "vykřikuje",
+      "vykrikuje"
+    ],
+    "candidate_blocks": [
+      "E",
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z3"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P2_ACT_003",
+    "profile": "P2",
+    "observable": "roztáčí skupinu",
+    "patterns": [
+      "roztaci skupinu",
+      "strhava ostatni deti",
+      "strhava skupinu",
+      "ostatni deti se pridaji",
+      "ostatni deti to zacnou delat taky"
+    ],
+    "candidate_blocks": [
+      "E",
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z3"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P2_ACT_004",
+    "profile": "P2",
+    "observable": "nedokončuje činnosti",
+    "patterns": [
+      "nedokoncuje cinnosti",
+      "nedokonci cinnost",
+      "nedokonci ukol",
+      "ukol nedokonci",
+      "dokonci jen kdyz u nej nekdo sedi",
+      "dokonci jen s dopomoci",
+      "dokonci jen s podporou dospeleho",
+      "potrebuje aby u nej nekdo sedel"
+    ],
+    "candidate_blocks": [
+      "C",
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "risk": "LOW",
+    "notes": "Kryje aktuální false negative: úkol dokončí jen když u něj někdo sedí."
+  },
+  {
+    "id": "CAND_P2_ACT_005",
+    "profile": "P2",
+    "observable": "sahá na věci kolem sebe",
+    "patterns": [
+      "saha na veci kolem sebe",
+      "saha na vse kolem",
+      "bere veci kolem sebe",
+      "manipuluje s vecmi kolem sebe"
+    ],
+    "candidate_blocks": [
+      "E",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z1"
+    ],
+    "risk": "LOW",
+    "safety_note": "Nesmí automaticky spouštět házení předmětů ani safety flag."
+  },
+  {
+    "id": "CAND_P2_HYPO_001",
+    "profile": "P2",
+    "observable": "pomalé reakce a dlouhé zahájení činnosti",
+    "patterns": [
+      "pomale reakce",
+      "dlouho zacina cinnost",
+      "dlouho se rozjizdi",
+      "nezacne pracovat",
+      "ztraci se v prubehu"
+    ],
+    "candidate_blocks": [
+      "E",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P3_EMO_001",
+    "profile": "P3",
+    "observable": "výbuch při frustraci",
+    "patterns": [
+      "vybuch pri frustraci",
+      "kdyz mu to nejde vybuchne",
+      "rychle se nastve",
+      "rychle se rozcili",
+      "place kdyz mu to nejde",
+      "vzteka se kdyz mu to nejde"
+    ],
+    "candidate_blocks": [
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z4"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P3_EMO_002",
+    "profile": "P3",
+    "observable": "dlouhý návrat do činnosti po emoční reakci",
+    "patterns": [
+      "dlouho se vraci do cinnosti",
+      "dlouho trva nez se uklidni",
+      "dlouhy navrat do klidu",
+      "nejde se vratit k cinnosti"
+    ],
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z4"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P4_SENS_001",
+    "profile": "P4",
+    "observable": "zakrývá si uši nebo reaguje na hluk",
+    "patterns": [
+      "zakryva si usi",
+      "vadi mu hluk",
+      "reaguje na hluk",
+      "hluk ho rozhodí",
+      "hluk ho pretizi"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z2"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P4_SENS_002",
+    "profile": "P4",
+    "observable": "odmítá určité materiály, oblečení nebo jídlo",
+    "patterns": [
+      "odmita urcite materialy",
+      "vadi mu obleceni",
+      "vadi mu material",
+      "odmita obleceni",
+      "odmita jidlo kvuli konzistenci",
+      "vadi mu dotek"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z4"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P4_SENS_003",
+    "profile": "P4",
+    "observable": "vyhledává silné tělesné podněty",
+    "patterns": [
+      "vyhledava narazy",
+      "narazi do veci",
+      "narazi do lidi",
+      "vyhledava skakani",
+      "leze do lidi",
+      "potrebuje silne podnety"
+    ],
+    "candidate_blocks": [
+      "E",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z3"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P5_ADAPT_001",
+    "profile": "P5",
+    "observable": "rozpad při změně činnosti nebo přechodu",
+    "patterns": [
+      "rozpad pri zmene cinnosti",
+      "nezvlada prechod",
+      "problem pri prechodu",
+      "odpor k prechodum",
+      "odmita prejit na dalsi cinnost",
+      "zasekne se pri prechodu",
+      "kolaps pri zmene"
+    ],
+    "candidate_blocks": [
+      "A",
+      "C",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z4"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P5_ADAPT_002",
+    "profile": "P5",
+    "observable": "lpí na rituálu nebo stejnosti",
+    "patterns": [
+      "lpi na ritualu",
+      "musi to byt stejne",
+      "musi to byt takhle",
+      "silna reakce na jinak nez obvykle",
+      "zaseknuti pri nove variante"
+    ],
+    "candidate_blocks": [
+      "C",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z4"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P6_SOC_001",
+    "profile": "P6",
+    "observable": "hraje si vedle dětí, ne s nimi",
+    "patterns": [
+      "hraje si vedle deti",
+      "nehraje si s ostatnimi",
+      "hraje si sam vedle ostatnich",
+      "nezapojuje se do hry"
+    ],
+    "candidate_blocks": [
+      "B",
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P6_SOC_002",
+    "profile": "P6",
+    "observable": "konflikty o hračky nebo bere bez domluvy",
+    "patterns": [
+      "konflikty o hracky",
+      "bere bez domluvy",
+      "bere hracky",
+      "bere veci ostatnim",
+      "neumi se domluvit o hracku"
+    ],
+    "candidate_blocks": [
+      "B",
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z2"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P6_SOC_003",
+    "profile": "P6",
+    "observable": "má vlastní scénář hry a obtížně přijímá scénář druhých",
+    "patterns": [
+      "vlastni scenar hry",
+      "neprijima scenar druhych",
+      "hra musi byt podle nej",
+      "nechce menit hru podle ostatnich"
+    ],
+    "candidate_blocks": [
+      "B",
+      "C",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z1"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P7_MOTOR_001",
+    "profile": "P7",
+    "observable": "neohrabanost, pády nebo narážení do věcí",
+    "patterns": [
+      "neohrabanost",
+      "casto pada",
+      "pada",
+      "narazi do veci",
+      "narazi do lidi",
+      "je neobratne"
+    ],
+    "candidate_blocks": [
+      "E"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P7_MOTOR_002",
+    "profile": "P7",
+    "observable": "potíže s jemnou motorikou",
+    "patterns": [
+      "potize s jemnou motorikou",
+      "problem s tuzkou",
+      "problem s nuzkami",
+      "spatne striha",
+      "spatne drzi tuzku",
+      "vyhyba se kresleni"
+    ],
+    "candidate_blocks": [
+      "E",
+      "C",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P7_MOTOR_003",
+    "profile": "P7",
+    "observable": "rychlá frustrace při motorickém neúspěchu",
+    "patterns": [
+      "rychle se vzda",
+      "vzda se pri neuspechu",
+      "frustrace pri kresleni",
+      "frustrace pri strihani",
+      "vyhyba se cinnosti protoze mu nejde"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "risk": "MEDIUM"
+  },
+  {
+    "id": "CAND_P8_RHYTHM_001",
+    "profile": "P8",
+    "observable": "silná reakce při příchodu nebo separaci",
+    "patterns": [
+      "silna reakce pri prichodu",
+      "place pri prichodu",
+      "drzi se rodice",
+      "nechce se odloucit",
+      "separace pri prichodu"
+    ],
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z2"
+    ],
+    "risk": "LOW"
+  },
+  {
+    "id": "CAND_P8_RHYTHM_002",
+    "profile": "P8",
+    "observable": "únava vede k podráždění nebo stažení",
+    "patterns": [
+      "unava vede k podrazdeni",
+      "unava vede ke stazeni",
+      "po obede horsi",
+      "odpoledne horsi",
+      "kolisani energie behem dne",
+      "horsi dny bez zjevne priciny"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z4"
+    ],
+    "risk": "MEDIUM"
+  }
+]

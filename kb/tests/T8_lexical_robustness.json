@@ -1,0 +1,79 @@
+[
+  {
+    "id": "T8_LEX_SAFE_001",
+    "input": "pri uklidu utece ze tridy a nejde ho zastavit",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z3",
+      "must_include_zones": [
+        "Z3",
+        "Z2"
+      ],
+      "must_have_flags": [
+        "LEAVES_SAFE_AREA",
+        "SAFETY_CONTEXT",
+        "HARD_TO_INTERRUPT"
+      ]
+    }
+  },
+  {
+    "id": "T8_LEX_SAFE_002",
+    "input": "vybehne ze tridy a bezi ke dverim",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z3",
+      "must_include_zones": [
+        "Z3"
+      ],
+      "must_have_flags": [
+        "LEAVES_SAFE_AREA",
+        "SAFETY_CONTEXT"
+      ]
+    }
+  },
+  {
+    "id": "T8_LEX_ACT_001",
+    "input": "pri rannim kruhu lita po tride a vykřikuje odpovědi",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_blocks": [
+        "E",
+        "A"
+      ],
+      "must_include_zones": [
+        "Z2"
+      ],
+      "must_not_include_zones": [
+        "Z3"
+      ]
+    }
+  },
+  {
+    "id": "T8_LEX_ATT_001",
+    "input": "nedrzi pozornost a odbiha od ukolu",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_blocks": [
+        "C"
+      ],
+      "must_include_zones": [
+        "Z2"
+      ]
+    }
+  },
+  {
+    "id": "T8_LEX_BLOCK_001",
+    "input": "pri uklidu se zasekne a nechce prejit na dalsi cinnost",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_blocks": [
+        "A",
+        "E"
+      ],
+      "must_include_zones": [
+        "Z4",
+        "Z3"
+      ]
+    }
+  }
+]

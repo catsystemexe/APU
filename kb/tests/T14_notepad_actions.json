@@ -1,0 +1,10 @@
+[
+  {
+    "id": "T14_ACTION_PROTOCOL_EXISTS_001",
+    "input": "rano place pri prichodu",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "notepad_min_confirmed_observations": 1
+    }
+  }
+]

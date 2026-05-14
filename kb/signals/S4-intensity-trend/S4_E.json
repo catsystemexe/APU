@@ -1,0 +1,96 @@
+{
+  "schema": "APU_TREND_INTENSITY_V1",
+  "category": "S4E_false_positive_guard",
+  "description": "Ochranná vrstva proti přehnanému zobecnění, diagnostickému tunelu a záměně intenzity za jistotu příčiny",
+  "global_rules": [
+    "Trend/intensity vrstva má brzdit přehnaný závěr, ne potvrzovat první hypotézu.",
+    "Silná epizoda není automaticky stabilní identita dítěte.",
+    "Urgentnost situace nezvyšuje automaticky pravdivost interpretace."
+  ],
+  "items": [
+    {
+      "id": "T41_STRONG_EPISODE_NOT_STABLE_PATTERN",
+      "label": "Silná epizoda není stabilní vzorec",
+      "typical_error": "Jednou měl velký meltdown → je agresivní dítě",
+      "risk": "Vrcholová situace je zaměněna za dlouhodobý profil dítěte.",
+      "control_questions": [
+        "Kolikrát se to skutečně stalo?",
+        "Jak často je dítě mimo tuto epizodu stabilní?",
+        "Je to trend, nebo výjimečný vrchol?"
+      ],
+      "rule": "Epizoda není baseline.",
+      "validation_flags": [
+        "FP_GUARD_EPISODE_NOT_BASELINE"
+      ],
+      "recommended_system_action": "Snížit sílu inference při jednorázové nebo výjimečné epizodě."
+    },
+    {
+      "id": "T42_SCHOOL_PROBLEM_NOT_GLOBAL_CHILD_PROBLEM",
+      "label": "Problém ve školce není globální problém dítěte",
+      "typical_error": "Ve třídě nezvládá → takové dítě prostě je",
+      "risk": "Ignorování environmentální vazby a setting difference.",
+      "control_questions": [
+        "Jak funguje doma?",
+        "Jak funguje venku?",
+        "Jak funguje v malé skupině?"
+      ],
+      "rule": "Setting difference je data, ne rozpor.",
+      "validation_flags": [
+        "FP_GUARD_SETTING_DIFFERENCE"
+      ],
+      "recommended_system_action": "Zvýšit význam kontextu a omezit globální závěry o dítěti."
+    },
+    {
+      "id": "T43_INTENSITY_NOT_CAUSE",
+      "label": "Intenzita není příčina",
+      "typical_error": "Situace je velmi silná → už víme proč",
+      "risk": "Naléhavost je zaměněna za jistotu interpretace.",
+      "control_questions": [
+        "Víme opravdu mechanismus?",
+        "Neřešíme rychlost místo přesnosti?",
+        "Co je fakt a co je domněnka?"
+      ],
+      "rule": "Urgentnost nezvyšuje automaticky pravdivost hypotézy.",
+      "validation_flags": [
+        "FP_GUARD_INTENSITY_NOT_CAUSE"
+      ],
+      "recommended_system_action": "Oddělit bezpečnostní prioritu od diagnostické jistoty."
+    },
+    {
+      "id": "T44_REPETITION_NOT_SINGLE_CAUSE",
+      "label": "Opakování není důkaz jediné příčiny",
+      "typical_error": "Opakuje se to → musí to být ADHD / vzdor / trauma",
+      "risk": "Opakování vede k diagnostickému tunelu.",
+      "control_questions": [
+        "Existují alternativní vysvětlení?",
+        "Je stejný projev i v jiném kontextu?",
+        "Co ještě může stejný pattern vytvářet?"
+      ],
+      "rule": "Opakování posiluje význam, ne diagnózu.",
+      "validation_flags": [
+        "FP_GUARD_REPETITION_NOT_DIAGNOSIS"
+      ],
+      "recommended_system_action": "Ponechat více hypotéz a neuzavírat systém do jedné příčiny."
+    },
+    {
+      "id": "T45_IMPROVEMENT_NOT_FINAL_PROOF",
+      "label": "Zlepšení po podpoře není definitivní důkaz příčiny",
+      "typical_error": "Po změně se zlepšilo → máme jistotu proč",
+      "risk": "Jedna funkční intervence je zaměněna za definitivní vysvětlení.",
+      "control_questions": [
+        "Co přesně se změnilo?",
+        "Nemohlo působit více faktorů zároveň?",
+        "Je efekt stabilní a opakovatelný?"
+      ],
+      "rule": "Funkční pomoc není automaticky diagnostický důkaz.",
+      "validation_flags": [
+        "FP_GUARD_SUPPORT_NOT_PROOF"
+      ],
+      "recommended_system_action": "Posílit pracovní hypotézu, ale neuzavírat definitivní závěr."
+    }
+  ],
+  "final_rule": {
+    "statement": "Trend/intensity vrstva má zabránit špatné teorii, ne potvrdit první teorii.",
+    "gold_standard": "Správná odpověď APU není: už víme co dítě má. Správná odpověď je: víme, co je potřeba ověřit a co už by byla nebezpečná zkratka."
+  }
+}

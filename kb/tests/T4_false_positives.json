@@ -1,0 +1,20 @@
+[
+  {
+    "id": "T4_FALSE_POSITIVE_001",
+    "input": "dnes poprve nedava pozor",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_have_flags": ["SINGLE_EPISODE", "WEAK_INFERENCE"],
+      "must_not_include_zones": ["Z3"]
+    }
+  },
+  {
+    "id": "T4_FALSE_POSITIVE_002",
+    "input": "nekdy je mimo",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["MISSING_OBSERVABLE_BEHAVIOR"],
+      "must_not_include_zones": ["Z1", "Z2", "Z3", "Z4"]
+    }
+  }
+]

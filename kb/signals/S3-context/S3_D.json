@@ -1,0 +1,184 @@
+{
+  "schema": "APU_CONTEXT_V1",
+  "category": "S3D_context_social_relationships",
+  "description": "Vrstevníci, sociální kontakt, vztahové situace a skupinová dynamika",
+  "items": [
+    {
+      "id": "CTX_004",
+      "label": "Volná hra",
+      "notepad": "při volné hře",
+      "typical_situations": [
+        "nestrukturovaný prostor",
+        "vlastní volba aktivity",
+        "spontánní sociální kontakt"
+      ],
+      "typical_signals": [
+        "izolace",
+        "konflikty s vrstevníky",
+        "přehnaná dominance",
+        "neschopnost vstoupit do hry",
+        "chaos bez regulace"
+      ],
+      "meaning": "silný zdroj dat o spontánní sociální reciproci a samoregulaci"
+    },
+    {
+      "id": "CTX_014",
+      "label": "Pouze ve skupině / individuálně ne",
+      "notepad": "obtíž se objevuje hlavně ve skupině",
+      "typical_situations": [
+        "ve skupině problém",
+        "individuálně dítě funguje dobře",
+        "jeden na jednoho je regulace výrazně lepší"
+      ],
+      "typical_signals": [
+        "vyrušování jen ve skupině",
+        "kolaps až při skupinové dynamice",
+        "lepší spolupráce individuálně"
+      ],
+      "meaning": "silný signál environmentálního triggeru, ne stabilní charakteristiky"
+    },
+    {
+      "id": "CTX_025",
+      "label": "Při vysoké potřebě pozornosti dospělého",
+      "notepad": "při potřebě okamžité pozornosti dospělého",
+      "typical_situations": [
+        "učitel se věnuje jinému dítěti",
+        "pozornost dospělého je sdílená",
+        "dítě není okamžitě vyslyšeno"
+      ],
+      "typical_signals": [
+        "vykřikování",
+        "přerušování",
+        "provokace",
+        "regresní chování",
+        "silné vyžadování kontaktu"
+      ],
+      "meaning": "nutné odlišit manipulaci od potřeby vztahové regulace a jistoty"
+    },
+    {
+      "id": "CTX_029",
+      "label": "Při sdílení pozornosti ve skupině",
+      "notepad": "při sdílené pozornosti ve skupině",
+      "typical_situations": [
+        "učitel mluví ke všem",
+        "dítě musí čekat na individuální reakci",
+        "společné zadávání úkolu"
+      ],
+      "typical_signals": [
+        "odpojení",
+        "vykřikování",
+        "hledání jiné stimulace",
+        "rychlá ztráta zájmu"
+      ],
+      "meaning": "riziko záměny za nezájem, přesto může jít o obtíž s udržením vztahové pozornosti"
+    },
+    {
+      "id": "CTX_030",
+      "label": "Při sociálním odmítnutí",
+      "notepad": "při sociálním odmítnutí vrstevníky",
+      "typical_situations": [
+        "dítě není přijato do hry",
+        "vrstevníci ho nepustí mezi sebe",
+        "odmítnutí konkrétním dítětem"
+      ],
+      "typical_signals": [
+        "afekt",
+        "agrese",
+        "pláč",
+        "stažení",
+        "silná obranná reakce"
+      ],
+      "meaning": "důležité sledovat citlivost na odmítnutí a sociální interpretaci situace"
+    },
+    {
+      "id": "CTX_036",
+      "label": "Při konfliktu s konkrétním dítětem",
+      "notepad": "ve vztahu ke konkrétnímu vrstevníkovi",
+      "typical_situations": [
+        "opakované střety se stejným dítětem",
+        "soupeření",
+        "silná rivalita",
+        "vztahové napětí ve dvojici"
+      ],
+      "typical_signals": [
+        "opakované konflikty",
+        "provokace",
+        "selektivní agrese",
+        "vyhledávání střetu",
+        "silná emoční reakce"
+      ],
+      "meaning": "nutné číst vztahovou dynamiku, ne pouze jednotlivé incidenty"
+    },
+    {
+      "id": "CTX_044",
+      "label": "Při potřebě respektovat nejasné sociální pravidlo",
+      "notepad": "při nejasných nebo implicitních sociálních pravidlech",
+      "typical_situations": [
+        "to se přece nedělá",
+        "implicitní sociální norma",
+        "neverbální očekávání skupiny"
+      ],
+      "typical_signals": [
+        "nevhodná reakce",
+        "sociální střet",
+        "nepochopení situace",
+        "konflikt bez zjevné příčiny"
+      ],
+      "meaning": "dítě nemusí pravidlo ignorovat, může ho skutečně nečíst"
+    },
+    {
+      "id": "CTX_046",
+      "label": "Při velkém sociálním tlaku",
+      "notepad": "při vysokém sociálním tlaku skupiny",
+      "typical_situations": [
+        "pozornost celé skupiny",
+        "vystupování před ostatními",
+        "veřejné hodnocení",
+        "sociálně exponovaná situace"
+      ],
+      "typical_signals": [
+        "stažení",
+        "odpor",
+        "afekt",
+        "útěk z aktivity",
+        "schovávání se"
+      ],
+      "meaning": "často nejde o neochotu, ale o silnou sociální zátěž"
+    },
+    {
+      "id": "CTX_047",
+      "label": "Při potřebě čekat na sociální odezvu",
+      "notepad": "při čekání na sociální odezvu dospělého",
+      "typical_situations": [
+        "dítě něco sdělí a čeká reakci",
+        "sdílení zážitku",
+        "potřeba potvrzení vztahové vazby"
+      ],
+      "typical_signals": [
+        "zesílení projevu",
+        "vykřikování",
+        "opakování",
+        "provokace",
+        "dramatizace"
+      ],
+      "meaning": "někdy dítě nehledá problém, ale potvrzení vztahového kontaktu"
+    },
+    {
+      "id": "CTX_055",
+      "label": "Spravedlivé vnímání mezi dětmi",
+      "notepad": "udržet spravedlivé vnímání podpory ve skupině",
+      "typical_situations": [
+        "proč on může a já ne",
+        "skupina reaguje závistí",
+        "odlišná podpora jednoho dítěte narušuje klima fairness"
+      ],
+      "typical_signals": [
+        "odpor skupiny",
+        "sociální odmítání",
+        "negativní role dítěte",
+        "pocit privilegia nebo nespravedlnosti"
+      ],
+      "meaning": "je potřeba chránit klima fairness i sociální pozici dítěte"
+    }
+  ]
+}

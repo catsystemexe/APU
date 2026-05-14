@@ -1,0 +1,826 @@
+{
+  "schema_version": "S3_label_map.v1",
+  "normalization": {
+    "lowercase": true,
+    "remove_diacritics": true,
+    "language": "cs",
+    "match_strategy": "hybrid_stems_patterns_excludes"
+  },
+  "purpose": [
+    "detect_interpretive_or_moral_language",
+    "prevent_premature_inference",
+    "separate_observation_from_interpretation",
+    "redirect_user_to_observable_behavior"
+  ],
+  "global_do_not_infer": [
+    "profile",
+    "block",
+    "zone"
+  ],
+  "risk_levels": {
+    "LOW": "mírně interpretační nebo vágní jazyk",
+    "MEDIUM": "výrazný hodnotící nebo kauzální výklad bez dostatku observables",
+    "HIGH": "morální, diagnostizující, záměrový nebo silně stigmatizující label"
+  },
+  "collision_rules": {
+    "prefer_false_negative": true,
+    "pattern_beats_stem": true,
+    "exclude_pattern_beats_all": true,
+    "high_risk_beats_lower_risk": true,
+    "multiple_hits_return_all_categories": true,
+    "never_route_as_observable_behavior": true,
+    "require_followup_observable_question": true
+  },
+  "validation_rules": [
+    {
+      "id": "VAL_001",
+      "rule": "If label hit exists without concrete observable behavior, do not infer profile, block or zone."
+    },
+    {
+      "id": "VAL_002",
+      "rule": "If moral or intent attribution is detected, ask for exact words/actions/context."
+    },
+    {
+      "id": "VAL_003",
+      "rule": "If diagnostic label is detected, explicitly state that APU does not diagnose."
+    },
+    {
+      "id": "VAL_004",
+      "rule": "If absolutizing language is detected, ask about frequency, duration, situation and exceptions."
+    },
+    {
+      "id": "VAL_005",
+      "rule": "If parental or pedagogical defensive framing is detected, neutralize blame and return to shared observable description."
+    }
+  ],
+  "items": [
+    {
+      "id": "LBL_MORAL_001",
+      "category": "moralni_labely",
+      "stems": [
+        "manipul",
+        "vydir"
+      ],
+      "patterns": [
+        "citove vydira",
+        "manipuluje s nami",
+        "manipuluje ucitelkou"
+      ],
+      "exclude_patterns": [
+        "manipulace s predmety",
+        "jemna manipulace"
+      ],
+      "label": "manipulativni interpretace",
+      "label_type": "interpretation_not_observation",
+      "risk": "HIGH",
+      "replacement_question": "Co presne dite udelalo nebo reklo, ze to pusobilo jako manipulace?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_INTENT_001",
+      "category": "prisuzovani_zameru",
+      "stems": [
+        "schval",
+        "naschval"
+      ],
+      "patterns": [
+        "dela to schvalne",
+        "dela naschvaly",
+        "dela nam to naschval"
+      ],
+      "exclude_patterns": [],
+      "label": "prisuzovani zameru bez observables",
+      "label_type": "intent_attribution",
+      "risk": "HIGH",
+      "replacement_question": "Co konkretne se stalo a podle ceho usuzujete, ze to bylo schvalne?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_MORAL_002",
+      "category": "moralni_labely",
+      "stems": [
+        "zlob",
+        "zlobiv"
+      ],
+      "patterns": [
+        "je zlobivy",
+        "porad zlobi",
+        "zase zlobi"
+      ],
+      "exclude_patterns": [],
+      "label": "moralizujici popis chovani",
+      "label_type": "moral_label",
+      "risk": "MEDIUM",
+      "replacement_question": "Jake konkretni chovani oznacujete jako zlobeni?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_MORAL_003",
+      "category": "moralni_labely",
+      "stems": [
+        "rozmazl"
+      ],
+      "patterns": [
+        "je rozmazlene",
+        "rozmazlene dite",
+        "doma ho rozmazluji"
+      ],
+      "exclude_patterns": [],
+      "label": "hodnotici rodinne vysvetleni",
+      "label_type": "moral_family_attribution",
+      "risk": "HIGH",
+      "replacement_question": "Jake konkretni projevy ve skolce pozorujete bez hodnoceni rodiny?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_MORAL_004",
+      "category": "moralni_labely",
+      "stems": [
+        "nevychov"
+      ],
+      "patterns": [
+        "je nevychovany",
+        "nevychovane dite",
+        "rodice ho nevychovali"
+      ],
+      "exclude_patterns": [],
+      "label": "moralni soud o vychove",
+      "label_type": "moral_parenting_judgment",
+      "risk": "HIGH",
+      "replacement_question": "Jake konkretni situace ve tride vedou k teto obave?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_DIAG_001",
+      "category": "diagnostizujici_labely",
+      "stems": [
+        "autist",
+        "autism"
+      ],
+      "patterns": [
+        "je autista",
+        "urcite ma autismus",
+        "chova se autisticky"
+      ],
+      "exclude_patterns": [
+        "ma diagnostikovany autismus",
+        "rodic uvedl diagnozu autismus"
+      ],
+      "label": "neopravnene diagnostizovani",
+      "label_type": "diagnostic_label",
+      "risk": "HIGH",
+      "replacement_question": "Jake konkretni projevy v komunikaci, hre nebo kontaktu pozorujete?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_DIAG_002",
+      "category": "diagnostizujici_labely",
+      "stems": [
+        "adhd",
+        "hyperaktiv"
+      ],
+      "patterns": [
+        "ma adhd",
+        "je hyperaktivni",
+        "urcite adhd"
+      ],
+      "exclude_patterns": [
+        "ma diagnostikovane adhd",
+        "rodic uvedl adhd"
+      ],
+      "label": "diagnostizujici zkratka",
+      "label_type": "diagnostic_label",
+      "risk": "HIGH",
+      "replacement_question": "Jake konkretni projevy pohybu, pozornosti nebo impulzivity vidite a v jakych situacich?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_DIAG_003",
+      "category": "diagnostizujici_labely",
+      "stems": [
+        "poruch",
+        "postiz"
+      ],
+      "patterns": [
+        "ma poruchu",
+        "je poruchovy",
+        "je postizeny"
+      ],
+      "exclude_patterns": [
+        "diagnostikovana porucha",
+        "zdravotni postizeni uvedene rodicem"
+      ],
+      "label": "nepodlozene diagnosticke oznaceni",
+      "label_type": "diagnostic_label",
+      "risk": "HIGH",
+      "replacement_question": "Popiste prosim konkretni pozorovatelne chovani bez diagnostickeho zaveru.",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_ABS_001",
+      "category": "absolutizujici_jazyk",
+      "stems": [
+        "porad",
+        "vzdy",
+        "nikdy"
+      ],
+      "patterns": [
+        "porad to dela",
+        "vzdycky vybuchne",
+        "nikdy neposlechne"
+      ],
+      "exclude_patterns": [],
+      "label": "absolutizace frekvence",
+      "label_type": "frequency_bias",
+      "risk": "LOW",
+      "replacement_question": "Jak často se to děje konkrétně a existují situace, kdy se to neděje?",
+      "do_not_infer": []
+    },
+    {
+      "id": "LBL_ABS_002",
+      "category": "absolutizujici_jazyk",
+      "stems": [
+        "neschop",
+        "nezvlad"
+      ],
+      "patterns": [
+        "neni schopny",
+        "nezvlada nic",
+        "vubec to nezvlada"
+      ],
+      "exclude_patterns": [
+        "dnes nezvladl ukol",
+        "nezvladl konkretni cinnost"
+      ],
+      "label": "globalizujici negativni zaver",
+      "label_type": "global_negative_generalization",
+      "risk": "MEDIUM",
+      "replacement_question": "Kterou konkretni cinnost nezvladlo a za jakych podminek?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_INTENT_002",
+      "category": "prisuzovani_zameru",
+      "stems": [
+        "provok"
+      ],
+      "patterns": [
+        "provokuje",
+        "jen provokuje",
+        "provokuje ostatni"
+      ],
+      "exclude_patterns": [],
+      "label": "interpretace jako provokace",
+      "label_type": "intent_attribution",
+      "risk": "HIGH",
+      "replacement_question": "Co presne dite delalo nebo rikalo a jak na to reagovaly ostatni deti?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_INTENT_003",
+      "category": "prisuzovani_zameru",
+      "stems": [
+        "pozornost",
+        "vynuc"
+      ],
+      "patterns": [
+        "jen si vynucuje pozornost",
+        "chce byt stredem pozornosti",
+        "dela to kvuli pozornosti"
+      ],
+      "exclude_patterns": [],
+      "label": "motivacni vyklad bez dukazu",
+      "label_type": "intent_attribution",
+      "risk": "HIGH",
+      "replacement_question": "Jake chovani se objevi predtim, behem toho a potom, co ziska pozornost?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_CATA_001",
+      "category": "katastrofizace",
+      "stems": [
+        "nezvladnutel",
+        "hrozny",
+        "silene"
+      ],
+      "patterns": [
+        "je nezvladnutelny",
+        "je to hrozne",
+        "je to silene"
+      ],
+      "exclude_patterns": [],
+      "label": "katastrofizujici popis",
+      "label_type": "catastrophizing_language",
+      "risk": "MEDIUM",
+      "replacement_question": "Ktera konkretni situace je ted nejtezsi a co se v ni presne deje?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_CATA_002",
+      "category": "katastrofizace",
+      "stems": [
+        "nebezpec",
+        "ohroz"
+      ],
+      "patterns": [
+        "je nebezpecny",
+        "ohrozuje tridu",
+        "je hrozbou"
+      ],
+      "exclude_patterns": [
+        "bezprostredne ohrozil",
+        "hrozilo zraneni"
+      ],
+      "label": "silny bezpecnostni framing",
+      "label_type": "risk_framing_needs_observables",
+      "risk": "HIGH",
+      "replacement_question": "Doslo ke konkretnimu riziku zraneni? Co presne dite udelalo, komu a s jakym nasledkem?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_BIAS_001",
+      "category": "pedagogicky_bias",
+      "stems": [
+        "neposlouch",
+        "ignor"
+      ],
+      "patterns": [
+        "neposloucha",
+        "ignoruje me",
+        "dela ze neslysi"
+      ],
+      "exclude_patterns": [
+        "neslysi pokyn kvuli hluku",
+        "ma vysetreni sluchu"
+      ],
+      "label": "interpretace nereagovani jako neposlusnosti",
+      "label_type": "pedagogical_bias",
+      "risk": "MEDIUM",
+      "replacement_question": "Na jake konkretni pokyny nereaguje a co v tu chvili dela?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_BIAS_002",
+      "category": "pedagogicky_bias",
+      "stems": [
+        "linej",
+        "leniv"
+      ],
+      "patterns": [
+        "je linej",
+        "je lenivy",
+        "nechce se mu"
+      ],
+      "exclude_patterns": [],
+      "label": "lenost jako interpretace",
+      "label_type": "moral_effort_label",
+      "risk": "HIGH",
+      "replacement_question": "Kterou cinnost odmita nebo nedokoncuje a co se deje predtim?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_BIAS_003",
+      "category": "pedagogicky_bias",
+      "stems": [
+        "problem"
+      ],
+      "patterns": [
+        "je problemovy",
+        "problemove dite",
+        "mame s nim problem"
+      ],
+      "exclude_patterns": [
+        "problem s pomuckou",
+        "problem v organizaci"
+      ],
+      "label": "globalni problemovy label",
+      "label_type": "global_negative_label",
+      "risk": "HIGH",
+      "replacement_question": "V jakych konkretnich situacich vznikaji potize a jak vypadaji?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_PARENT_001",
+      "category": "rodicovska_defenziva",
+      "stems": [
+        "doma",
+        "skolka",
+        "ucitel"
+      ],
+      "patterns": [
+        "doma to nedela",
+        "to se naucil ve skolce",
+        "to je vina ucitelky"
+      ],
+      "exclude_patterns": [],
+      "label": "defenzivni presun priciny",
+      "label_type": "defensive_framing",
+      "risk": "MEDIUM",
+      "replacement_question": "Jak se chovani lisi doma a ve skolce? V jakych situacich se objevuje?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_PARENT_002",
+      "category": "rodicovska_defenziva",
+      "stems": [
+        "prehan",
+        "zased"
+      ],
+      "patterns": [
+        "ucitelka prehani",
+        "zasedli si na nej",
+        "delaji z nej problem"
+      ],
+      "exclude_patterns": [],
+      "label": "obranny framing konfliktu",
+      "label_type": "defensive_framing",
+      "risk": "MEDIUM",
+      "replacement_question": "Jake konkretni udalosti popsala skolka a co z toho je overitelne?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_HIDDEN_001",
+      "category": "skryte_interpretacni_vety",
+      "stems": [
+        "test",
+        "zkous"
+      ],
+      "patterns": [
+        "jen nas zkousi",
+        "testuje hranice",
+        "zkousi co si muze dovolit"
+      ],
+      "exclude_patterns": [
+        "zkousi novou cinnost",
+        "zkousi si hru"
+      ],
+      "label": "skryta interpretace motivu",
+      "label_type": "hidden_interpretation",
+      "risk": "HIGH",
+      "replacement_question": "Co konkretne dela opakovane a jaka hranice je v te situaci nastavena?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_HIDDEN_002",
+      "category": "skryte_interpretacni_vety",
+      "stems": [
+        "respekt"
+      ],
+      "patterns": [
+        "nema respekt",
+        "nerespektuje autoritu",
+        "nerespektuje pravidla"
+      ],
+      "exclude_patterns": [],
+      "label": "autoritarni interpretace chovani",
+      "label_type": "authority_framing",
+      "risk": "MEDIUM",
+      "replacement_question": "Ktere konkretni pravidlo nedodrzelo a jak bylo pravidlo dite vysvetleno?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_VAGUE_001",
+      "category": "neurcite_negativni_popisy",
+      "stems": [
+        "divn",
+        "zvlastn",
+        "jiny"
+      ],
+      "patterns": [
+        "je divny",
+        "je zvlastni",
+        "je jiny nez ostatni"
+      ],
+      "exclude_patterns": [
+        "jiny zpusob hry",
+        "zvlastni zajem o"
+      ],
+      "label": "vagni odlisnostni label",
+      "label_type": "vague_negative_description",
+      "risk": "MEDIUM",
+      "replacement_question": "V cem konkretne se jeho chovani lisi od ostatnich deti?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_VAGUE_002",
+      "category": "neurcite_negativni_popisy",
+      "stems": [
+        "naroc",
+        "tez"
+      ],
+      "patterns": [
+        "je narocny",
+        "tezke dite",
+        "je s nim tezka prace"
+      ],
+      "exclude_patterns": [],
+      "label": "neurcity zatezovy popis",
+      "label_type": "vague_difficulty_label",
+      "risk": "LOW",
+      "replacement_question": "Ktera cast dne nebo ktera situace je nejnarocnejsi a co se v ni deje?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_FALSEPOS_001",
+      "category": "falesne_pozitivni_framing",
+      "stems": [
+        "agres"
+      ],
+      "patterns": [
+        "je agresivni",
+        "agresivne reaguje",
+        "ma agresivni projevy"
+      ],
+      "exclude_patterns": [
+        "agresivni hra s figurkami",
+        "agresivni barva",
+        "agresivni hudba"
+      ],
+      "label": "agrese jako predcasny zaver",
+      "label_type": "risk_label_needs_observables",
+      "risk": "HIGH",
+      "replacement_question": "Co presne dite udelalo telove nebo verbalne, komu, jak silne a s jakym nasledkem?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_FALSEPOS_002",
+      "category": "falesne_pozitivni_framing",
+      "stems": [
+        "domin"
+      ],
+      "patterns": [
+        "je dominantni",
+        "ovlada ostatni",
+        "chce vse ridit"
+      ],
+      "exclude_patterns": [
+        "dominantni ruka",
+        "dominantni barva"
+      ],
+      "label": "dominance jako interpretace socialni role",
+      "label_type": "social_interpretation",
+      "risk": "MEDIUM",
+      "replacement_question": "Jak konkretne vstupuje do hry ostatnich deti a jak ostatni reaguji?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_EMO_001",
+      "category": "moralni_labely",
+      "stems": [
+        "hyster"
+      ],
+      "patterns": [
+        "je hystericky",
+        "ma hysterak",
+        "hysterci"
+      ],
+      "exclude_patterns": [],
+      "label": "stigmatizujici popis emoce",
+      "label_type": "emotion_moralizing",
+      "risk": "HIGH",
+      "replacement_question": "Jak presne vypada emocionalni reakce: plac, krik, odchod, pohyb, slova?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_EMO_002",
+      "category": "moralni_labely",
+      "stems": [
+        "vztek",
+        "vztekl"
+      ],
+      "patterns": [
+        "je vztekly",
+        "vzteka se",
+        "ma zachvat vzteku"
+      ],
+      "exclude_patterns": [],
+      "label": "emoce jako globalni label",
+      "label_type": "emotion_label_needs_observables",
+      "risk": "MEDIUM",
+      "replacement_question": "Co predchazelo reakci a jak dlouho trvala?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_SOC_001",
+      "category": "neurcite_negativni_popisy",
+      "stems": [
+        "asocial",
+        "nesocial"
+      ],
+      "patterns": [
+        "je asocialni",
+        "neni socialni",
+        "neumi mezi deti"
+      ],
+      "exclude_patterns": [],
+      "label": "socialni deficit jako predcasny zaver",
+      "label_type": "social_deficit_label",
+      "risk": "HIGH",
+      "replacement_question": "Jak konkretne se zapojuje nebo nezapojuje do kontaktu s detmi?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_SOC_002",
+      "category": "skryte_interpretacni_vety",
+      "stems": [
+        "zalob",
+        "bonz"
+      ],
+      "patterns": [
+        "porad zaluje",
+        "bonzuje",
+        "beha zalovat"
+      ],
+      "exclude_patterns": [],
+      "label": "negativni interpretace hledani pomoci",
+      "label_type": "help_seeking_moralized",
+      "risk": "MEDIUM",
+      "replacement_question": "Co presne dite prichazi sdelit dospelemu a v jakych situacich?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_ATT_001",
+      "category": "pedagogicky_bias",
+      "stems": [
+        "nesoustred",
+        "nepozor"
+      ],
+      "patterns": [
+        "nesoustredi se",
+        "nedava pozor",
+        "je mimo"
+      ],
+      "exclude_patterns": [],
+      "label": "pozornostni zaver bez kontextu",
+      "label_type": "attention_interpretation",
+      "risk": "MEDIUM",
+      "replacement_question": "Pri jake cinnosti se to deje, jak dlouho vydrzi a co dela misto toho?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_CTRL_001",
+      "category": "prisuzovani_zameru",
+      "stems": [
+        "vzdor",
+        "odmit"
+      ],
+      "patterns": [
+        "vzdoruje",
+        "odmita spolupracovat",
+        "dela odpor"
+      ],
+      "exclude_patterns": [
+        "odmita konkretni jidlo",
+        "odmita kvuli bolesti"
+      ],
+      "label": "vzdor jako interpretace",
+      "label_type": "oppositional_interpretation",
+      "risk": "HIGH",
+      "replacement_question": "Co presne odmita udelat, kdy a jaka alternativa byla nabidnuta?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    },
+    {
+      "id": "LBL_DEV_001",
+      "category": "falesne_pozitivni_framing",
+      "stems": [
+        "mimino",
+        "infantil"
+      ],
+      "patterns": [
+        "chova se jako mimino",
+        "je infantilni",
+        "je detinsky"
+      ],
+      "exclude_patterns": [],
+      "label": "vyvojove zahanbujici label",
+      "label_type": "developmental_shaming",
+      "risk": "HIGH",
+      "replacement_question": "Ktere konkretni chovani pusobi mladsi vzhledem k veku ditete?",
+      "do_not_infer": [
+        "profile",
+        "block",
+        "zone"
+      ]
+    }
+  ]
+}

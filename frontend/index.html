@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>APU – Chat + Notepad</title>
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <div class="title">
+          <div class="name">APU</div>
+          <div class="sub">MŠ · Chat + Notepad</div>
+        </div>
+      </div>
+      <div class="actions">
+        <label class="togglePill" title="Zapnout LLM semantic extraction">
+          <input id="llmExtractionToggle" type="checkbox" />
+          <span>LLM extraction</span>
+        </label>
+        <button id="btnCopySession" class="btn ghost" title="Zkopírovat celou session">copy session</button>
+        <button id="btnPersonal" class="btn ghost" title="personal">personal</button>
+        <button id="btnClear" class="btn ghost" title="Vymazat chat">clear</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="chatPanel">
+        <main class="chat" id="chat"></main>
+
+        <footer class="composer">
+          <div class="composerInner">
+            <textarea id="input" rows="1" placeholder="Napište zprávu… (Enter = odeslat, Shift+Enter = nový řádek)"></textarea>
+            <button id="send" class="btn primary">Odeslat</button>
+          </div>
+          <div class="hint">
+            Backend: <code>/api/chat</code>
+            <span class="sep"> · </span>
+            <span id="sessionStats">Session: —</span>
+          </div>
+        </footer>
+      </section>
+
+      <aside class="notepadPanel">
+        <div class="notepadHeader">
+          <div>
+            <div class="notepadTitle">APU Notepad</div>
+            <div class="notepadSub" id="caseIdLabel">case: —</div>
+          </div>
+          <button id="btnCopyNotepad" class="btn ghost miniBtn" title="Zkopírovat notepad">copy</button>
+        </div>
+
+        <div id="notepad" class="notepad">
+          <div class="emptyNote">
+            Zatím žádný pracovní zápis.  
+            Po první zprávě se zde zobrazí shrnutí případu, pozorování, otázky a další kroky.
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="/static/app-dev.js"></script>
+</body>
+</html>

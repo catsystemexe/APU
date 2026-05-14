@@ -1,0 +1,47 @@
+{
+  "schema": "S4_trend_patch.v1",
+  "category": "S4Z_patch_test_coverage",
+  "description": "Patch trend/intensity patternů pro notepad testy.",
+  "global_rules": [
+    "S4 nesmí samo vytvářet observable.",
+    "S4 pouze doplňuje trend, frekvenci, intenzitu nebo časový rámec."
+  ],
+  "items": [
+    {
+      "id": "T_PATCH_SINGLE_EPISODE_001",
+      "label": "Poprvé",
+      "teacher_phrases": ["dnes se to stalo poprvé", "stalo poprvé", "stalo se to poprvé", "poprvé"],
+      "patterns": ["dnes se to stalo poprve", "dnes se to stalo poprvé", "stalo poprve", "stalo poprvé", "stalo se to poprve", "stalo se to poprvé", "poprve", "poprvé"],
+      "meaning": "Jde o první nebo jednorázově popsaný výskyt.",
+      "inference_effect": "weaken_generalization",
+      "confidence_effect": "decrease_without_repetition",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": ["SINGLE_EPISODE", "WEAK_INFERENCE"],
+      "recommendation": "Nepřevádět jednorázovou epizodu na stabilní vzorec."
+    },
+    {
+      "id": "T_PATCH_ESCALATION_001",
+      "label": "Zhoršující se trend",
+      "teacher_phrases": ["zhoršuje se", "trvá déle", "teď se to zhoršuje"],
+      "patterns": ["zhorsuje se", "zhoršuje se", "ted se to zhorsuje", "teď se to zhoršuje", "trva dele", "trvá déle"],
+      "meaning": "Projev se zhoršuje nebo trvá déle než dříve.",
+      "inference_effect": "increase_need_for_monitoring",
+      "confidence_effect": "increase_if_observable_present",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["ESCALATION", "REPEATED_PATTERN"],
+      "recommendation": "Ověřit frekvenci, délku a kontext zhoršení."
+    },
+    {
+      "id": "T_PATCH_OCCASIONAL_001",
+      "label": "Občasný výskyt",
+      "teacher_phrases": ["občas", "dřív to bylo občas"],
+      "patterns": ["obcas", "občas", "driv to bylo obcas", "dřív to bylo občas"],
+      "meaning": "Projev je popisován jako občasný nebo nepravidelný.",
+      "inference_effect": "weaken_generalization",
+      "confidence_effect": "decrease_without_repetition",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": ["OCCASIONAL_PATTERN", "WEAK_INFERENCE"],
+      "recommendation": "Rozlišit izolované epizody od stabilního trendu."
+    }
+  ]
+}

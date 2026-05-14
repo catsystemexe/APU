@@ -1,0 +1,210 @@
+{
+  "schema": "APU_CONTEXT_V1",
+  "category": "S3C_context_performance_instruction",
+  "description": "Výkon, instrukce, dokončování úkolů a práce s požadavkem",
+  "items": [
+    {
+      "id": "CTX_003",
+      "label": "Skupinová klidová činnost",
+      "notepad": "při společné klidové činnosti ve skupině",
+      "typical_situations": [
+        "společná práce v kruhu",
+        "řízená činnost u stolu",
+        "výtvarná práce",
+        "poslech",
+        "delší soustředění bez pohybu"
+      ],
+      "typical_signals": [
+        "odchod od činnosti",
+        "vyrušování",
+        "ztráta pozornosti",
+        "motorický neklid",
+        "odpor k zapojení"
+      ],
+      "meaning": "kombinace výkonu, inhibice a nároku na soustředění"
+    },
+    {
+      "id": "CTX_019",
+      "label": "Při požadavku na výkon",
+      "notepad": "při požadavku na výkon",
+      "typical_situations": [
+        "úkol s hodnocením",
+        "dokončení práce",
+        "kreslení podle zadání",
+        "vystoupení před skupinou",
+        "očekávání výkonu"
+      ],
+      "typical_signals": [
+        "odpor",
+        "únik",
+        "znehodnocení úkolu",
+        "zlobení místo výkonu",
+        "kolaps při neúspěchu"
+      ],
+      "meaning": "často nejde o lenost, ale o výkonovou zátěž"
+    },
+    {
+      "id": "CTX_026",
+      "label": "Při samostatné práci",
+      "notepad": "při samostatné práci bez přímé podpory",
+      "typical_situations": [
+        "individuální úkol",
+        "práce bez přímého vedení",
+        "dokončení práce samostatně",
+        "rozhodování bez opory dospělého"
+      ],
+      "typical_signals": [
+        "zastavení",
+        "pasivita",
+        "vyhledávání dospělého",
+        "odmítání úkolu",
+        "odchod od činnosti",
+        "nevím"
+      ],
+      "meaning": "často nejde o neochotu, ale o nejistotu nebo slabou iniciační kapacitu"
+    },
+    {
+      "id": "CTX_027",
+      "label": "Při nutnosti dokončit úkol",
+      "notepad": "při požadavku dokončit úkol",
+      "typical_situations": [
+        "dokončení rozdělané práce",
+        "přechod od zajímavé části k méně atraktivní",
+        "požadavek ještě to dokonči"
+      ],
+      "typical_signals": [
+        "odpor",
+        "odchod",
+        "sabotáž",
+        "ztráta motivace",
+        "afekt při tlaku na dokončení"
+      ],
+      "meaning": "nutné odlišit kapacitu dokončení od odporu k autoritě"
+    },
+    {
+      "id": "CTX_028",
+      "label": "Při verbálním požadavku",
+      "notepad": "při slovní instrukci bez další opory",
+      "typical_situations": [
+        "dítě dostane pouze slovní instrukci",
+        "delší vysvětlování bez vizuální opory",
+        "více kroků najednou"
+      ],
+      "typical_signals": [
+        "nereaguje",
+        "dělá něco jiného",
+        "působí jako že neposlouchá",
+        "frustrace",
+        "chybné splnění"
+      ],
+      "meaning": "často souvisí s porozuměním instrukci, ne s neposlušností"
+    },
+    {
+      "id": "CTX_034",
+      "label": "Při příliš dlouhé verbální interakci",
+      "notepad": "při dlouhé verbální zátěži",
+      "typical_situations": [
+        "dlouhé vysvětlování",
+        "dlouhé domlouvání",
+        "opakované slovní napomínání"
+      ],
+      "typical_signals": [
+        "odpojení",
+        "zhoršení chování",
+        "eskalace",
+        "ignorování",
+        "další vyrušování"
+      ],
+      "meaning": "někdy méně slov funguje lépe než více slov"
+    },
+    {
+      "id": "CTX_039",
+      "label": "Při opakovaném neúspěchu",
+      "notepad": "při opakovaném zažívání neúspěchu",
+      "typical_situations": [
+        "opakované selhávání v určité oblasti",
+        "dlouhodobé nezažívání úspěchu",
+        "srovnávání s ostatními"
+      ],
+      "typical_signals": [
+        "rezignace",
+        "obranné znehodnocení",
+        "odmítání činnosti",
+        "stejně to neumím",
+        "zlobení místo pokusu"
+      ],
+      "meaning": "často jde o ochranu sebeobrazu, ne o nezájem"
+    },
+    {
+      "id": "CTX_041",
+      "label": "Při nadměrné potřebě perfekce",
+      "notepad": "při vysoké potřebě dokonalosti",
+      "typical_situations": [
+        "úkol musí být správně",
+        "dítě těžko snáší chybu",
+        "silná kontrola vlastního výkonu"
+      ],
+      "typical_signals": [
+        "zablokování při nejistotě",
+        "odmítnutí začít",
+        "afekt při chybě",
+        "mazání a opakování",
+        "kolaps při neúspěchu"
+      ],
+      "meaning": "často nejde o pečlivost, ale o úzkost z nedokonalosti"
+    },
+    {
+      "id": "CTX_043",
+      "label": "Při potřebě dlouhodobého soustředění",
+      "notepad": "při delší potřebě soustředění",
+      "typical_situations": [
+        "delší práce u stolu",
+        "vícekrokový úkol",
+        "aktivita bez rychlé odměny"
+      ],
+      "typical_signals": [
+        "odchod od činnosti",
+        "vyrušování",
+        "hledání jiné stimulace",
+        "ztráta motivace",
+        "impulzivní odbočení"
+      ],
+      "meaning": "často souvisí s regulací pozornosti, ne s leností"
+    },
+    {
+      "id": "CTX_045",
+      "label": "Při vysoké potřebě jistoty",
+      "notepad": "při zvýšené potřebě jistoty a ujištění",
+      "typical_situations": [
+        "opakované dotazy na známou věc",
+        "kontrola správnosti",
+        "ověřování předvídatelnosti",
+        "potřeba opakovaného potvrzení"
+      ],
+      "typical_signals": [
+        "opakované ověřování",
+        "úzkost při nejistotě",
+        "rigidita",
+        "zvýšená závislost na dospělém"
+      ],
+      "meaning": "často jde o regulační strategii proti nejistotě"
+    },
+    {
+      "id": "CTX_053",
+      "label": "Přijetí chyby bez ohrožení sebehodnoty",
+      "notepad": "podpořit bezpečné přijetí chyby",
+      "typical_situations": [
+        "dítě reaguje silně na chybu",
+        "oprava je prožívána jako osobní selhání",
+        "chyba vede k afektu nebo stažení"
+      ],
+      "typical_signals": [
+        "pláč po chybě",
+        "odmítnutí dalšího pokusu",
+        "útěk od úkolu",
+        "výkonový kolaps"
+      ],
+      "meaning": "je nutné oddělit chybu od identity dítěte"
+    }
+  ]
+}

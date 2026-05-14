@@ -1,0 +1,190 @@
+[
+  {
+    "id": "CORE_1_STABILIZE_SITUATION",
+    "label": "Stabilizovat aktuální situaci",
+    "description": "Uživatel potřebuje rychle snížit eskalaci, obnovit bezpečí nebo udržet průběh činnosti.",
+    "priority_level": "HIGH",
+    "primary_goal": "okamžitá stabilizace situace",
+    "response_mode_bias": "FAST_INTERVENTION",
+    "includes_subneeds": [
+      "NEED_001_CURRENT_DEESCALATION",
+      "NEED_003_KEEP_GROUP_ROUTINE",
+      "NEED_010_CHECK_SAFETY_RISK",
+      "NEED_015_STOP_REPEATED_ESCALATION",
+      "NEED_024_BOUNDARIES_WITHOUT_POWER_STRUGGLE",
+      "NEED_025_SUPPORT_EMOTIONAL_REGULATION",
+      "NEED_048_SAFE_CONFLICT_CLOSURE",
+      "NEED_061_GAIN_TIME",
+      "NEED_062_REDUCE_GROUP_PRESSURE",
+      "NEED_063_PROTECT_OTHER_CHILDREN",
+      "NEED_065_STOP_TEACHER_IMPULSE"
+    ],
+    "routing_override_rules": [
+      "If safety observable is present, prioritize safety stabilization over explanation.",
+      "If user asks 'co teď' or describes active escalation, prefer fast intervention.",
+      "Do not start with long causal analysis when immediate safety or group stability is at stake."
+    ],
+    "notepad_label": "aktuálně stabilizovat situaci"
+  },
+  {
+    "id": "CORE_2_UNDERSTAND_CAUSE",
+    "label": "Porozumět příčině a ověřit interpretaci",
+    "description": "Uživatel potřebuje rozlišit, co se za projevem pravděpodobně děje, a zabránit předčasnému závěru.",
+    "priority_level": "MEDIUM",
+    "primary_goal": "vytvořit bezpečnou pracovní hypotézu",
+    "response_mode_bias": "HYPOTHESIS_VALIDATION",
+    "includes_subneeds": [
+      "NEED_002_UNDERSTAND_CAUSE",
+      "NEED_008_DEVELOPMENTAL_VARIANT_OR_LOAD",
+      "NEED_016_SITUATIONAL_OR_STABLE_PATTERN",
+      "NEED_022_GET_PRECISE_OBSERVATION",
+      "NEED_031_SEPARATE_BEHAVIOR_FROM_INTENT",
+      "NEED_034_CHECK_ADULT_EXPECTATIONS",
+      "NEED_039_STOP_PREMATURE_LABELING",
+      "NEED_042_CHILD_OR_SYSTEM_PROBLEM",
+      "NEED_044_FIND_REAL_TRIGGER",
+      "NEED_057_DEVELOPMENTAL_IMMATURITY_OR_INTENT",
+      "NEED_060_PEDAGOGICAL_VIEW_NOT_MORAL_JUDGMENT",
+      "NEED_064_CLARIFY_REAL_PROBLEM"
+    ],
+    "routing_override_rules": [
+      "If user input contains labels without observables, route here before inference.",
+      "If multiple explanations are plausible, keep hypothesis language.",
+      "If context is missing, ask targeted disambiguation questions."
+    ],
+    "notepad_label": "porozumět možné příčině projevu"
+  },
+  {
+    "id": "CORE_3_SUPPORT_CHILD_PARTICIPATION",
+    "label": "Podpořit zapojení, výkon a samostatnost dítěte",
+    "description": "Uživatel potřebuje dítěti zpřístupnit činnost, snížit bariéru vstupu a budovat malé funkční kroky.",
+    "priority_level": "MEDIUM",
+    "primary_goal": "zvýšit dostupnost zapojení bez přetížení",
+    "response_mode_bias": "SUPPORT_PLAN",
+    "includes_subneeds": [
+      "NEED_004_SUPPORT_PARTICIPATION",
+      "NEED_014_SUPPORT_INDEPENDENCE",
+      "NEED_045_SMALL_REALISTIC_STEPS",
+      "NEED_046_WORK_WITH_ACTIVITY_REFUSAL",
+      "NEED_053_SAFE_ACCEPTANCE_OF_ERROR",
+      "NEED_058_EXTERNAL_TO_INTERNAL_REGULATION"
+    ],
+    "routing_override_rules": [
+      "Use when the child is not primarily dangerous but cannot enter, sustain, or complete activity.",
+      "Prefer small actionable adaptations over broad interpretation.",
+      "Avoid moral explanations such as laziness or lack of effort."
+    ],
+    "notepad_label": "podpořit zapojení a samostatnost dítěte"
+  },
+  {
+    "id": "CORE_4_REDUCE_OVERLOAD_REGULATION",
+    "label": "Snížit přetížení a podpořit regulaci",
+    "description": "Uživatel potřebuje upravit tlak, tempo, senzorickou zátěž nebo tělesnou regulaci dítěte.",
+    "priority_level": "HIGH",
+    "primary_goal": "snížit zátěž a obnovit regulační kapacitu",
+    "response_mode_bias": "REGULATION_SUPPORT",
+    "includes_subneeds": [
+      "NEED_005_REDUCE_OVERLOAD",
+      "NEED_019_ADJUST_REST_AND_TEMPO",
+      "NEED_027_CONSIDER_LIFE_STRESS",
+      "NEED_029_ADJUST_ADULT_GUIDANCE_PRESSURE",
+      "NEED_035_INCREASE_PREDICTABILITY_SAFETY",
+      "NEED_036_RESPECT_BODY_SENSORY_NEEDS",
+      "NEED_047_MOVEMENT_NEED_NOT_DISOBEDIENCE",
+      "NEED_052_FATIGUE_NOT_RESISTANCE",
+      "NEED_056_SUPPORT_NEED_FOR_CONTROL"
+    ],
+    "routing_override_rules": [
+      "If sensory, fatigue, hunger, transition overload, or body activation signals are present, route here.",
+      "Prefer environmental adjustment before behavior correction.",
+      "Do not interpret overload as character failure."
+    ],
+    "notepad_label": "snížit přetížení a podpořit regulaci dítěte"
+  },
+  {
+    "id": "CORE_5_SUPPORT_TRANSITION_ADAPTATION",
+    "label": "Podpořit přechod, změnu a adaptaci",
+    "description": "Uživatel řeší obtíže vznikající při změně režimu, přechodu, novém prostředí nebo návratu po absenci.",
+    "priority_level": "MEDIUM",
+    "primary_goal": "zvýšit předvídatelnost a snížit tření při změně",
+    "response_mode_bias": "TRANSITION_ADAPTATION_PLAN",
+    "includes_subneeds": [
+      "NEED_006_SUPPORT_TRANSITION",
+      "NEED_018_SUPPORT_NEW_ENVIRONMENT_ADAPTATION",
+      "NEED_051_SUPPORT_RETURN_AFTER_ABSENCE"
+    ],
+    "routing_override_rules": [
+      "If the difficulty appears at beginnings, endings, transitions, return, or novelty, route here.",
+      "Focus on bridges, preparation, rhythm, and predictable sequence.",
+      "Do not treat transition dysregulation as simple refusal."
+    ],
+    "notepad_label": "podpořit zvládnutí přechodu nebo adaptace"
+  },
+  {
+    "id": "CORE_6_SOCIAL_RELATIONSHIPS",
+    "label": "Podpořit vztahy, začlenění a sociální bezpečí",
+    "description": "Uživatel řeší vztahovou pozici dítěte, konflikty mezi dětmi, odmítání, skupinovou dynamiku nebo sociální komunikaci.",
+    "priority_level": "MEDIUM",
+    "primary_goal": "zlepšit sociální zapojení a bezpečí ve skupině",
+    "response_mode_bias": "SOCIAL_SUPPORT_PLAN",
+    "includes_subneeds": [
+      "NEED_012_SUPPORT_SOCIAL_INCLUSION",
+      "NEED_026_PROTECT_FROM_NEGATIVE_ROLE_FIXATION",
+      "NEED_033_PREVENT_GROUP_TENSION_SPREAD",
+      "NEED_037_SEPARATE_CONFLICT_FROM_RELATIONSHIP",
+      "NEED_038_SAFE_EXPRESSION_OF_NEED",
+      "NEED_055_FAIRNESS_IN_GROUP_SUPPORT"
+    ],
+    "routing_override_rules": [
+      "Use when the main load is peer relation, group position, rejection, role fixation, or social conflict.",
+      "Consider group ecology, not only individual behavior.",
+      "Avoid framing child as the sole source of the problem."
+    ],
+    "notepad_label": "podpořit sociální začlenění a vztahovou bezpečnost"
+  },
+  {
+    "id": "CORE_7_ADULT_PARENT_TEAM_COMMUNICATION",
+    "label": "Stabilizovat komunikaci dospělých a profesní jistotu",
+    "description": "Uživatel potřebuje zvládnout komunikaci s rodiči, sjednotit tým dospělých nebo podpořit vlastní pedagogické rozhodování.",
+    "priority_level": "MEDIUM",
+    "primary_goal": "udržet profesionální rámec spolupráce dospělých",
+    "response_mode_bias": "ADULT_COMMUNICATION_MODE",
+    "includes_subneeds": [
+      "NEED_007_PARENT_COMMUNICATION",
+      "NEED_017_ADULT_TEAM_ALIGNMENT",
+      "NEED_020_SUPPORT_TEACHER_IN_DIFFICULT_SITUATION",
+      "NEED_021_CHECK_NEED_FOR_EXTERNAL_CONSULTATION",
+      "NEED_041_RESTORE_PARENT_TRUST",
+      "NEED_050_MAINTAIN_TEACHER_PROFESSIONAL_CONFIDENCE"
+    ],
+    "routing_override_rules": [
+      "If the user asks how to talk to parents, team, assistant, or leadership, route here.",
+      "Separate facts, interpretations, and agreements.",
+      "Do not diagnose in parent communication mode."
+    ],
+    "notepad_label": "stabilizovat komunikaci dospělých"
+  },
+  {
+    "id": "CORE_8_BOUNDARIES_SYSTEM_SUSTAINABILITY",
+    "label": "Ujasnit hranice, systém a dlouhodobě udržitelný postup",
+    "description": "Uživatel potřebuje nastavit pravidla, snížit mocenský boj, ověřit funkčnost podpory nebo upravit systémové podmínky.",
+    "priority_level": "MEDIUM",
+    "primary_goal": "vytvořit stabilní, předvídatelný a udržitelný pedagogický rámec",
+    "response_mode_bias": "SYSTEM_STRATEGY_MODE",
+    "includes_subneeds": [
+      "NEED_011_CLARIFY_BOUNDARIES_RULES",
+      "NEED_023_CHECK_CURRENT_SUPPORT_FUNCTIONALITY",
+      "NEED_030_MAINTAIN_DIGNITY",
+      "NEED_040_LONG_TERM_SUSTAINABILITY",
+      "NEED_043_SUPPORT_APPROPRIATE_AUTONOMY",
+      "NEED_054_PREVENT_SECONDARY_REINFORCEMENT",
+      "NEED_059_STOP_MICROCONFLICT_CHAINING"
+    ],
+    "routing_override_rules": [
+      "Use when repeated problems suggest unclear rules, inconsistent adult response, or unsustainable support.",
+      "Prefer system adjustment over repeated correction of the child.",
+      "Check whether the current intervention is accidentally maintaining the problem."
+    ],
+    "notepad_label": "ujasnit hranice a dlouhodobě udržitelný postup"
+  }
+]

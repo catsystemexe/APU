@@ -1,0 +1,241 @@
+[
+  {
+    "id": "OBS_I1_PEER_CONTACT_LOW_INITIATION_001",
+    "category": "peer_relationships_social_position",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "je pořád samo",
+      "nevyhledává děti",
+      "drží se bokem",
+      "nezapojuje se mezi ostatní",
+      "zůstává stranou"
+    ],
+    "patterns": [
+      "je porad samo",
+      "nevyhledava deti",
+      "drzi se bokem",
+      "nezapojuje se mezi ostatni",
+      "zustava stranou"
+    ],
+    "observable": "spontánně nevyhledává vrstevníky a opakovaně zůstává mimo dětskou skupinu",
+    "observable_anchor": "Dítě spontánně nevstupuje do vrstevnického kontaktu, opakovaně zůstává mimo skupinu a bez aktivní podpory se samo do vztahového prostoru nepřipojuje.",
+    "context_hotspots": [
+      "volná hra",
+      "ranní příchod",
+      "pobyt venku",
+      "spontánní skupinová hra",
+      "nová sociální situace"
+    ],
+    "candidate_blocks": ["B", "A", "D"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "LOW",
+    "risk": "MEDIUM",
+    "false_positive_risk": "HIGH",
+    "not_diagnostic_warning": "Samota není automaticky problém — důležitá je funkčnost, ne extroverze.",
+    "alternative_explanations": [
+      "introvertní styl",
+      "sociální nejistota",
+      "adaptační fáze",
+      "přetížení skupinou",
+      "zkušenost s odmítáním",
+      "preference individuální hry"
+    ],
+    "disambiguation_questions": [
+      "Je dítě spokojené samo, nebo působí osaměle?",
+      "Umí kontakt navázat, když chce?",
+      "Je rozdíl mezi volnou hrou a řízenou situací?",
+      "Má alespoň jedno stabilní spojení?"
+    ]
+  },
+  {
+    "id": "OBS_I2_PEER_REJECTION_EXCLUSION_001",
+    "category": "peer_relationships_social_position",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "děti ho nechtějí",
+      "nikdo si s ním nechce hrát",
+      "bývá vyřazované",
+      "ostatní ho odstrkují",
+      "zůstává mimo kolektiv"
+    ],
+    "patterns": [
+      "deti ho nechteji",
+      "nikdo si s nim nechce hrat",
+      "byva vyrazovane",
+      "ostatni ho odstrkuji",
+      "zustava mimo kolektiv"
+    ],
+    "observable": "opakovaně zažívá odmítání ze strany skupiny a je sociálně vyřazováno",
+    "observable_anchor": "Ve vrstevnické skupině se opakovaně objevuje odmítání, nepřijetí nebo sociální vyřazování dítěte, a reciproční vztahová vazba je oslabená.",
+    "context_hotspots": [
+      "volná hra",
+      "výběr partnera",
+      "rozdělování do skupin",
+      "pravidlové hry",
+      "dlouhodobá třídní dynamika"
+    ],
+    "candidate_blocks": ["B", "A", "D"],
+    "candidate_zones": ["Z2", "Z3"],
+    "zone_tendency": ["Z2", "Z3"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nutné oddělit reálné odmítání od subjektivního pocitu nebo jednorázového konfliktu.",
+    "alternative_explanations": [
+      "oslabená sociální reciprocita",
+      "předchozí konfliktní historie",
+      "skupinové nálepkování",
+      "nízká vztahová bezpečnost",
+      "maladaptivní skupinová dynamika"
+    ],
+    "disambiguation_questions": [
+      "Jde o dlouhodobý vzorec?",
+      "Ve kterých situacích se to děje nejvíc?",
+      "Jak dítě samo situaci popisuje?",
+      "Potvrzují situaci i jiné děti nebo dospělí?"
+    ]
+  },
+  {
+    "id": "OBS_I3_CONTROLS_PEER_PLAY_001",
+    "category": "peer_relationships_social_position",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "všechno chce řídit",
+      "poroučí ostatním",
+      "nenechá nikoho rozhodnout",
+      "musí být po jeho",
+      "chce určovat pravidla"
+    ],
+    "patterns": [
+      "vsechno chce ridit",
+      "porouci ostatnim",
+      "nenecha nikoho rozhodnout",
+      "musi byt po jeho",
+      "chce urcovat pravidla"
+    ],
+    "observable": "ve hře potřebuje silně řídit ostatní a obtížně přijímá sdílené vedení",
+    "observable_anchor": "Ve společné aktivitě dítě silně potřebuje kontrolovat průběh, rozhodování nebo pravidla, a obtížně přijímá vedení nebo změnu od druhých dětí.",
+    "context_hotspots": [
+      "role-play hra",
+      "pravidlové hry",
+      "sdílené rozhodování",
+      "skupinová tvořivá aktivita",
+      "změna pravidel během hry"
+    ],
+    "candidate_blocks": ["B", "A"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Může jít o nejistotu maskovanou kontrolou, ne pouze panovačnost.",
+    "alternative_explanations": [
+      "potřeba předvídatelnosti",
+      "vztahová nejistota",
+      "slabší sociální flexibilita",
+      "obrana proti ztrátě kontroly",
+      "úzkost při nejasnosti"
+    ],
+    "disambiguation_questions": [
+      "Děje se to hlavně ve hře nebo ve všech situacích?",
+      "Reaguje silně na změnu pravidel?",
+      "Umí přijmout vedení od jiného dítěte?",
+      "Zhoršuje se to při nové nebo nejisté situaci?"
+    ]
+  },
+  {
+    "id": "OBS_I4_MISREADS_SOCIAL_SITUATION_001",
+    "category": "peer_relationships_social_position",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "neodhadne situaci",
+      "vstupuje nevhodně do hry",
+      "nechápe hranice druhých",
+      "sociálně to netrefuje",
+      "nečte situaci"
+    ],
+    "patterns": [
+      "neodhadne situaci",
+      "vstupuje nevhodne do hry",
+      "nechape hranice druhych",
+      "socialne to netrefuje",
+      "necte situaci"
+    ],
+    "observable": "opakovaně neodhaduje sociální situaci a vstupuje do ní nevhodně",
+    "observable_anchor": "Dítě opakovaně vstupuje do sociálních situací způsobem, který nerespektuje implicitní pravidla, hranice druhých nebo aktuální vztahový kontext.",
+    "context_hotspots": [
+      "připojování ke hře",
+      "sdílení hraček",
+      "fyzická blízkost",
+      "humor / sociální narážky",
+      "spontánní vrstevnické situace"
+    ],
+    "candidate_blocks": ["B", "D"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Často bývá mylně čteno jako nevychovanost nebo schválnost.",
+    "alternative_explanations": [
+      "oslabené čtení sociálních signálů",
+      "impulzivní vstup",
+      "slabší porozumění implicitním pravidlům",
+      "sociální nejistota",
+      "odlišné sociální tempo"
+    ],
+    "disambiguation_questions": [
+      "Chápe pravidlo po explicitním vysvětlení?",
+      "Opakuje se stejný typ situace?",
+      "Je problém spíše ve skupině než s dospělým?",
+      "Dochází ke zpětnému uvědomění až po konfliktu?"
+    ]
+  },
+  {
+    "id": "OBS_I5_SINGLE_PEER_DEPENDENCY_001",
+    "category": "peer_relationships_social_position",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "bez něj nefunguje",
+      "drží se jen jednoho dítěte",
+      "při absenci kamaráda se rozpadá",
+      "má jen jednoho člověka"
+    ],
+    "patterns": [
+      "bez nej nefunguje",
+      "drzi se jen jednoho ditete",
+      "pri absenci kamarada se rozpada",
+      "ma jen jednoho cloveka"
+    ],
+    "observable": "funguje stabilně jen s jedním konkrétním kamarádem a jeho absence výrazně destabilizuje",
+    "observable_anchor": "Dítě staví svou sociální regulaci výrazně na jednom konkrétním vrstevníkovi, a při jeho nepřítomnosti se vztahové i regulační fungování výrazně zhoršuje.",
+    "context_hotspots": [
+      "ranní příchod",
+      "absence kamaráda",
+      "přechod do nové skupiny",
+      "volná hra",
+      "sociální nejistota"
+    ],
+    "candidate_blocks": ["B", "A"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o problém — důležitá je míra rigidity.",
+    "alternative_explanations": [
+      "stabilizační vztahová kotva",
+      "vysoká sociální nejistota",
+      "potřeba bezpečné vazby",
+      "nízká flexibilita vztahové sítě",
+      "adaptační obtíž"
+    ],
+    "disambiguation_questions": [
+      "Je vazba stabilizační nebo limitující?",
+      "Co se děje při nepřítomnosti tohoto dítěte?",
+      "Umí navázat i jiné vztahy?",
+      "Přenáší se jistota postupně i mimo tuto vazbu?"
+    ]
+  }
+]

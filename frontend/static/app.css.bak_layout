@@ -1,0 +1,386 @@
+:root{
+  --bg:#0b0f14;
+  --panel:#0f1722;
+  --panel2:#0c1320;
+  --text:#e6edf3;
+  --muted:#9fb0c0;
+  --border:rgba(255,255,255,.08);
+  --user:#1b2a3a;
+  --asst:#101a28;
+  --accent:#4ea1ff;
+  --danger:#ff5c5c;
+}
+const sessionStatsEl = document.getElementById("sessionStats");
+
+let session = {
+  est_in_tokens: 0,
+  est_out_tokens: 0,
+  est_total_tokens: 0,
+  est_cost_usd: null, // pokud server posílá
+};
+
+function fmtInt(n){ return (n ?? 0).toLocaleString("cs-CZ"); }
+
+function updateSessionStats(){
+  const t = session.est_total_tokens;
+  const cost = session.est_cost_usd;
+  const costStr = (cost == null) ? "—" : `$${cost.toFixed(4)}`;
+  sessionStatsEl.textContent =
+    `Session: ~${fmtInt(t)} tok (in ~${fmtInt(session.est_in_tokens)} / out ~${fmtInt(session.est_out_tokens)}) · cost ${costStr}`;
+}
+                    
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+}
+
+.app{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 14px;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg,var(--panel),var(--panel2));
+}
+
+.brand{display:flex; gap:10px; align-items:center}
+.dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 18px rgba(78,161,255,.65);
+}
+.title .name{font-weight:700; letter-spacing:.2px}
+.title .sub{color:var(--muted); font-size:12px; margin-top:1px}
+
+.actions{display:flex; gap:8px}
+
+.chat{
+  flex:1;
+  overflow:auto;
+  padding:18px 14px 12px;
+  max-width:980px;
+  width:100%;
+  margin:0 auto;
+}
+
+.msg{
+  display:flex;
+  gap:10px;
+  margin:12px 0;
+}
+
+.avatar{
+  width:28px;height:28px;border-radius:8px;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  flex:0 0 auto;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.bubble{
+  padding:12px 12px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  max-width:760px;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.msg.user .bubble{background:var(--user)}
+.msg.assistant .bubble{background:var(--asst)}
+.meta{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:6px;
+}
+
+.composer{
+  border-top:1px solid var(--border);
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
+  padding:12px 14px 10px;
+}
+.composerInner{
+  max-width:980px;
+  margin:0 auto;
+  display:flex;
+  gap:10px;
+  align-items:flex-end;
+}
+textarea{
+  flex:1;
+  resize:none;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:10px 10px;
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  outline:none;
+  min-height:42px;
+  max-height:180px;
+}
+textarea:focus{border-color:rgba(78,161,255,.45)}
+.hint{
+  max-width:980px;
+  margin:8px auto 0;
+  color:var(--muted);
+  font-size:12px;
+}
+code{color:#cfe6ff}
+
+.btn{
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:12px;
+  cursor:pointer;
+  user-select:none;
+}
+.btn:hover{border-color:rgba(255,255,255,.16)}
+.btn.primary{
+  background:rgba(78,161,255,.18);
+  border-color:rgba(78,161,255,.35);
+}
+.btn.ghost{padding:8px 10px; font-size:13px; color:var(--muted)}
+.btn.danger{border-color:rgba(255,92,92,.35); background:rgba(255,92,92,.12)}
+
+.loading{
+  opacity:.75;
+  animation:pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}
+
+.sep{opacity:.55}
+#sessionStats{color:var(--muted)}
+.meta{
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px dashed rgba(255,255,255,.08);
+}
+.meta .line{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:2px;
+}
+.meta .kbh{
+  margin-top:6px;
+  font-weight:600;
+  color:rgba(255,255,255,.65);
+}
+.meta {
+  position: relative;
+}
+
+.copyBtn {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: inherit;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 6px;
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.copyBtn:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.12);
+}
+
+.copyBtn {
+  left: auto;
+  right: 4px;
+  z-index: 5;
+}
+
+.copyRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+
+.copyBtn {
+  position: static;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.copyBtn:hover {
+  opacity: 1;
+}
+
+.copyRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+
+.copyBtn {
+  position: static;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.copyBtn:hover {
+  opacity: 1;
+}
+
+/* DEBUG visible copy button */
+.meta .copyRow {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  margin: 0 0 8px 0 !important;
+  padding: 0 !important;
+  min-height: 28px !important;
+}
+
+.meta .copyBtn {
+  display: inline-block !important;
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 9999 !important;
+  border: 1px solid #66ccff !important;
+  background: #12384a !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  padding: 6px 10px !important;
+  cursor: pointer !important;
+}
+
+.meta .copyBtn {
+  min-width: 30px !important;
+  height: 28px !important;
+  padding: 0 8px !important;
+  border: 1px solid rgba(255,255,255,0.14) !important;
+  background: rgba(255,255,255,0.05) !important;
+  color: inherit !important;
+  border-radius: 7px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  opacity: 0.72 !important;
+  transition: opacity 0.15s ease, background 0.15s ease !important;
+}
+
+.meta .copyBtn:hover {
+  opacity: 1 !important;
+  background: rgba(255,255,255,0.11) !important;
+}
+
+.apuSectionLabel {
+  display: inline-block;
+  color: #8fa9bf;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.bubble .apuSectionLabel:first-child {
+  margin-top: 0;
+}
+
+.apuSectionLabel {
+  display: inline-block;
+  color: #7f97ad;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  margin-top: 8px;
+}
+
+.apuSectionLabel {
+  display: inline-block !important;
+  color: #7f97ad !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.2px !important;
+  margin-top: 6px !important;
+  margin-bottom: 1px !important;
+}
+
+.bubble br + .apuSectionLabel {
+  margin-top: 8px !important;
+}
+
+/* APU section headings final tuning */
+
+.apuSectionLabel {
+  display: block !important;
+  color: #8ea3b8 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.2px !important;
+  margin-top: 8px !important;
+  margin-bottom: 0px !important;
+  line-height: 1.2 !important;
+}
+
+/* remove extra visual gap after heading */
+.apuSectionLabel + br {
+  display: none !important;
+}
+
+/* ensure text starts immediately after heading */
+.bubble {
+  line-height: 1.45;
+}
+
+
+/* APU section headings final tuning */
+
+.apuSectionLabel {
+  display: block !important;
+  color: #8ea3b8 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.2px !important;
+  margin-top: 8px !important;
+  margin-bottom: 0px !important;
+  line-height: 1.2 !important;
+}
+
+/* remove extra visual gap after heading */
+.apuSectionLabel + br {
+  display: none !important;
+}
+
+/* ensure text starts immediately after heading */
+.bubble {
+  line-height: 1.45;
+}
+.devSectionTitle {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}

@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "passed": 0,
+    "total": 21,
+    "pass_rate": 0.0
+  },
+  "results": [
+    {
+      "id": "T1_LOW_001",
+      "input": "dite je manipulativni",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T1_PARTIAL_001",
+      "input": "porad beha po tride a skace do reci, co mam delat",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T1_FULL_001",
+      "input": "je mu 5 let, pri rannim kruhu porad beha po tride a skace do reci, potrebuji udrzet skupinu",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T1_SAFE_001",
+      "input": "utika ze tridy a nejde zastavit",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T1_SINGLE_001",
+      "input": "dnes poprve beha po tride",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T1_CONTEXT_001",
+      "input": "rodic rika ze doma to nedela a problem je jen ve skolce",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T2_LABEL_001",
+      "input": "dite je liny",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T2_LABEL_002",
+      "input": "je zlobivy a problemovy",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T3_COLLISION_001",
+      "input": "pri uklidu odmita pracovat, krici a pak utika ze tridy",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T3_COLLISION_002",
+      "input": "pri rannim kruhu nedava pozor, beha po tride a skace do reci",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T4_FALSE_POSITIVE_001",
+      "input": "dnes poprve nedava pozor",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T4_FALSE_POSITIVE_002",
+      "input": "nekdy je mimo",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T5_SAFETY_001",
+      "input": "utika ze tridy, neda se zastavit a bezi ke dverim ven",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T6_PARENT_SCHOOL_001",
+      "input": "rodic rika ze doma je v klidu, ale ve skolce pri prechodech krici a odmita jit",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T7_LOW_DATA_001",
+      "input": "co s nim mam delat",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T7_LOW_DATA_002",
+      "input": "asi ma nejaky problem",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T8_LEX_SAFE_001",
+      "input": "pri uklidu utece ze tridy a nejde ho zastavit",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T8_LEX_SAFE_002",
+      "input": "vybehne ze tridy a bezi ke dverim",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T8_LEX_ACT_001",
+      "input": "pri rannim kruhu lita po tride a vykřikuje odpovědi",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T8_LEX_ATT_001",
+      "input": "nedrzi pozornost a odbiha od ukolu",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    },
+    {
+      "id": "T8_LEX_BLOCK_001",
+      "input": "pri uklidu se zasekne a nechce prejit na dalsi cinnost",
+      "pass": false,
+      "fails": [
+        "runner_error: URLError: <urlopen error [Errno 111] Connection refused>"
+      ],
+      "actual": {}
+    }
+  ]
+}

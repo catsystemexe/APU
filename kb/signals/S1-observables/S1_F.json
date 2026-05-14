@@ -1,0 +1,282 @@
+[
+  {
+    "id": "OBS_F1_REFUSES_TO_START_COOPERATION_001",
+    "category": "boundaries_resistance_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "neudělá co má",
+      "ignoruje pokyn",
+      "řekne ne",
+      "odmítá spolupracovat",
+      "prostě nezačne"
+    ],
+    "patterns": [
+      "neudela co ma",
+      "ignoruje pokyn",
+      "rekne ne",
+      "odmita spolupracovat",
+      "proste nezacne"
+    ],
+    "observable": "po zadání požadavku aktivně nebo pasivně odmítá začít spolupracovat",
+    "observable_anchor": "Po jasném zadání požadavku dítě aktivně odmítá, nebo pasivně nevstupuje do činnosti, a běžná výzva nevede k zahájení spolupráce.",
+    "context_hotspots": [
+      "přechod mezi aktivitami",
+      "ukončení oblíbené činnosti",
+      "nový úkol",
+      "povinnost bez vlastní volby",
+      "návrat ke struktuře po volné hře"
+    ],
+    "candidate_blocks": [
+      "B",
+      "A",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z2"
+    ],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "„Odmítání spolupráce“ není automaticky vzdor ani neposlušnost.",
+    "alternative_explanations": [
+      "neporozumění zadání",
+      "přetížení",
+      "výkonová úzkost",
+      "obrana autonomie",
+      "potřeba kontroly",
+      "slabá iniciační kapacita"
+    ],
+    "disambiguation_questions": [
+      "Rozumí dítě zadání?",
+      "Odmítá vše, nebo jen konkrétní typ požadavku?",
+      "Pomůže možnost volby nebo první krok s podporou?",
+      "Je rozdíl mezi individuálním a veřejným zadáním?"
+    ]
+  },
+  {
+    "id": "OBS_F2_REPEATS_FORBIDDEN_BEHAVIOR_001",
+    "category": "boundaries_resistance_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "dělá pravý opak",
+      "po zákazu to udělá znovu",
+      "vzdoruje",
+      "testuje hranice",
+      "schválně pokračuje"
+    ],
+    "patterns": [
+      "dela pravy opak",
+      "po zakazu to udela znovu",
+      "vzdoruje",
+      "testuje hranice",
+      "schvalne pokracuje"
+    ],
+    "observable": "na nastavení hranice reaguje odporem a opakuje zakázané chování",
+    "observable_anchor": "Po nastavení jasné hranice dítě nereaguje regulací, ale zvýšením odporu, opakovaným návratem k zakázanému chování nebo otevřeným konfliktem.",
+    "context_hotspots": [
+      "zákaz činnosti",
+      "bezpečnostní pravidlo",
+      "stop hranice",
+      "fyzické limity",
+      "pravidla ve skupině"
+    ],
+    "candidate_blocks": [
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z3"
+    ],
+    "zone_tendency": [
+      "Z2",
+      "Z3"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "HIGH",
+    "false_positive_risk": "HIGH",
+    "not_diagnostic_warning": "„Testování hranic“ bývá často interpretace, ne skutečné vysvětlení.",
+    "alternative_explanations": [
+      "obranná reakce",
+      "stud nebo ohrožení autonomie",
+      "nízká tolerance frustrace",
+      "potřeba kontroly",
+      "vztahová nejistota",
+      "oslabená inhibice v zátěži"
+    ],
+    "disambiguation_questions": [
+      "Je cílem kontrola, obrana, nebo emoční reakce?",
+      "Reaguje stejně na všechny dospělé?",
+      "Zhoršuje se to při veřejné korekci?",
+      "Uklidní se později a chápe hranici zpětně?"
+    ]
+  },
+  {
+    "id": "OBS_F3_QUESTIONS_RULE_FAIRNESS_001",
+    "category": "boundaries_resistance_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "pořád diskutuje",
+      "hádá se o každé pravidlo",
+      "zpochybňuje autoritu",
+      "dlouze argumentuje",
+      "proč zrovna já?"
+    ],
+    "patterns": [
+      "porad diskutuje",
+      "hada se o kazde pravidlo",
+      "zpochybnuje autoritu",
+      "dlouze argumentuje",
+      "proc zrovna ja"
+    ],
+    "observable": "potřebuje opakovaně zpochybňovat pravidlo a ověřovat jeho spravedlnost",
+    "observable_anchor": "Při nastavení pravidla dítě opakovaně vstupuje do diskuse, potřebuje ověřovat logiku, spravedlnost nebo konzistenci hranice a obtížně přijímá nejasné pravidlo bez vysvětlení.",
+    "context_hotspots": [
+      "změna pravidla",
+      "rozdílné zacházení",
+      "korekce chování",
+      "skupinová pravidla",
+      "situace vnímané jako nespravedlivé"
+    ],
+    "candidate_blocks": [
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Nejde automaticky o manipulaci ani problém s autoritou.",
+    "alternative_explanations": [
+      "vysoká potřeba předvídatelnosti",
+      "citlivost na fairness",
+      "úzkost při nejasnosti",
+      "potřeba logické konzistence",
+      "obrana proti nejistotě"
+    ],
+    "disambiguation_questions": [
+      "Jde o odpor, nebo skutečnou potřebu porozumět pravidlu?",
+      "Uklidní se po jasném vysvětlení?",
+      "Je silná citlivost na nespravedlnost i mimo tuto situaci?",
+      "Vadí obsah pravidla, nebo způsob jeho podání?"
+    ]
+  },
+  {
+    "id": "OBS_F4_SELECTIVE_ADULT_CONFLICT_001",
+    "category": "boundaries_resistance_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "se mnou je problém, s ostatními ne",
+      "jen s jednou učitelkou",
+      "selektivní odpor",
+      "u jiných funguje normálně"
+    ],
+    "patterns": [
+      "se mnou je problem s ostatnimi ne",
+      "jen s jednou ucitelkou",
+      "selektivni odpor",
+      "u jinych funguje normalne"
+    ],
+    "observable": "problém vzniká výrazně jen ve vztahu k jednomu konkrétnímu dospělému",
+    "observable_anchor": "Obtíž v regulaci, spolupráci nebo respektu se výrazně objevuje pouze ve vztahu ke konkrétnímu dospělému, zatímco s ostatními je fungování stabilnější.",
+    "context_hotspots": [
+      "konkrétní pedagog",
+      "přechod mezi službami",
+      "změna vedení",
+      "individuální korekce",
+      "dlouhodobě napjatý vztah"
+    ],
+    "candidate_blocks": [
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "risk": "LOW",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Silný signál, že problém nemusí být primárně v dítěti.",
+    "alternative_explanations": [
+      "vztahová nejistota",
+      "rozdílný styl vedení",
+      "historie interakce",
+      "odlišné vnímání bezpečí",
+      "vzájemná eskalační dynamika"
+    ],
+    "disambiguation_questions": [
+      "Co je v této interakci jiné?",
+      "Jde o styl vedení, bezpečí nebo vztahovou historii?",
+      "Potvrzují rozdíl i ostatní dospělí?",
+      "Funguje lépe při přítomnosti třetí osoby?"
+    ]
+  },
+  {
+    "id": "OBS_F5_WITHDRAWS_AFTER_CORRECTION_001",
+    "category": "boundaries_resistance_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "po napomenutí se vypne",
+      "už pak nic neudělá",
+      "stáhne se a končí",
+      "po opravě se uzavře"
+    ],
+    "patterns": [
+      "po napomenuti se vypne",
+      "uz pak nic neudela",
+      "stahne se a konci",
+      "po oprave se uzavre"
+    ],
+    "observable": "po opravě se stáhne a ukončí spolupráci místo úpravy chování",
+    "observable_anchor": "Po korekci nebo upozornění dítě nepřechází k úpravě chování, ale do stažení, pasivity nebo úplného ukončení spolupráce.",
+    "context_hotspots": [
+      "veřejná korekce",
+      "oprava chyby",
+      "výkonová situace",
+      "vyšší očekávání",
+      "srovnání s ostatními"
+    ],
+    "candidate_blocks": [
+      "A",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o uraženost ani manipulativní stažení.",
+    "alternative_explanations": [
+      "stud",
+      "výkonová úzkost",
+      "vysoká citlivost na chybu",
+      "perfekcionismus",
+      "vztahové ohrožení při korekci"
+    ],
+    "disambiguation_questions": [
+      "Pomáhá soukromá korekce místo veřejné?",
+      "Je přítomná silná potřeba perfekce?",
+      "Vrací se samo, nebo je nutná intenzivní opora?",
+      "Je rozdíl mezi jemnou a přímou korekcí?"
+    ]
+  }
+]

@@ -1,0 +1,233 @@
+{
+  "schema": "APU_TREND_INTENSITY_V1",
+  "category": "S4B_context_binding",
+  "description": "Situační vazba projevu na skupinu, čekání, přechody, statickou aktivitu, osobu, hluk, únavu a konkrétní spouštěče",
+  "global_rules": [
+    "Situační vazba omezuje přehnanou generalizaci na dítě jako celek.",
+    "Kontextový trigger posiluje environmentální nebo funkční hypotézu, ne diagnostický závěr.",
+    "Pokud je projev vázán na konkrétní situaci, APU má nejdřív řešit tuto situaci, ne identitu dítěte."
+  ],
+  "items": [
+    {
+      "id": "T11_ONLY_IN_GROUP",
+      "label": "Pouze / hlavně ve skupině",
+      "teacher_phrases": [
+        "děje se to hlavně ve skupině",
+        "když jsou ostatní děti kolem",
+        "ve skupině je to výrazně horší"
+      ],
+      "patterns": [
+        "deje se to hlavne ve skupine",
+        "kdyz jsou ostatni deti kolem",
+        "ve skupine je to vyrazne horsi",
+        "hlavne mezi detmi"
+      ],
+      "meaning": "Projev je výrazně vázaný na skupinové sociální prostředí.",
+      "inference_effect": "zvyšuje význam sociální zátěže, hluku, čekání a skupinové regulace",
+      "confidence_effect": "snižuje pravděpodobnost globálního problému dítěte",
+      "false_positive_risk": "LOWER",
+      "validation_flags": ["ONLY_IN_GROUP"],
+      "recommendation": "Ověřit roli skupinové hustoty, sociálního tlaku, čekání a hluku."
+    },
+    {
+      "id": "T12_ONLY_IN_INDIVIDUAL_CONTACT",
+      "label": "Pouze / hlavně v individuálním kontaktu",
+      "teacher_phrases": [
+        "ve skupině ne, ale individuálně ano",
+        "problém se objeví hlavně jeden na jednoho"
+      ],
+      "patterns": [
+        "ve skupine ne ale individualne ano",
+        "problem se objevi hlavne jeden na jednoho",
+        "jen kdyz jsem s nim sama",
+        "hlavne v individualnim kontaktu"
+      ],
+      "meaning": "Projev je vázaný na přímý vztahový kontakt.",
+      "inference_effect": "zvyšuje význam vztahové dynamiky, autority a způsobu vedení dospělého",
+      "confidence_effect": "omezuje zobecnění na celé fungování dítěte",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": ["ONLY_IN_INDIVIDUAL_CONTACT"],
+      "recommendation": "Sledovat vztahovou bezpečnost, styl vedení a reakci na různé dospělé."
+    },
+    {
+      "id": "T13_DURING_WAITING",
+      "label": "Při čekání",
+      "teacher_phrases": [
+        "při čekání je to nejhorší",
+        "když musí čekat, rozpadá se",
+        "fronta je problém"
+      ],
+      "patterns": [
+        "pri cekani je to nejhorsi",
+        "kdyz musi cekat rozpada se",
+        "fronta je problem",
+        "nevydrzi cekat",
+        "problem pri cekani"
+      ],
+      "meaning": "Projev je spojen s nízkou tolerancí pasivního čekání.",
+      "inference_effect": "zvyšuje význam regulace času, anticipace a odloženého uspokojení",
+      "confidence_effect": "vede spíše k environmentální než osobnostní interpretaci",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["WAITING_TRIGGER"],
+      "recommendation": "Zkrátit čekání, dát aktivní roli nebo vizualizovat pořadí."
+    },
+    {
+      "id": "T14_DURING_TRANSITION",
+      "label": "Při přechodu",
+      "teacher_phrases": [
+        "při přechodu mezi činnostmi",
+        "při změně režimu",
+        "přesuny jsou nejhorší"
+      ],
+      "patterns": [
+        "pri prechodu mezi cinnostmi",
+        "pri zmene rezimu",
+        "presuny jsou nejhorsi",
+        "prechody jsou problem",
+        "problem pri prechodu"
+      ],
+      "meaning": "Projev je spojen s přechodovou zátěží a změnou struktury.",
+      "inference_effect": "silně posiluje environmentální a adaptační interpretaci",
+      "confidence_effect": "snižuje relevanci charakterových soudů",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["TRANSITION_TRIGGER"],
+      "recommendation": "Pracovat s předvídatelností, předstihem, rituálem a malým prvním krokem."
+    },
+    {
+      "id": "T15_DURING_STATIC_GROUP_ACTIVITY",
+      "label": "Při statické skupinové aktivitě",
+      "teacher_phrases": [
+        "při kruhu",
+        "při sezení",
+        "při společné klidové činnosti",
+        "když musí sedět a čekat"
+      ],
+      "patterns": [
+        "pri kruhu",
+        "pri sezeni",
+        "pri spolecne klidove cinnosti",
+        "kdyz musi sedet a cekat",
+        "pri rannim kruhu"
+      ],
+      "meaning": "Projev je vázaný na statickou skupinovou regulaci.",
+      "inference_effect": "zvyšuje význam aktivační regulace, inhibice a potřeby pohybu",
+      "confidence_effect": "snižuje interpretaci jako nevychovanost",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["GROUP_STATIC_ACTIVITY"],
+      "recommendation": "Ověřit potřebu pohybu, aktivní roli a délku statické aktivity."
+    },
+    {
+      "id": "T16_MORNING_TRANSITION",
+      "label": "Ranní příchod / separace",
+      "teacher_phrases": [
+        "nejhorší je ráno",
+        "ranní příchod je problém",
+        "po příchodu do školky se rozpadá"
+      ],
+      "patterns": [
+        "nejhorsi je rano",
+        "ranni prichod je problem",
+        "po prichodu do skolky se rozpada",
+        "rano se rozpada",
+        "pri rannim prichodu"
+      ],
+      "meaning": "Projev je vázaný na ranní separaci a adaptační přechod.",
+      "inference_effect": "zvyšuje význam separace, jistoty a startu dne",
+      "confidence_effect": "snižuje relevanci globální interpretace dítěte",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["MORNING_TRANSITION"],
+      "recommendation": "Sledovat ranní rituál, separační proces a čas návratu do regulace."
+    },
+    {
+      "id": "T17_AFTER_MEAL",
+      "label": "V souvislosti s jídlem",
+      "teacher_phrases": [
+        "po obědě",
+        "kolem jídla",
+        "po svačině",
+        "před jídlem nebo po jídle"
+      ],
+      "patterns": [
+        "po obede",
+        "kolem jidla",
+        "po svacine",
+        "pred jidlem",
+        "po jidlee",
+        "pred jidlem nebo po jidlee",
+        "v souvislosti s jidlem"
+      ],
+      "meaning": "Projev je vázaný na fyziologickou regulaci kolem jídla.",
+      "inference_effect": "zvyšuje význam tělesné regulace, hladu, únavy a režimu dne",
+      "confidence_effect": "snižuje pravděpodobnost interpretace jako schválnost",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["MEALTIME_CONTEXT"],
+      "recommendation": "Ověřit hlad, únavu, přechod po jídle a senzorické zatížení při stolování."
+    },
+    {
+      "id": "T18_FATIGUE_LINK",
+      "label": "Vazba na únavu",
+      "teacher_phrases": [
+        "když je unavené, je to horší",
+        "odpoledne už nezvládá",
+        "ke konci dne se rozpadá"
+      ],
+      "patterns": [
+        "kdyz je unavene je to horsi",
+        "odpoledne uz nezvlada",
+        "ke konci dne se rozpada",
+        "pri unave je to horsi",
+        "kdyz je unavene"
+      ],
+      "meaning": "Projev je silně ovlivněn energetickým vyčerpáním.",
+      "inference_effect": "zvyšuje význam kapacity organismu a režimu dne",
+      "confidence_effect": "snižuje přímou interpretaci jako vzdor",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["FATIGUE_LINK"],
+      "recommendation": "Pracovat s rytmem dne, odpočinkem a prevencí vyčerpání."
+    },
+    {
+      "id": "T19_NOISE_LINK",
+      "label": "Vazba na hluk / ruch",
+      "teacher_phrases": [
+        "při hluku je to horší",
+        "větší ruch ho rozhodí",
+        "v hlučné třídě nezvládá fungovat"
+      ],
+      "patterns": [
+        "pri hluku je to horsi",
+        "vetsi ruch ho rozhodi",
+        "v hlucne tride nezvlada fungovat",
+        "hluk ho rozhodi",
+        "ruch ho rozhodi"
+      ],
+      "meaning": "Projev je spojen se senzorickou auditivní zátěží.",
+      "inference_effect": "zvyšuje význam senzorické regulace a prostředí",
+      "confidence_effect": "snižuje relevanci sociálně-morální interpretace",
+      "false_positive_risk": "LOW",
+      "validation_flags": ["NOISE_LINK"],
+      "recommendation": "Ověřit hlukové zatížení, možnost klidového místa a předvídatelnost ruchu."
+    },
+    {
+      "id": "T20_SPECIFIC_PERSON_TRIGGER",
+      "label": "Vazba na konkrétní osobu",
+      "teacher_phrases": [
+        "děje se to hlavně s jednou učitelkou",
+        "jen s konkrétním dítětem",
+        "pouze s určitou osobou"
+      ],
+      "patterns": [
+        "deje se to hlavne s jednou ucitelkou",
+        "jen s konkretnim ditetem",
+        "pouze s urcitou osobou",
+        "jen s jednim dospelym",
+        "jen s jednim ditetem"
+      ],
+      "meaning": "Projev je vztahově specifický, ne globální.",
+      "inference_effect": "výrazně zvyšuje význam vztahové dynamiky",
+      "confidence_effect": "snižuje generalizaci na dítě je takové",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": ["SPECIFIC_PERSON_TRIGGER"],
+      "recommendation": "Analyzovat vztahový kontext, historii interakce a rozdíl mezi osobami."
+    }
+  ]
+}

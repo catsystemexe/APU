@@ -1,0 +1,42 @@
+{
+  "schema": "S3_context_patch.v1",
+  "category": "S3Z_patch_test_coverage",
+  "description": "Patch kontextů pro notepad testy.",
+  "items": [
+    {
+      "id": "CTX_PATCH_FREE_PLAY_001",
+      "label": "Volná hra",
+      "notepad": "při volné hře",
+      "patterns": ["volna hra", "volná hra", "ve volne hre", "ve volné hře"],
+      "meaning": "Projev se objevuje ve volné hře."
+    },
+    {
+      "id": "CTX_PATCH_FOOD_001",
+      "label": "Oběd / jídlo",
+      "notepad": "v souvislosti s jídlem / stolováním",
+      "patterns": ["pri obede", "při obědě", "obed", "oběd", "jidlo", "jídlo"],
+      "meaning": "Projev se objevuje v souvislosti s jídlem nebo stolováním."
+    },
+    {
+      "id": "CTX_PATCH_CORRECTION_001",
+      "label": "Oprava / upozornění",
+      "notepad": "při opravě nebo upozornění",
+      "patterns": ["pri oprave", "při opravě", "upozorneni", "upozornění", "po upozorneni", "po upozornění"],
+      "meaning": "Projev se objevuje při opravě nebo upozornění dospělého."
+    },
+    {
+      "id": "CTX_PATCH_AFTERNOON_FATIGUE_001",
+      "label": "Odpoledne / únava",
+      "notepad": "odpoledne při únavě",
+      "patterns": ["odpoledne", "unavene", "unavené", "kdyz je unavene", "když je unavené"],
+      "meaning": "Projev se objevuje hlavně odpoledne nebo při únavě."
+    },
+    {
+      "id": "CTX_PATCH_OUTSIDE_TO_CLASS_001",
+      "label": "Přechod z venku do třídy",
+      "notepad": "při přechodu z venku do třídy",
+      "patterns": ["prechod z venku do tridy", "přechod z venku do třídy", "z venku do tridy", "z venku do třídy"],
+      "meaning": "Projev se objevuje při přechodu z venku do třídy."
+    }
+  ]
+}

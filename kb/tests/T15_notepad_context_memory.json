@@ -1,0 +1,13 @@
+[
+  {
+    "id": "T15_ARRIVAL_OBSERVABLE_001",
+    "input": "Pepicek pri prichodu do skolky place a drzi se maminky",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_blocks": ["A"],
+      "must_include_zones": ["Z2", "Z3"],
+      "must_not_have_flags": ["MISSING_OBSERVABLE_BEHAVIOR"],
+      "notepad_min_confirmed_observations": 1
+    }
+  }
+]

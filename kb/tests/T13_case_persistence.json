@@ -1,0 +1,10 @@
+[
+  {
+    "id": "T13_CASE_ID_CREATED_001",
+    "input": "rano place pri prichodu",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "notepad_min_confirmed_observations": 1
+    }
+  }
+]

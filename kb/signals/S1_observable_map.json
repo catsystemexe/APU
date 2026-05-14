@@ -1,0 +1,989 @@
+[
+  {
+    "id": "OBS_ADAPT_001",
+    "patterns": [
+      "place pri prichodu",
+      "rano place",
+      "place rano ve skolce",
+      "intenzivni ranni plac",
+      "pri prichodu place",
+      "při příchodu pláče",
+      "place pri prichodu do skolky",
+      "pláče při příchodu do školky",
+      "pri prichodu do skolky place",
+      "při příchodu do školky pláče"
+    ],
+    "observable": "intenzivní emoční reakce při ranním přechodu do prostředí",
+    "candidate_blocks": [
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K1"
+    ],
+    "disambiguation_questions": [
+      "Zlepšuje se stav po odchodu rodiče?",
+      "Je situace horší po víkendu nebo změně režimu?"
+    ]
+  },
+  {
+    "id": "OBS_ADAPT_002",
+    "patterns": [
+      "drzi se rodice",
+      "nechce pustit rodice",
+      "lpí na rodiči",
+      "drzi se maminky",
+      "drží se maminky",
+      "drzi se mamy",
+      "drží se mámy",
+      "drzi se matky",
+      "drží se matky",
+      "drzi se tatinka",
+      "drží se tatínka"
+    ],
+    "observable": "silné lpění na rodiči při oddělení",
+    "candidate_blocks": [
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K1"
+    ],
+    "disambiguation_questions": [
+      "Dochází ke zklidnění po převzetí pedagogem?",
+      "Má dítě bezpečnou vazbu na konkrétního pedagoga?"
+    ]
+  },
+  {
+    "id": "OBS_ADAPT_003",
+    "patterns": [
+      "odmita vstoupit do tridy",
+      "nechce do tridy",
+      "zastavi se u dveri",
+      "stoji u dveri"
+    ],
+    "observable": "zastavení nebo odpor při vstupu do prostředí",
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K1"
+    ],
+    "disambiguation_questions": [
+      "Pomáhá jasný ranní rituál?",
+      "Rozumí dítě tomu, co bude následovat?"
+    ]
+  },
+  {
+    "id": "OBS_OMJ_001",
+    "patterns": [
+      "malo mluvi",
+      "nemluvi ve tride",
+      "nehlasi potreby",
+      "nemluvi s ucitelkou"
+    ],
+    "observable": "omezená spontánní komunikace v novém prostředí",
+    "candidate_blocks": [
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K2"
+    ],
+    "disambiguation_questions": [
+      "Komunikuje více doma nebo s jedním bezpečným dospělým?",
+      "Pomáhá vizuální opora nebo gesto místo slov?"
+    ]
+  },
+  {
+    "id": "OBS_OMJ_002",
+    "patterns": [
+      "drzi se mimo kolektiv",
+      "nechce do kolektivu",
+      "jen pozoruje ostatni",
+      "nezapojuje se do hry"
+    ],
+    "observable": "pasivní sociální stažení a observační režim",
+    "candidate_blocks": [
+      "B",
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K2"
+    ],
+    "disambiguation_questions": [
+      "Zapojí se lépe v malé skupině?",
+      "Vyhledává kontakt alespoň s jedním dítětem nebo pedagogem?"
+    ]
+  },
+  {
+    "id": "OBS_OMJ_003",
+    "patterns": [
+      "zamrzne ve skupine",
+      "zamrza pri skupinove aktivite",
+      "place pri zmene rezimu",
+      "silna reakce na zmenu"
+    ],
+    "observable": "regulační kolaps při sociálním nebo přechodovém přetížení",
+    "candidate_blocks": [
+      "A",
+      "E",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3",
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K2"
+    ],
+    "disambiguation_questions": [
+      "Dochází k tomu hlavně při změně režimu nebo ve velké skupině?",
+      "Pomáhá předvídatelná rutina a příprava dopředu?"
+    ]
+  },
+  {
+    "id": "OBS_MEL_001",
+    "patterns": [
+      "odmita uklid",
+      "nechce uklzet",
+      "odmita ukoncit cinnost",
+      "nechce prestat s oblibenou aktivitou",
+      "zasekne se pri uklidu",
+      "sekne se pri uklidu",
+      "zablokuje se pri uklidu",
+      "odmita prejit na dalsi cinnost",
+      "nechce prejit na dalsi cinnost"
+    ],
+    "observable": "výrazná obtíž při ukončování preferované činnosti",
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K3"
+    ],
+    "disambiguation_questions": [
+      "Pomáhá předchozí upozornění před ukončením činnosti?",
+      "Je problém hlavně při přerušení oblíbené aktivity?"
+    ]
+  },
+  {
+    "id": "OBS_MEL_002",
+    "patterns": [
+      "lehne si na zem",
+      "krici pri uklidu",
+      "place pri uklidu",
+      "silna reakce pri uklidu",
+      "meltdown pri uklidu",
+      "rve pri uklidu",
+      "krici pri zmene",
+      "rve pri zmene",
+      "hysterci pri uklidu",
+      "ma hysterak pri uklidu"
+    ],
+    "observable": "regulační kolaps při přechodu mezi činnostmi",
+    "candidate_blocks": [
+      "A",
+      "E",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K3"
+    ],
+    "disambiguation_questions": [
+      "Dochází k tomu pravidelně při stejném přechodu?",
+      "Vrací se dítě po zklidnění rychle zpět do činnosti?"
+    ]
+  },
+  {
+    "id": "OBS_MEL_003",
+    "patterns": [
+      "hazi vecmi",
+      "vzteka se pri zmene",
+      "eskaluje pri preruseni",
+      "nezvlada prechod mezi cinnostmi"
+    ],
+    "observable": "frustrační eskalace při ztrátě kontroly nad situací",
+    "candidate_blocks": [
+      "A",
+      "B",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K3"
+    ],
+    "disambiguation_questions": [
+      "Je spouštěčem změna pravidla nebo ztráta kontroly?",
+      "Pomáhá jasná předvídatelná struktura a časové varování?"
+    ]
+  },
+  {
+    "id": "OBS_SOC_001",
+    "patterns": [
+      "odmita jit do kruhu",
+      "nechce do ranniho kruhu",
+      "odchazi od kruhu",
+      "odmita spolecnou aktivitu"
+    ],
+    "observable": "odmítání vstupu do skupinové struktury",
+    "candidate_blocks": [
+      "B",
+      "A",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K4"
+    ],
+    "disambiguation_questions": [
+      "Je problém hlavně při skupinové aktivitě nebo i individuálně?",
+      "Pomáhá menší skupina nebo předvídatelný rituál?"
+    ]
+  },
+  {
+    "id": "OBS_SOC_002",
+    "patterns": [
+      "sedi mimo kolektiv",
+      "zustava stranou",
+      "jen pozoruje skupinu",
+      "nechce se zapojit"
+    ],
+    "observable": "pasivní sociální stažení bez otevřeného konfliktu",
+    "candidate_blocks": [
+      "B",
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K4"
+    ],
+    "disambiguation_questions": [
+      "Vyhledává alespoň jedno bezpečné dítě nebo pedagoga?",
+      "Zapojí se lépe v menší nebo známé skupině?"
+    ]
+  },
+  {
+    "id": "OBS_SOC_003",
+    "patterns": [
+      "place kdyz ho volaji do skupiny",
+      "silne reaguje pri nuceni",
+      "horsi pri tlaku na zapojeni",
+      "pasivni odpor bez konfliktu"
+    ],
+    "observable": "eskalace při tlaku na sociální zapojení",
+    "candidate_blocks": [
+      "A",
+      "B",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K4"
+    ],
+    "disambiguation_questions": [
+      "Zhoršuje se situace při přímém nucení do zapojení?",
+      "Pomáhá možnost pozorovat bez okamžitého výkonového tlaku?"
+    ]
+  },
+  {
+    "id": "OBS_SOC_004",
+    "patterns": [
+      "je mimo kolektiv",
+      "hraje si samo",
+      "casto je samo",
+      "zustava stranou"
+    ],
+    "observable": "dlouhodobé sociální stažení mimo vrstevnickou skupinu",
+    "candidate_blocks": [
+      "B",
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K5"
+    ],
+    "disambiguation_questions": [
+      "Vyhledává kontakt alespoň s jedním dítětem?",
+      "Je samo i při volné hře, nebo hlavně ve strukturované skupině?"
+    ]
+  },
+  {
+    "id": "OBS_SOC_005",
+    "patterns": [
+      "ostatni ho neberou do hry",
+      "deti ho odmitaji",
+      "nechteji ho mezi sebe",
+      "nezapadne do kolektivu"
+    ],
+    "observable": "nízké vrstevnické přijetí a opakované sociální odmítání",
+    "candidate_blocks": [
+      "B",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K5"
+    ],
+    "disambiguation_questions": [
+      "Jde spíš o aktivní odmítání skupinou, nebo vlastní stažení dítěte?",
+      "Mění se situace s konkrétními dětmi nebo pedagogy?"
+    ]
+  },
+  {
+    "id": "OBS_SOC_006",
+    "patterns": [
+      "konflikt pri zapojeni",
+      "rychle se stahne po odmitnuti",
+      "podrazdene po odmitnuti",
+      "silna reakce na odmitnuti"
+    ],
+    "observable": "obranná reakce na sociální odmítnutí a narušené hranice",
+    "candidate_blocks": [
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K5"
+    ],
+    "disambiguation_questions": [
+      "Dochází ke konfliktu hlavně po odmítnutí nebo frustraci?",
+      "Pomáhá bezpečný individuální kontakt před vstupem do skupiny?"
+    ]
+  },
+  {
+    "id": "OBS_COM_001",
+    "patterns": [
+      "nemluvi s ucitelkou",
+      "neodpovida ucitelce",
+      "odpovida jen rodici",
+      "ve skole nemluvi"
+    ],
+    "observable": "selektivní komunikační stažení ve školním prostředí",
+    "candidate_blocks": [
+      "D",
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K6"
+    ],
+    "disambiguation_questions": [
+      "Mluví běžně doma nebo s jiným bezpečným dospělým?",
+      "Pomáhá neverbální forma odpovědi nebo menší tlak na výkon?"
+    ]
+  },
+  {
+    "id": "OBS_COM_002",
+    "patterns": [
+      "odpovida velmi tise",
+      "mluvi jen pres gesto",
+      "komunikuje neverbalne",
+      "vyhyba se prime odpovedi"
+    ],
+    "observable": "omezená verbální komunikace při zachované potřebě kontaktu",
+    "candidate_blocks": [
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K6"
+    ],
+    "disambiguation_questions": [
+      "Používá spontánně gesto nebo jinou bezpečnější formu komunikace?",
+      "Zhoršuje se to při přímém oslovení před skupinou?"
+    ]
+  },
+  {
+    "id": "OBS_COM_003",
+    "patterns": [
+      "zamrza pri otazce",
+      "stahne se pri osloveni",
+      "vyhyba se ocnimu kontaktu",
+      "pasivni reakce bez odporu"
+    ],
+    "observable": "regulační zamrznutí při vztahovém nebo výkonovém tlaku",
+    "candidate_blocks": [
+      "A",
+      "D",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K6"
+    ],
+    "disambiguation_questions": [
+      "Dochází k tomu hlavně při přímém oslovení nebo ve skupině?",
+      "Pomáhá kontakt přes známou rutinu nebo bezpečného pedagoga?"
+    ]
+  },
+  {
+    "id": "OBS_ACT_001",
+    "patterns": [
+      "beha po tride",
+      "neustale vstava",
+      "nevydrzi sedet",
+      "porad se hybe",
+      "lita po tride",
+      "lita po mistnosti",
+      "pobiha po tride",
+      "pobihá po tride",
+      "nevydrzi v klidu",
+      "porad vstava",
+      "porad odbiha"
+    ],
+    "observable": "výrazně zvýšená potřeba pohybu a aktivace těla",
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K7"
+    ],
+    "disambiguation_questions": [
+      "Pomáhá krátká pohybová pauza nebo možnost regulovaného pohybu?",
+      "Zhoršuje se situace hlavně při delším sezení nebo čekání?"
+    ]
+  },
+  {
+    "id": "OBS_ACT_002",
+    "patterns": [
+      "skace do reci",
+      "prerusuje ostatni",
+      "reaguje driv nez domysli",
+      "odpovi bez cekani",
+      "skáče do řeči",
+      "skáče ostatním do řeči",
+      "mluvi pres ostatni",
+      "vykřikuje",
+      "vykřikuje odpovědi"
+    ],
+    "observable": "oslabené brzdění impulzu v sociální interakci",
+    "candidate_blocks": [
+      "E",
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K7"
+    ],
+    "disambiguation_questions": [
+      "Děje se to hlavně při skupinové komunikaci nebo i individuálně?",
+      "Dokáže po připomenutí impulz zastavit, nebo reakce přichází automaticky?"
+    ]
+  },
+  {
+    "id": "OBS_ACT_003",
+    "patterns": [
+      "nedokoncuje cinnost",
+      "rychle prechazi mezi aktivitami",
+      "nezustane u ukolu",
+      "saha na veci ostatnich",
+      "nedrzi pozornost",
+      "nedava bacha",
+      "nesoustredi se na ukol",
+      "odbiha od ukolu",
+      "prepina mezi cinnostmi"
+    ],
+    "observable": "rychlé přepínání pozornosti a hledání nové stimulace",
+    "candidate_blocks": [
+      "E",
+      "C",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K7"
+    ],
+    "disambiguation_questions": [
+      "Je obtíž hlavně ve výdrži u jedné činnosti nebo v samotném porozumění úkolu?",
+      "Pomáhá rozdělení úkolu na kratší a jasně ukončené části?"
+    ]
+  },
+  {
+    "id": "OBS_SEN_001",
+    "patterns": [
+      "zakryva si usi",
+      "vadi mu hluk",
+      "nesnese hluk",
+      "silna reakce na hlasite prostredi"
+    ],
+    "observable": "výrazná sluchová senzorická citlivost",
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K9"
+    ],
+    "disambiguation_questions": [
+      "Dochází k tomu hlavně při hluku, nebo i u jiných podnětů?",
+      "Pomáhá klidnější prostředí nebo možnost dočasného ústupu?"
+    ]
+  },
+  {
+    "id": "OBS_SEN_002",
+    "patterns": [
+      "utika z hlucne situace",
+      "schovava se pri hluku",
+      "odmita hlucnou skupinu",
+      "nechce do velke skupiny"
+    ],
+    "observable": "úniková reakce při senzorickém přetížení",
+    "candidate_blocks": [
+      "A",
+      "B",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K9"
+    ],
+    "disambiguation_questions": [
+      "Je spouštěčem hlavně hluk, nebo obecně velká skupina lidí?",
+      "Vrací se dítě po zklidnění zpět relativně snadno?"
+    ]
+  },
+  {
+    "id": "OBS_SEN_003",
+    "patterns": [
+      "place pri pretizeni",
+      "rychle zhorsi v chaosu",
+      "kolaps pri mnoha podnetech",
+      "lepsi fungovani v klidu"
+    ],
+    "observable": "regulační kolaps při nadměrné senzorické zátěži",
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K9"
+    ],
+    "disambiguation_questions": [
+      "Je přetížení vázané na konkrétní podnět nebo obecně na nepředvídatelnost?",
+      "Pomáhá předvídatelný režim a menší počet podnětů?"
+    ]
+  },
+  {
+    "id": "OBS_SEP_001",
+    "patterns": [
+      "place pri rannim predani",
+      "place pri prichodu",
+      "rano place ve skolce",
+      "silna reakce pri prichodu"
+    ],
+    "observable": "výrazná separační zátěž při ranním předání",
+    "candidate_blocks": [
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K10"
+    ],
+    "disambiguation_questions": [
+      "Uklidní se po odchodu rodiče relativně rychle, nebo dlouho zůstává mimo regulaci?",
+      "Zhoršilo se to po změně režimu nebo po delší absenci?"
+    ]
+  },
+  {
+    "id": "OBS_SEP_002",
+    "patterns": [
+      "drzi se rodice",
+      "odmita odlouceni",
+      "nechce pustit rodice",
+      "nechce zustat bez rodice"
+    ],
+    "observable": "silná potřeba bezpečnostní vazby při přechodu do školního prostředí",
+    "candidate_blocks": [
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z4",
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K10"
+    ],
+    "disambiguation_questions": [
+      "Vyhledává po příchodu jednoho konkrétního bezpečného pedagoga?",
+      "Pomáhá předvídatelný rituál předání?"
+    ]
+  },
+  {
+    "id": "OBS_SEP_003",
+    "patterns": [
+      "uklidni se az po delsi dobe",
+      "zlepseni po stabilizaci rezimu",
+      "zhorseni po zmene rutiny",
+      "potrebuje dlouhe prechody"
+    ],
+    "observable": "regulační obtíž při přechodu mezi bezpečným a nejistým prostředím",
+    "candidate_blocks": [
+      "A",
+      "E",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "K10"
+    ],
+    "disambiguation_questions": [
+      "Pomáhá stabilní ranní rutina a stejné předání?",
+      "Je obtíž hlavně ráno, nebo i při jiných přechodech během dne?"
+    ]
+  },
+  {
+    "id": "OBS_SAFE_001",
+    "patterns": [
+      "utika ze tridy",
+      "vybiha ze tridy",
+      "odchazi ze tridy",
+      "utika pryc",
+      "bezi pryc ze tridy",
+      "utece ze tridy",
+      "utekl ze tridy",
+      "utekla ze tridy",
+      "utikal ze tridy",
+      "utika ke dverim",
+      "bezi ke dverim",
+      "vybehne ze tridy",
+      "vybehl ze tridy",
+      "vybehla ze tridy"
+    ],
+    "observable": "opuštění bezpečného prostoru nebo únik ze třídy",
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [],
+    "disambiguation_questions": [
+      "Kam dítě utíká a hrozí při tom reálné nebezpečí?",
+      "Jak často se to děje a kdo ho musí zastavit?"
+    ]
+  },
+  {
+    "id": "OBS_ACT_004",
+    "patterns": [
+      "odbiha od stolu",
+      "odbíhá od stolu",
+      "odchazi od stolu",
+      "odchází od stolu",
+      "odbiha od cinnosti",
+      "odbíhá od činnosti",
+      "odchazi od cinnosti",
+      "odchází od činnosti"
+    ],
+    "observable": "odchází od činnosti nebo pracovního místa",
+    "candidate_blocks": [
+      "E",
+      "C",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z1"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "P2"
+    ],
+    "disambiguation_questions": [
+      "Děje se to hlavně při delší činnosti, při nejasném zadání, nebo při čekání?",
+      "Pomáhá kratší úsek, jasný začátek/konec, nebo krátký pohybový reset?"
+    ]
+  },
+  {
+    "id": "OBS_TASK_001",
+    "patterns": [
+      "dokonci jen kdyz u nej nekdo sedi",
+      "dokončí jen když u něj někdo sedí",
+      "dokonci jen s dopomoci",
+      "dokončí jen s dopomocí",
+      "dokonci jen s podporou dospeleho",
+      "dokončí jen s podporou dospělého",
+      "potrebuje aby u nej nekdo sedel",
+      "potřebuje aby u něj někdo seděl"
+    ],
+    "observable": "dokončí úkol pouze s blízkou podporou dospělého",
+    "candidate_blocks": [
+      "C",
+      "E",
+      "A",
+      "D"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "P2",
+      "P1"
+    ],
+    "disambiguation_questions": [
+      "Potřebuje hlavně připomenout krok, ujistit se, nebo zůstat regulovaný?",
+      "Rozumí zadání bez doprovodu dospělého?"
+    ]
+  },
+  {
+    "id": "OBS_ACT_005",
+    "patterns": [
+      "saha na veci kolem sebe",
+      "sahá na věci kolem sebe",
+      "saha na vse kolem",
+      "sahá na vše kolem",
+      "bere veci kolem sebe",
+      "bere věci kolem sebe",
+      "manipuluje s vecmi kolem sebe",
+      "manipuluje s věcmi kolem sebe"
+    ],
+    "observable": "sahá na předměty kolem sebe během činnosti",
+    "candidate_blocks": [
+      "E",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z1"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "P2"
+    ],
+    "disambiguation_questions": [
+      "Děje se to při čekání, při delším sezení, nebo když ztrácí pozornost?",
+      "Pomáhá dát mu konkrétní předmět nebo jasnou roli?"
+    ],
+    "safety_note": "Neznamená automaticky házení předmětů ani bezpečnostní riziko."
+  },
+  {
+    "id": "OBS_SOC_007",
+    "patterns": [
+      "vstupuje do reci",
+      "vstupuje do řeči",
+      "vstupuje ostatnim do reci",
+      "vstupuje ostatním do řeči",
+      "skace do reci",
+      "skáče do řeči",
+      "prerusuje ostatni",
+      "přerušuje ostatní"
+    ],
+    "observable": "vstupuje druhým do řeči nebo přerušuje komunikaci",
+    "candidate_blocks": [
+      "E",
+      "B",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "P2",
+      "P6"
+    ],
+    "disambiguation_questions": [
+      "Děje se to při nadšení, čekání na řadu, nebo při neporozumění pravidlu?",
+      "Pomáhá jasně daná role nebo vizuální signál, kdy je jeho řada?"
+    ],
+    "notes": "Přerušování řeči držíme primárně jako regulaci/inhibici. Z3 až při explicitním vztahovém konfliktu."
+  },
+  {
+    "id": "OBS_SAFE_002",
+    "patterns": [
+      "hazi sesitem",
+      "házi sešitem",
+      "hází sešitem",
+      "hodil sesit",
+      "hodil sešit",
+      "hodila sesit",
+      "hodila sešit",
+      "hazi predmet",
+      "hází předmět",
+      "hazi predmety",
+      "hází předměty",
+      "hazi veci",
+      "hází věci",
+      "hazi vecmi",
+      "hází věcmi",
+      "hazi po detech",
+      "hází po dětech",
+      "hazi po ostatnich",
+      "hází po ostatních"
+    ],
+    "observable": "hází předmětem nebo věcmi",
+    "candidate_blocks": [
+      "A",
+      "E",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z2",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "source_cases": [
+      "safety"
+    ],
+    "disambiguation_questions": [
+      "Co přesně hází, kam a jakou silou?",
+      "Byl někdo zasažen nebo hrozilo reálné zranění?",
+      "Co tomu bezprostředně předchází?"
+    ],
+    "safety_note": "Jde o pozorovatelný bezpečnostně relevantní projev, nikoli pouze intenzitní flag."
+  },
+  {
+    "id": "OBS_TASK_002",
+    "patterns": [
+      "nezvlada tempo",
+      "nezvládá tempo",
+      "nestaci tempu",
+      "nestačí tempu",
+      "nestaci ostatnim",
+      "nestačí ostatním",
+      "nezvlada tempo s ostatnimi",
+      "nezvládá tempo s ostatními"
+    ],
+    "observable": "nestíhá tempo činnosti ve skupině",
+    "candidate_blocks": [
+      "C",
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "source_cases": [
+      "profile_extrapolation"
+    ],
+    "disambiguation_questions": [
+      "Nestíhá kvůli porozumění zadání, tempu práce, únavě, nebo regulaci?",
+      "Děje se to při všech činnostech, nebo jen při konkrétním typu úkolu?"
+    ]
+  }
+]

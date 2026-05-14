@@ -1,0 +1,242 @@
+[
+  {
+    "id": "OBS_J1_MORNING_SEPARATION_DYSREGULATION_001",
+    "category": "independence_adaptation",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "ráno dlouho pláče",
+      "nechce pustit rodiče",
+      "příchod do školky je velmi těžký",
+      "separace je každý den problém",
+      "drží se rodiče a nejde pustit"
+    ],
+    "patterns": [
+      "rano dlouho place",
+      "nechce pustit rodice",
+      "prichod do skolky je velmi tezky",
+      "separace je kazdy den problem",
+      "drzi se rodice a nejde pustit"
+    ],
+    "observable": "při ranní separaci od rodiče dochází k výraznému rozpadu regulace",
+    "observable_anchor": "Při ranním oddělení od rodiče dítě přechází do silné emoční dysregulace, obtížně vstupuje do školkového režimu a návrat k funkčnímu zapojení vyžaduje výraznou podporu nebo dlouhý čas.",
+    "context_hotspots": [
+      "ranní příchod",
+      "změna režimu doma",
+      "návrat po nemoci",
+      "změna pedagoga",
+      "období zvýšené nejistoty"
+    ],
+    "candidate_blocks": ["A", "B"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "LOW_MEDIUM",
+    "not_diagnostic_warning": "U mladších dětí může být částečně vývojově běžné — důležitý je trend, intenzita a délka návratu.",
+    "alternative_explanations": [
+      "separační nejistota",
+      "oslabená adaptační stabilita",
+      "změna bezpečnostního rámce",
+      "zvýšená úzkost",
+      "změna v rodinném systému"
+    ],
+    "disambiguation_questions": [
+      "Je situace stejná každý den?",
+      "Zlepší se po chvíli, nebo přetrvává dlouho?",
+      "Změnilo se něco doma nebo ve školce?",
+      "Funguje lépe s konkrétním pedagogem?"
+    ]
+  },
+  {
+    "id": "OBS_J2_TRANSITION_DYSREGULATION_001",
+    "category": "independence_adaptation",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "každý přechod je problém",
+      "nezvládá změnu činnosti",
+      "při přesunech se rozpadá",
+      "změna programu ho rozhodí",
+      "přechody jsou vždy těžké"
+    ],
+    "patterns": [
+      "kazdy prechod je problem",
+      "nezvlada zmenu cinnosti",
+      "pri presunech se rozpada",
+      "zmena programu ho rozhodi",
+      "prechody jsou vzdy tezke"
+    ],
+    "observable": "při změně činnosti nebo režimu dochází k výrazné regulační obtíži",
+    "observable_anchor": "Při přechodu mezi aktivitami, změně režimu nebo změně očekávání dítě ztrácí regulační stabilitu a návrat do nového rámce je výrazně obtížný.",
+    "context_hotspots": [
+      "ráno",
+      "po obědě",
+      "převlékání",
+      "přechod z venku dovnitř",
+      "nečekaná změna programu"
+    ],
+    "candidate_blocks": ["A", "E"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "HIGH",
+    "risk": "LOW",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Často nejde o neposlušnost, ale o regulační náročnost změny.",
+    "alternative_explanations": [
+      "vysoká potřeba předvídatelnosti",
+      "oslabená přechodová regulace",
+      "senzorické přetížení",
+      "úzkost při změně",
+      "slabá anticipace času"
+    ],
+    "disambiguation_questions": [
+      "Jde hlavně o nečekané změny?",
+      "Pomáhá předvídatelnost a upozornění dopředu?",
+      "Je problém ráno, po obědě, nebo obecně?",
+      "Funguje lépe při vizuální struktuře dne?"
+    ]
+  },
+  {
+    "id": "OBS_J3_REFUSES_NEW_ACTIVITY_001",
+    "category": "independence_adaptation",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "odmítá nové aktivity",
+      "bojí se nového",
+      "drží se jen známého",
+      "nechce zkusit nic nového",
+      "nechce vstoupit do nové situace"
+    ],
+    "patterns": [
+      "odmita nove aktivity",
+      "boji se noveho",
+      "drzi se jen znameho",
+      "nechce zkusit nic noveho",
+      "nechce vstoupit do nove situace"
+    ],
+    "observable": "odmítá novou činnost nebo novou zkušenost, pokud není dostatečně bezpečná",
+    "observable_anchor": "Při setkání s novou aktivitou, novým prostředím nebo neznámým požadavkem dítě ustupuje, odmítá vstup a výrazně preferuje známý a předvídatelný rámec.",
+    "context_hotspots": [
+      "nová aktivita",
+      "změna pedagoga",
+      "výlet",
+      "nová pomůcka",
+      "nová sociální situace"
+    ],
+    "candidate_blocks": ["A", "C"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Může souviset s temperamentem i úzkostným přetížením — ne automaticky problém.",
+    "alternative_explanations": [
+      "vysoká potřeba jistoty",
+      "nízká tolerance novosti",
+      "výkonová nejistota",
+      "sociální úzkost",
+      "oslabená adaptační flexibilita"
+    ],
+    "disambiguation_questions": [
+      "Odmítá vše nové, nebo jen některé typy situací?",
+      "Pomáhá modelování druhými dětmi?",
+      "Jde více o sociální nebo výkonovou nejistotu?",
+      "Zlepší se situace po bezpečném prvním kontaktu?"
+    ]
+  },
+  {
+    "id": "OBS_J4_EXCESSIVE_ADULT_SUPPORT_NEED_001",
+    "category": "independence_adaptation",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "pořád potřebuje učitelku",
+      "bez dospělého nezačne",
+      "neustále se ujišťuje",
+      "samo si nevěří",
+      "bez opory nefunguje"
+    ],
+    "patterns": [
+      "porad potrebuje ucitelku",
+      "bez dospeleho nezacne",
+      "neustale se ujistuje",
+      "samo si neveri",
+      "bez opory nefunguje"
+    ],
+    "observable": "pro běžné fungování potřebuje nadměrnou externí oporu dospělého",
+    "observable_anchor": "V běžných činnostech dítě opakovaně potřebuje externí vedení, ujištění nebo přítomnost dospělého, a samostatné fungování je výrazně oslabené.",
+    "context_hotspots": [
+      "samostatná práce",
+      "nový úkol",
+      "přechod mezi aktivitami",
+      "nejistá situace",
+      "výkonová činnost"
+    ],
+    "candidate_blocks": ["A", "C"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Je nutné odlišit skutečně potřebnou podporu od naučené závislosti.",
+    "alternative_explanations": [
+      "nízká sebedůvěra",
+      "výkonová nejistota",
+      "slabá iniciační kapacita",
+      "potřeba vztahové jistoty",
+      "regulační opora proti přetížení"
+    ],
+    "disambiguation_questions": [
+      "Potřebuje pomoc fakticky, nebo hlavně ujištění?",
+      "Funguje lépe s jasnou strukturou?",
+      "Je rozdíl mezi známou a novou činností?",
+      "Přenáší se jistota postupně i bez dospělého?"
+    ]
+  },
+  {
+    "id": "OBS_J5_GIVES_UP_AFTER_DIFFICULTY_001",
+    "category": "independence_adaptation",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "hned to vzdá",
+      "nechce pokračovat když to nejde",
+      "při neúspěchu končí",
+      "nevydrží u obtížnější věci",
+      "rychle rezignuje"
+    ],
+    "patterns": [
+      "hned to vzda",
+      "nechce pokracovat kdyz to nejde",
+      "pri neuspechu konci",
+      "nevydrzi u obtiznejsi veci",
+      "rychle rezignuje"
+    ],
+    "observable": "při obtíži nebo prvním neúspěchu rychle ukončuje snahu a vzdává se",
+    "observable_anchor": "Při první obtíži, frustraci nebo neúspěchu dítě rychle ukončuje aktivní snahu, odstupuje od úkolu a obtížně obnovuje pokračování.",
+    "context_hotspots": [
+      "náročnější úkol",
+      "nová činnost",
+      "jemná motorika",
+      "výkonová situace",
+      "situace bez rychlého úspěchu"
+    ],
+    "candidate_blocks": ["A", "C"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Často souvisí s předchozí zkušeností neúspěchu, ne s leností.",
+    "alternative_explanations": [
+      "nízká frustrační tolerance",
+      "výkonová úzkost",
+      "oslabená vytrvalost",
+      "slabá sebedůvěra",
+      "anticipace dalšího selhání"
+    ],
+    "disambiguation_questions": [
+      "Vzdává vše, nebo jen určité typy úkolů?",
+      "Co se stane těsně před ukončením?",
+      "Pomáhá malý úspěch nebo rozdělení úkolu?",
+      "Vrací se později samo k úkolu?"
+    ]
+  }
+]

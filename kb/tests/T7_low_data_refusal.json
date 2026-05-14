@@ -1,0 +1,20 @@
+[
+  {
+    "id": "T7_LOW_DATA_001",
+    "input": "co s nim mam delat",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["MISSING_OBSERVABLE_BEHAVIOR"],
+      "must_not_include_zones": ["Z1", "Z2", "Z3", "Z4"]
+    }
+  },
+  {
+    "id": "T7_LOW_DATA_002",
+    "input": "asi ma nejaky problem",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["MISSING_OBSERVABLE_BEHAVIOR"],
+      "must_not_include_zones": ["Z1", "Z2", "Z3", "Z4"]
+    }
+  }
+]

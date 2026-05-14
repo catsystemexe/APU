@@ -1,0 +1,50 @@
+[
+  {
+    "id": "T10_CONF_LOW_NO_OBS_001",
+    "input": "asi ma nejaky problem",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "overall_confidence": "LOW",
+      "must_have_flags": [
+        "MISSING_OBSERVABLE_BEHAVIOR"
+      ]
+    }
+  },
+  {
+    "id": "T10_CONF_LABEL_CAP_001",
+    "input": "je manipulativni, pri rannim predani place a drzi se rodice",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "overall_confidence": "MEDIUM",
+      "must_have_flags": [
+        "HAS_INTERPRETATION_LABEL",
+        "CONTRADICTION_LABEL_VS_OBSERVABLE"
+      ]
+    }
+  },
+  {
+    "id": "T10_CONF_WEAK_001",
+    "input": "dnes poprve beha po tride",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "overall_confidence": "LOW",
+      "must_have_flags": [
+        "SINGLE_EPISODE",
+        "WEAK_INFERENCE"
+      ]
+    }
+  },
+  {
+    "id": "T10_CONF_HIGH_001",
+    "input": "je mu 5 let, pri rannim kruhu porad beha po tride a skace do reci, potrebuji udrzet skupinu",
+    "expected": {
+      "output_mode": "FULL",
+      "overall_confidence": "MEDIUM",
+      "primary_zone": "Z2",
+      "must_have_flags": [
+        "MULTIPLE_HYPOTHESES",
+        "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+      ]
+    }
+  }
+]

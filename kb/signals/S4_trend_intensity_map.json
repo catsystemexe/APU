@@ -1,0 +1,1274 @@
+{
+  "schema_version": "S4_trend_intensity_map.v1",
+  "file": "kb/signals/S4_trend_intensity_map.json",
+  "normalization": {
+    "lowercase": true,
+    "remove_diacritics": true,
+    "language": "cs",
+    "match_strategy": "hybrid_stems_patterns_excludes"
+  },
+  "purpose": [
+    "modify_strength_of_already_detected_observable_or_context_signal",
+    "detect_frequency_duration_intensity_trend_and_scope",
+    "increase_or_decrease_confidence_only_when_observable_is_present",
+    "generate_validation_flags_and_followup_questions"
+  ],
+  "hard_limits": [
+    "S4 must not create block inference alone",
+    "S4 must not create profile inference alone",
+    "S4 must not create zone inference alone",
+    "S4 must not be treated as observable behavior",
+    "S4 must not override S3 moral or interpretive warnings"
+  ],
+  "risk_levels": {
+    "LOW": "slaby nebo neurcity modifikator",
+    "MEDIUM": "uzitecny modifikator pri pritomnem observable",
+    "HIGH": "silny trend/intenzita/generalizace nebo bezpecnostni signal vyzadujici overeni observables"
+  },
+  "effect_model": {
+    "specificity_delta": {
+      "-2": "snizuje specificitu kvuli neurcitosti nebo biasu",
+      "-1": "mirne snizuje specificitu",
+      "0": "bez zmeny specificity",
+      "1": "zvysuje specificitu pri pritomnem observable",
+      "2": "vyrazne zvysuje specificitu pri opakovanem nebo casove ukotvenem observable"
+    },
+    "confidence_modifier_values": [
+      "increase_if_observable_present",
+      "decrease_due_to_uncertainty",
+      "decrease_due_to_absolutization",
+      "increase_environmental_specificity",
+      "increase_safety_priority_if_risk_observable_present",
+      "reduce_pathologizing_if_improving",
+      "no_change"
+    ],
+    "output_mode_values": [
+      "ask_for_observables",
+      "ask_for_frequency_context",
+      "ask_for_timeline",
+      "ask_for_safety_details",
+      "suggest_low_risk_support",
+      "suggest_environmental_adjustment",
+      "monitor_trend",
+      "consider_wider_mapping_only_if_observables_confirmed"
+    ]
+  },
+  "validation_rules": [
+    {
+      "id": "S4_VAL_001",
+      "rule": "If S4 signal appears without observable behavior, do not increase confidence; ask for observable behavior first."
+    },
+    {
+      "id": "S4_VAL_002",
+      "rule": "Frequency signals increase confidence only when the described behavior is concrete and repeated."
+    },
+    {
+      "id": "S4_VAL_003",
+      "rule": "Duration signals increase seriousness but do not identify cause."
+    },
+    {
+      "id": "S4_VAL_004",
+      "rule": "Escalation signals require timeline comparison: what changed, since when, and in which situations."
+    },
+    {
+      "id": "S4_VAL_005",
+      "rule": "Improvement signals reduce pathologizing and should trigger support/adaptation framing."
+    },
+    {
+      "id": "S4_VAL_006",
+      "rule": "Situational limitation increases probability of environmental/context influence."
+    },
+    {
+      "id": "S4_VAL_007",
+      "rule": "Generalization across settings increases need for broader mapping, but only after observables are confirmed."
+    },
+    {
+      "id": "S4_VAL_008",
+      "rule": "Safety intensity may raise output priority, but cannot activate Z3 without concrete risky observable."
+    },
+    {
+      "id": "S4_VAL_009",
+      "rule": "Uncertainty markers decrease confidence and require clarifying questions."
+    },
+    {
+      "id": "S4_VAL_010",
+      "rule": "Absolutizing words like always/never should be treated as possible frustration or bias until frequency is specified."
+    }
+  ],
+  "collision_rules": {
+    "prefer_false_negative": true,
+    "exclude_pattern_beats_all": true,
+    "safety_observable_required_for_safety_escalation": true,
+    "absolutization_does_not_count_as_frequency": true,
+    "specific_time_pattern_beats_general_stem": true,
+    "improvement_signal_reduces_pathologizing_even_if_frequency_is_high": true,
+    "situational_limitation_reduces_generalization": true,
+    "generalization_requires_multiple_contexts": true
+  },
+  "items": [
+    {
+      "id": "TR_FREQ_001",
+      "category": "frequency",
+      "stems": [
+        "porad",
+        "neustal"
+      ],
+      "patterns": [
+        "skoro porad",
+        "porad dokola",
+        "neustale se to opakuje"
+      ],
+      "exclude_patterns": [],
+      "signal": "velmi casty nebo opakovany vyskyt",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "REPEATED_PATTERN",
+          "FREQUENCY_HIGH"
+        ],
+        "output_mode": "ask_for_frequency_context",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Jak casto se to deje a v jakych situacich se to opakuje?"
+    },
+    {
+      "id": "TR_FREQ_002",
+      "category": "frequency",
+      "stems": [
+        "denn",
+        "kazdodenn"
+      ],
+      "patterns": [
+        "kazdy den",
+        "opakuje se to denne",
+        "deje se to denne"
+      ],
+      "exclude_patterns": [],
+      "signal": "denni vyskyt",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "DAILY_PATTERN",
+          "REPEATED_PATTERN"
+        ],
+        "output_mode": "ask_for_frequency_context",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Deje se to kazdy den ve stejne situaci, nebo v ruznych castech dne?"
+    },
+    {
+      "id": "TR_FREQ_003",
+      "category": "frequency",
+      "stems": [
+        "cast"
+      ],
+      "patterns": [
+        "casto se stava",
+        "deje se to casto",
+        "casto opakuje"
+      ],
+      "exclude_patterns": [],
+      "signal": "castejsi vyskyt bez presne frekvence",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "FREQUENCY_UNSPECIFIED"
+        ],
+        "output_mode": "ask_for_frequency_context",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co znamena casto: denne, nekolikrat tydne, nebo jen v nekterych situacich?"
+    },
+    {
+      "id": "TR_FREQ_004",
+      "category": "frequency",
+      "stems": [
+        "obcas",
+        "nekdy"
+      ],
+      "patterns": [
+        "jen obcas",
+        "stane se to nekdy",
+        "obcas se objevi"
+      ],
+      "exclude_patterns": [],
+      "signal": "obcasny vyskyt",
+      "effect": {
+        "specificity_delta": 0,
+        "confidence_modifier": "no_change",
+        "validation_flags": [
+          "OCCASIONAL_PATTERN"
+        ],
+        "output_mode": "monitor_trend",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "V jakych situacich se to obcas objevi a kdy naopak ne?"
+    },
+    {
+      "id": "TR_FREQ_005",
+      "category": "frequency",
+      "stems": [
+        "jednou",
+        "poprve"
+      ],
+      "patterns": [
+        "stalo se to jednou",
+        "dnes poprve",
+        "poprve se to objevilo"
+      ],
+      "exclude_patterns": [],
+      "signal": "jednorazova epizoda",
+      "effect": {
+        "specificity_delta": -1,
+        "confidence_modifier": "no_change",
+        "validation_flags": [
+          "SINGLE_EPISODE"
+        ],
+        "output_mode": "ask_for_observables",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Popiste prosim presne, co se stalo, co tomu predchazelo a zda se to uz nekdy opakovalo."
+    },
+    {
+      "id": "TR_DUR_001",
+      "category": "duration",
+      "stems": [
+        "dlouh",
+        "dlouhodob"
+      ],
+      "patterns": [
+        "uz dlouho",
+        "dlouhodobe",
+        "trva to dlouho"
+      ],
+      "exclude_patterns": [],
+      "signal": "dlouhodobe trvani bez presneho ukotveni",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "LONG_DURATION_UNSPECIFIED"
+        ],
+        "output_mode": "ask_for_timeline",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Od kdy to pozorujete a zmenilo se to v case?"
+    },
+    {
+      "id": "TR_DUR_002",
+      "category": "duration",
+      "stems": [
+        "mesic"
+      ],
+      "patterns": [
+        "posledni mesic",
+        "asi mesic",
+        "uz mesic"
+      ],
+      "exclude_patterns": [],
+      "signal": "casove ukotvene trvani v radu tydnu",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "TIMELINE_ANCHORED",
+          "MULTI_WEEK_DURATION"
+        ],
+        "output_mode": "ask_for_timeline",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Co se zmenilo pred timto obdobim a v jakych situacich se projev objevuje?"
+    },
+    {
+      "id": "TR_DUR_003",
+      "category": "duration",
+      "stems": [
+        "nastup",
+        "skolk"
+      ],
+      "patterns": [
+        "od nastupu do skolky",
+        "od zacatku skolky",
+        "od zari"
+      ],
+      "exclude_patterns": [],
+      "signal": "vazba na adaptacni obdobi nebo zmenu prostredi",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "ADAPTATION_CONTEXT",
+          "TIMELINE_ANCHORED"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Jak se projev menil od nastupu a co pomaha pri adaptaci?"
+    },
+    {
+      "id": "TR_DUR_004",
+      "category": "duration",
+      "stems": [
+        "tyden"
+      ],
+      "patterns": [
+        "posledni tyden",
+        "par dni",
+        "v poslednich dnech"
+      ],
+      "exclude_patterns": [],
+      "signal": "kratkodoby trend",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "SHORT_TERM_TREND"
+        ],
+        "output_mode": "monitor_trend",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Souvisi to s nejakou zmenou v rezimu, spanku, skupine nebo rodinne situaci?"
+    },
+    {
+      "id": "TR_ESC_001",
+      "category": "escalation",
+      "stems": [
+        "z hors",
+        "zhors",
+        "horsi"
+      ],
+      "patterns": [
+        "zhorsuje se to",
+        "je to horsi",
+        "posledni dobou horsi"
+      ],
+      "exclude_patterns": [],
+      "signal": "zhoršujici se trend",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "ESCALATION",
+          "TREND_WORSENING"
+        ],
+        "output_mode": "ask_for_timeline",
+        "do_not_use_without_observable": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Co presne je horsi oproti driv: frekvence, intenzita, delka trvani, nebo nasledky?"
+    },
+    {
+      "id": "TR_ESC_002",
+      "category": "escalation",
+      "stems": [
+        "stupn",
+        "eskal"
+      ],
+      "patterns": [
+        "stupnuje se to",
+        "zacalo to eskalovat",
+        "jde to nahoru"
+      ],
+      "exclude_patterns": [],
+      "signal": "eskalace projevu",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "ESCALATION"
+        ],
+        "output_mode": "ask_for_timeline",
+        "do_not_use_without_observable": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Jak vypadal projev drive a jak vypada ted?"
+    },
+    {
+      "id": "TR_ESC_003",
+      "category": "escalation",
+      "stems": [
+        "pribyv"
+      ],
+      "patterns": [
+        "pribyva to",
+        "je toho vic",
+        "objevuje se to casteji"
+      ],
+      "exclude_patterns": [],
+      "signal": "narust frekvence",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "FREQUENCY_INCREASING"
+        ],
+        "output_mode": "ask_for_frequency_context",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Jak casto se to delo driv a jak casto ted?"
+    },
+    {
+      "id": "TR_IMP_001",
+      "category": "improvement",
+      "stems": [
+        "leps",
+        "zleps"
+      ],
+      "patterns": [
+        "zlepsuje se to",
+        "je to lepsi",
+        "uz je to lepsi"
+      ],
+      "exclude_patterns": [],
+      "signal": "zlepsujici se trend",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "reduce_pathologizing_if_improving",
+        "validation_flags": [
+          "IMPROVING_TREND"
+        ],
+        "output_mode": "monitor_trend",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co se zlepsilo a co k tomu pravdepodobne pomohlo?"
+    },
+    {
+      "id": "TR_IMP_002",
+      "category": "improvement",
+      "stems": [
+        "zvyk",
+        "adapt"
+      ],
+      "patterns": [
+        "postupne si zvyka",
+        "adaptuje se",
+        "uz si trochu zvykl"
+      ],
+      "exclude_patterns": [],
+      "signal": "adaptacni zlepsovani",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "reduce_pathologizing_if_improving",
+        "validation_flags": [
+          "ADAPTATION_IMPROVING"
+        ],
+        "output_mode": "suggest_low_risk_support",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Ve kterych castech dne uz funguje lepe a kde jeste potrebuje podporu?"
+    },
+    {
+      "id": "TR_IMP_003",
+      "category": "improvement",
+      "stems": [
+        "uklidn"
+      ],
+      "patterns": [
+        "po chvili se uklidni",
+        "rychle se uklidni",
+        "po odchodu rodice se uklidni"
+      ],
+      "exclude_patterns": [],
+      "signal": "rychla navratnost do klidu nebo situacni zklidneni",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "reduce_pathologizing_if_improving",
+        "validation_flags": [
+          "RECOVERY_PRESENT",
+          "SITUATIONAL_REGULATION"
+        ],
+        "output_mode": "suggest_low_risk_support",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co presne pomaha, aby se dite uklidnilo?"
+    },
+    {
+      "id": "TR_IMP_004",
+      "category": "improvement",
+      "stems": [
+        "rut"
+      ],
+      "patterns": [
+        "pomaha rutina",
+        "pomaha stejny postup",
+        "kdyz vi co bude tak je to lepsi"
+      ],
+      "exclude_patterns": [],
+      "signal": "pozitivni vliv predvidatelnosti",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "ROUTINE_HELPS",
+          "ENVIRONMENTAL_SUPPORT_EFFECTIVE"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Ktera konkretni rutina pomaha a kdy je potreba ji posilit?"
+    },
+    {
+      "id": "TR_SIT_001",
+      "category": "situational_limitation",
+      "stems": [
+        "rano"
+      ],
+      "patterns": [
+        "jen rano",
+        "hlavne rano",
+        "pri rannim prichodu"
+      ],
+      "exclude_patterns": [],
+      "signal": "vazba na ranni prechod nebo odlouceni",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "SITUATIONAL_LIMITED",
+          "MORNING_TRANSITION"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Co presne se deje pri prichodu a jak dlouho to trva po odchodu rodice?"
+    },
+    {
+      "id": "TR_SIT_002",
+      "category": "situational_limitation",
+      "stems": [
+        "prechod",
+        "zmena"
+      ],
+      "patterns": [
+        "jen pri prechodu",
+        "pri zmene cinnosti",
+        "kdyz se meni aktivita"
+      ],
+      "exclude_patterns": [],
+      "signal": "vazba na prechod mezi cinnostmi",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "TRANSITION_TRIGGER",
+          "SITUATIONAL_LIMITED"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Pri kterem prechodu se to deje a co pomaha pred zmenou cinnosti?"
+    },
+    {
+      "id": "TR_SIT_003",
+      "category": "situational_limitation",
+      "stems": [],
+      "patterns": [
+        "jen pri kruhu",
+        "jen při kruhu",
+        "pri rannim kruhu",
+        "při ranním kruhu",
+        "v kruhu nevydrzi",
+        "v kruhu nevydrží"
+      ],
+      "exclude_patterns": [
+        "spolecne praci v kruhu",
+        "společné práci v kruhu",
+        "spolecna prace v kruhu",
+        "společná práce v kruhu"
+      ],
+      "signal": "vazba na skupinovou statickou aktivitu",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "GROUP_STATIC_ACTIVITY",
+          "SITUATIONAL_LIMITED"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co presne dela pri kruhu a jak dlouho aktivita trva?"
+    },
+    {
+      "id": "TR_SIT_004",
+      "category": "situational_limitation",
+      "stems": [
+        "obed",
+        "jid"
+      ],
+      "patterns": [
+        "jen pri obede",
+        "pri jidle",
+        "u stolu"
+      ],
+      "exclude_patterns": [],
+      "signal": "vazba na jidlo nebo stolovani",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "MEALTIME_CONTEXT",
+          "SITUATIONAL_LIMITED"
+        ],
+        "output_mode": "ask_for_observables",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co presne se deje pri jidle: odmita, odchazi, place, vybira jidlo, nebo reaguje na hluk?"
+    },
+    {
+      "id": "TR_SIT_005",
+      "category": "situational_limitation",
+      "stems": [
+        "venk"
+      ],
+      "patterns": [
+        "jen venku",
+        "hlavne venku",
+        "na zahrade"
+      ],
+      "exclude_patterns": [],
+      "signal": "vazba na venkovni prostredi",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "OUTDOOR_CONTEXT",
+          "SITUATIONAL_LIMITED"
+        ],
+        "output_mode": "ask_for_observables",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co se venku deje jinak nez ve tride?"
+    },
+    {
+      "id": "TR_SIT_006",
+      "category": "situational_limitation",
+      "stems": [
+        "doma"
+      ],
+      "patterns": [
+        "doma ne",
+        "doma to nedela",
+        "jen ve skolce"
+      ],
+      "exclude_patterns": [],
+      "signal": "rozdil mezi domovem a MS",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "SETTING_DIFFERENCE",
+          "ENVIRONMENTAL_INFLUENCE_POSSIBLE"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Co je ve skolce jine nez doma: pocet deti, hluk, pravidla, prechody, dospely?"
+    },
+    {
+      "id": "TR_SIT_007",
+      "category": "situational_limitation",
+      "stems": [
+        "ucitel"
+      ],
+      "patterns": [
+        "s jednou ucitelkou",
+        "jen s jednou ucitelkou",
+        "s jinou ucitelkou ne"
+      ],
+      "exclude_patterns": [],
+      "signal": "vazba na konkretniho dospeleho",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "ADULT_SPECIFIC_CONTEXT"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Co se lisi v pristupu jednotlivych dospelych a jak na to dite reaguje?"
+    },
+    {
+      "id": "TR_SIT_008",
+      "category": "situational_limitation",
+      "stems": [
+        "individual",
+        "samostat"
+      ],
+      "patterns": [
+        "individualne funguje",
+        "v male skupine funguje",
+        "samo funguje lepe"
+      ],
+      "exclude_patterns": [],
+      "signal": "lepsi fungovani pri nizsi socialni nebo senzoricke zatezi",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_environmental_specificity",
+        "validation_flags": [
+          "LOW_LOAD_FUNCTIONING_BETTER"
+        ],
+        "output_mode": "suggest_environmental_adjustment",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co se zlepsi v male skupine nebo individualne?"
+    },
+    {
+      "id": "TR_GEN_001",
+      "category": "generalization",
+      "stems": [
+        "vsude",
+        "vsech"
+      ],
+      "patterns": [
+        "ve vsech situacich",
+        "vsude stejne",
+        "pri vsem"
+      ],
+      "exclude_patterns": [],
+      "signal": "generalizace napric situacemi",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "CROSS_CONTEXT_PATTERN"
+        ],
+        "output_mode": "consider_wider_mapping_only_if_observables_confirmed",
+        "do_not_use_without_observable": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Ve kterych konkretnich situacich se to potvrzuje a existuje situace, kde se to nedeje?"
+    },
+    {
+      "id": "TR_GEN_002",
+      "category": "generalization",
+      "stems": [
+        "doma",
+        "skolk"
+      ],
+      "patterns": [
+        "doma i ve skolce",
+        "ve skolce i doma",
+        "vsude se chova stejne"
+      ],
+      "exclude_patterns": [],
+      "signal": "vyskyt ve vice prostredich",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "MULTI_SETTING_PATTERN"
+        ],
+        "output_mode": "consider_wider_mapping_only_if_observables_confirmed",
+        "do_not_use_without_observable": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Je chovani opravdu stejne doma i ve skolce, nebo se lisi spoustec a intenzita?"
+    },
+    {
+      "id": "TR_GEN_003",
+      "category": "generalization",
+      "stems": [
+        "kazd",
+        "dospel"
+      ],
+      "patterns": [
+        "s kazdym dospelym",
+        "u vsech ucitelek",
+        "nezavisle na dospelem"
+      ],
+      "exclude_patterns": [],
+      "signal": "generalizace napric dospelymi",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "ADULT_GENERALIZED_PATTERN"
+        ],
+        "output_mode": "consider_wider_mapping_only_if_observables_confirmed",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "U kterych dospelych se to projevuje a kdo s ditetem funguje lepe?"
+    },
+    {
+      "id": "TR_INT_001",
+      "category": "intensity",
+      "stems": [
+        "siln",
+        "hodne"
+      ],
+      "patterns": [
+        "velmi silne",
+        "hodne silne",
+        "silna reakce"
+      ],
+      "exclude_patterns": [],
+      "signal": "vysoka intenzita bez popisu chovani",
+      "effect": {
+        "specificity_delta": 0,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "INTENSITY_HIGH_UNSPECIFIED"
+        ],
+        "output_mode": "ask_for_observables",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Jak konkretne ta silna reakce vypada telove, hlasove nebo chovanim?"
+    },
+    {
+      "id": "TR_INT_002",
+      "category": "intensity",
+      "stems": [
+        "mirn",
+        "trochu"
+      ],
+      "patterns": [
+        "mirne",
+        "jen trochu",
+        "slabe"
+      ],
+      "exclude_patterns": [],
+      "signal": "nizka intenzita",
+      "effect": {
+        "specificity_delta": 0,
+        "confidence_modifier": "no_change",
+        "validation_flags": [
+          "INTENSITY_LOW"
+        ],
+        "output_mode": "monitor_trend",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Je to spis mirny projev, nebo neco, co narusuje fungovani ve tride?"
+    },
+    {
+      "id": "TR_INT_003",
+      "category": "intensity",
+      "stems": [
+        "dlouho",
+        "trv"
+      ],
+      "patterns": [
+        "dlouho trva",
+        "trva to dlouho",
+        "dlouho se vraci do klidu"
+      ],
+      "exclude_patterns": [
+        "trva dlouho oblekani"
+      ],
+      "signal": "prodlouzena reakce nebo pomaly navrat do klidu",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "RECOVERY_SLOW",
+          "DURATION_OF_EPISODE_LONG"
+        ],
+        "output_mode": "ask_for_timeline",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Jak dlouho reakce trva a co pomaha k navratu do klidu?"
+    },
+    {
+      "id": "TR_INT_004",
+      "category": "intensity",
+      "stems": [
+        "zastav",
+        "nejde",
+        "prerus",
+        "uklidn"
+      ],
+      "patterns": [
+        "nejde zastavit",
+        "nejde ho uklidnit",
+        "nejde prerusit",
+        "neda se zastavit",
+        "nejde ho zastavit",
+        "nejde ji zastavit"
+      ],
+      "exclude_patterns": [],
+      "signal": "obtizne prerusitelny projev",
+      "effect": {
+        "specificity_delta": 1,
+        "confidence_modifier": "increase_if_observable_present",
+        "validation_flags": [
+          "HARD_TO_INTERRUPT",
+          "ADULT_SUPPORT_NEEDED"
+        ],
+        "output_mode": "ask_for_observables",
+        "do_not_use_without_observable": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Co presne nejde zastavit a jaky zasah dospeleho byl potreba?"
+    },
+    {
+      "id": "TR_SAFE_001",
+      "category": "safety_intensity",
+      "stems": [
+        "ohroz",
+        "ubliz",
+        "zran"
+      ],
+      "patterns": [
+        "ohrozuje sebe",
+        "ublizuje si",
+        "ublízuje si",
+        "hrozi ze si ublizi",
+        "hrozí že si ublíží",
+        "bije hlavou",
+        "mlati hlavou",
+        "utika pod auto"
+      ],
+      "exclude_patterns": [],
+      "signal": "mozne riziko pro dite",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_safety_priority_if_risk_observable_present",
+        "validation_flags": [
+          "SAFETY_SELF_RISK_POSSIBLE"
+        ],
+        "output_mode": "ask_for_safety_details",
+        "do_not_use_without_observable": true,
+        "can_raise_zone_priority_only_if_risk_observable_present": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Co presne dite udelalo, jak bezprostredni bylo riziko a jaky zasah byl nutny?"
+    },
+    {
+      "id": "TR_SAFE_002",
+      "category": "safety_intensity",
+      "stems": [
+        "ohroz",
+        "ubliz",
+        "zran"
+      ],
+      "patterns": [
+        "ohrozuje ostatni",
+        "ohrozuje deti",
+        "hrozi zraneni ostatnich",
+        "ublizuje detem",
+        "ublizuje ostatnim",
+        "bije deti",
+        "kope deti",
+        "kouse deti"
+      ],
+      "exclude_patterns": [],
+      "signal": "mozne riziko pro ostatni",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_safety_priority_if_risk_observable_present",
+        "validation_flags": [
+          "SAFETY_OTHER_RISK_POSSIBLE"
+        ],
+        "output_mode": "ask_for_safety_details",
+        "do_not_use_without_observable": true,
+        "can_raise_zone_priority_only_if_risk_observable_present": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Komu hrozilo riziko, co presne dite udelalo a doslo ke kontaktu nebo zraneni?"
+    },
+    {
+      "id": "TR_SAFE_003",
+      "category": "safety_intensity",
+      "stems": [
+        "utik",
+        "vybih",
+        "odchaz",
+        "utec",
+        "utek",
+        "vybehn"
+      ],
+      "patterns": [
+        "utika ze tridy",
+        "vybiha ze tridy",
+        "odchazi ze tridy",
+        "utika pryc",
+        "bezi pryc ze tridy",
+        "utece ze tridy",
+        "utekl ze tridy",
+        "utekla ze tridy",
+        "utika ke dverim",
+        "bezi ke dverim",
+        "vybehne ze tridy"
+      ],
+      "exclude_patterns": [
+        "utika ve hre",
+        "hra na honenou"
+      ],
+      "signal": "opusteni bezpecneho prostoru",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_safety_priority_if_risk_observable_present",
+        "validation_flags": [
+          "LEAVES_SAFE_AREA",
+          "SAFETY_CONTEXT"
+        ],
+        "output_mode": "ask_for_safety_details",
+        "do_not_use_without_observable": true,
+        "can_raise_zone_priority_only_if_risk_observable_present": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Kam dite utika, jak casto, kdo ho zastavi a hrozi pritom realne nebezpeci?"
+    },
+    {
+      "id": "TR_SAFE_004",
+      "category": "safety_intensity",
+      "stems": [
+        "haz"
+      ],
+      "patterns": [
+        "hazi veci",
+        "hazi predmety",
+        "hazi po detech",
+        "hazi po ostatnich",
+        "hazi vecmi",
+        "hazi predmetem",
+        "hodil vec",
+        "hodila vec",
+        "hodil predmet",
+        "hodila predmet"
+      ],
+      "exclude_patterns": [
+        "hazi mic",
+        "hazi pri hre",
+        "saha na veci",
+        "sahá na věci",
+        "bere veci",
+        "bere věci",
+        "manipuluje s vecmi",
+        "manipuluje s věcmi"
+      ],
+      "signal": "hazeni predmetu s moznym rizikem",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_safety_priority_if_risk_observable_present",
+        "validation_flags": [
+          "OBJECT_THROWING",
+          "SAFETY_CONTEXT"
+        ],
+        "output_mode": "ask_for_safety_details",
+        "do_not_use_without_observable": true,
+        "can_raise_zone_priority_only_if_risk_observable_present": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Jake predmety hazi, kam, jakou silou a jestli nekdo byl zasazen?"
+    },
+    {
+      "id": "TR_SAFE_005",
+      "category": "safety_intensity",
+      "stems": [
+        "bije",
+        "kop",
+        "kous"
+      ],
+      "patterns": [
+        "bije deti",
+        "kope deti",
+        "kouse deti",
+        "uhodil dite"
+      ],
+      "exclude_patterns": [
+        "hraje si na boj",
+        "symbolicka hra"
+      ],
+      "signal": "telesny kontakt s moznym rizikem",
+      "effect": {
+        "specificity_delta": 2,
+        "confidence_modifier": "increase_safety_priority_if_risk_observable_present",
+        "validation_flags": [
+          "PHYSICAL_CONTACT_RISK",
+          "SAFETY_CONTEXT"
+        ],
+        "output_mode": "ask_for_safety_details",
+        "do_not_use_without_observable": true,
+        "can_raise_zone_priority_only_if_risk_observable_present": true
+      },
+      "risk": "HIGH",
+      "replacement_question": "Co presne udelalo, komu, jak casto a jake byly nasledky?"
+    },
+    {
+      "id": "TR_UNC_001",
+      "category": "uncertainty",
+      "stems": [
+        "asi",
+        "mozna"
+      ],
+      "patterns": [
+        "asi",
+        "mozna",
+        "nejsem si jista"
+      ],
+      "exclude_patterns": [],
+      "signal": "nejistota v popisu",
+      "effect": {
+        "specificity_delta": -1,
+        "confidence_modifier": "decrease_due_to_uncertainty",
+        "validation_flags": [
+          "USER_UNCERTAINTY"
+        ],
+        "output_mode": "ask_for_observables",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co je jiste pozorovane a co je zatim jen odhad?"
+    },
+    {
+      "id": "TR_UNC_002",
+      "category": "uncertainty",
+      "stems": [
+        "pocit",
+        "zda"
+      ],
+      "patterns": [
+        "mam pocit",
+        "zda se mi",
+        "pusobi to"
+      ],
+      "exclude_patterns": [],
+      "signal": "subjektivni dojem misto overeneho popisu",
+      "effect": {
+        "specificity_delta": -1,
+        "confidence_modifier": "decrease_due_to_uncertainty",
+        "validation_flags": [
+          "SUBJECTIVE_IMPRESSION"
+        ],
+        "output_mode": "ask_for_observables",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Co konkretne jste videli nebo slyseli, ze to vyvolalo tento dojem?"
+    },
+    {
+      "id": "TR_UNC_003",
+      "category": "uncertainty",
+      "stems": [
+        "nevim",
+        "nepresn"
+      ],
+      "patterns": [
+        "nevim presne",
+        "nejsem si jista kdy",
+        "nejsem si jist jak casto"
+      ],
+      "exclude_patterns": [],
+      "signal": "chybejici presnost casu nebo frekvence",
+      "effect": {
+        "specificity_delta": -2,
+        "confidence_modifier": "decrease_due_to_uncertainty",
+        "validation_flags": [
+          "MISSING_FREQUENCY_OR_TIMELINE"
+        ],
+        "output_mode": "ask_for_frequency_context",
+        "do_not_use_without_observable": true
+      },
+      "risk": "LOW",
+      "replacement_question": "Zkuste odhadnout alespon rozsah: denne, tydne, vyjimecne, nebo pri konkretni situaci?"
+    },
+    {
+      "id": "TR_ABS_001",
+      "category": "absolutization",
+      "stems": [
+        "vzdy",
+        "vzdycky"
+      ],
+      "patterns": [
+        "vzdycky",
+        "vzdy to udela",
+        "vzdycky reaguje stejne"
+      ],
+      "exclude_patterns": [],
+      "signal": "absolutizace frekvence",
+      "effect": {
+        "specificity_delta": -1,
+        "confidence_modifier": "decrease_due_to_absolutization",
+        "validation_flags": [
+          "ABSOLUTIZING_LANGUAGE"
+        ],
+        "output_mode": "ask_for_frequency_context",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Je to opravdu pokazde, nebo existuji situace, kdy se to nedeje?"
+    },
+    {
+      "id": "TR_ABS_002",
+      "category": "absolutization",
+      "stems": [
+        "nikdy"
+      ],
+      "patterns": [
+        "nikdy neposlechne",
+        "nikdy se nezapoji",
+        "nikdy to neudela"
+      ],
+      "exclude_patterns": [],
+      "signal": "absolutni negace schopnosti nebo reakce",
+      "effect": {
+        "specificity_delta": -1,
+        "confidence_modifier": "decrease_due_to_absolutization",
+        "validation_flags": [
+          "ABSOLUTIZING_LANGUAGE"
+        ],
+        "output_mode": "ask_for_frequency_context",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Existuje aspon jedna situace, kdy se zapoji, zareaguje nebo zvladne cast ukolu?"
+    },
+    {
+      "id": "TR_ABS_003",
+      "category": "absolutization",
+      "stems": [
+        "celej",
+        "cely"
+      ],
+      "patterns": [
+        "cely den",
+        "celou dobu",
+        "od rana do odpoledne"
+      ],
+      "exclude_patterns": [],
+      "signal": "casova absolutizace",
+      "effect": {
+        "specificity_delta": -1,
+        "confidence_modifier": "decrease_due_to_absolutization",
+        "validation_flags": [
+          "TIME_ABSOLUTIZATION"
+        ],
+        "output_mode": "ask_for_timeline",
+        "do_not_use_without_observable": true
+      },
+      "risk": "MEDIUM",
+      "replacement_question": "Kdy presne to zacina, kdy konci a jsou behem dne klidnejsi casti?"
+    }
+  ]
+}

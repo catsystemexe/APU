@@ -1,0 +1,55 @@
+[
+  {
+    "id": "INT_REG_MOVE_001",
+    "title": "Regulovaný pohyb před návratem do činnosti",
+    "action": "Dejte dítěti krátký řízený pohybový úkol a potom ho vraťte k jednomu konkrétnímu kroku.",
+    "match_blocks": ["E", "A"],
+    "match_profiles": ["P2"],
+    "match_zones": ["Z2"],
+    "match_context": ["ranní kruh", "skupinový kruh"],
+    "timing": "now",
+    "confidence": "HIGH"
+  },
+  {
+    "id": "INT_GROUP_ROLE_001",
+    "title": "Vrátit dítě do skupiny přes jednoduchou roli",
+    "action": "Dejte dítěti jednoduchou roli v kruhu, například podržet obrázek, podat pomůcku nebo ukázat první krok.",
+    "match_blocks": ["B", "E"],
+    "match_profiles": ["P2", "P6"],
+    "match_zones": ["Z3", "Z4"],
+    "match_context": ["ranní kruh", "skupinový kruh"],
+    "timing": "now",
+    "confidence": "HIGH"
+  },
+  {
+    "id": "INT_RULE_SHORT_001",
+    "title": "Jedna věta místo vysvětlování",
+    "action": "Řekněte jednou krátkou větou, co má dítě dělat teď, ne co nemá dělat.",
+    "match_blocks": ["B", "C", "E"],
+    "match_profiles": ["P2", "P6"],
+    "match_zones": ["Z2", "Z4"],
+    "match_context": [],
+    "timing": "now",
+    "confidence": "HIGH"
+  },
+  {
+    "id": "INT_TASK_SPLIT_001",
+    "title": "Rozdělit činnost na kratší úsek",
+    "action": "Zkraťte činnost na malý dokončitelný úsek a hned označte konec úkolu.",
+    "match_blocks": ["C", "E", "A"],
+    "match_profiles": ["P2"],
+    "match_zones": ["Z1", "Z2"],
+    "match_context": [],
+    "timing": "now",
+    "confidence": "MEDIUM"
+  },
+  {
+    "id": "INT_PARENT_FACTS_001",
+    "title": "Vrátit komunikaci s rodičem k pozorování",
+    "action": "Popište rodiči jen konkrétní situaci, kdy se projev objevil, bez hodnocení dítěte nebo rodiče.",
+    "match_context_flags": ["CONTEXT_WITHOUT_CHILD_OBSERVABLE"],
+    "match_context_candidates": ["CTX_PAR_001", "CTX_PAR_002", "CTX_PAR_003"],
+    "timing": "next",
+    "confidence": "HIGH"
+  }
+]

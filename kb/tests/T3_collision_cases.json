@@ -1,0 +1,22 @@
+[
+  {
+    "id": "T3_COLLISION_001",
+    "input": "pri uklidu odmita pracovat, krici a pak utika ze tridy",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z3",
+      "must_include_zones": ["Z3"],
+      "must_have_flags": ["MULTIPLE_HYPOTHESES", "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"]
+    }
+  },
+  {
+    "id": "T3_COLLISION_002",
+    "input": "pri rannim kruhu nedava pozor, beha po tride a skace do reci",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_zones": ["Z2"],
+      "must_have_flags": ["MULTIPLE_HYPOTHESES", "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"],
+      "must_not_include_zones": ["Z3"]
+    }
+  }
+]

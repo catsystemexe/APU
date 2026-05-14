@@ -1,0 +1,10 @@
+[
+  {
+    "id": "T17_CASE_MEMORY_INTERVENTION_BASELINE_001",
+    "input": "potrebuji zklidnit situaci",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["MISSING_OBSERVABLE_BEHAVIOR"]
+    }
+  }
+]

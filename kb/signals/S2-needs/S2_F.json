@@ -1,0 +1,199 @@
+[
+  {
+    "id": "NEED_006_SUPPORT_TRANSITION",
+    "label": "Podpořit zvládnutí přechodové situace",
+    "belongs_to_core": "CORE_5_ADAPTATION_AND_TRANSITIONS",
+    "description": "Obtíž vzniká hlavně při změně režimu, přesunu nebo ukončení činnosti. Nejde o samotnou aktivitu, ale o přechod mezi stavy.",
+    "typical_triggers": [
+      "ranní příchod do školky",
+      "přechod z volné hry do řízené činnosti",
+      "odchod ven a návrat dovnitř",
+      "oběd, odpočinek, převlékání",
+      "ukončení oblíbené činnosti"
+    ],
+    "trigger_patterns": [
+      "nezvlada prechody",
+      "kazda zmena je problem",
+      "prechod mezi aktivitami",
+      "ukonceni cinnosti je tezke",
+      "potrebuji podporit prechod"
+    ],
+    "observable_bias": [
+      "OBS_J2_TRANSITION_REGULATION_DIFFICULTY_001",
+      "OBS_C5_CANNOT_WAIT_TURN_001"
+    ],
+    "block_bias": ["A", "E"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "TRANSITION_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "podpořit zvládnutí přechodové situace"
+  },
+  {
+    "id": "NEED_018_SUPPORT_NEW_ENVIRONMENT_ADAPTATION",
+    "label": "Podpořit adaptaci na nové prostředí",
+    "belongs_to_core": "CORE_5_ADAPTATION_AND_TRANSITIONS",
+    "description": "Obtíž souvisí hlavně se změnou prostředí, novou skupinou nebo novým režimem. Cílem je snížit nejistotu a zvýšit pocit bezpečí.",
+    "typical_triggers": [
+      "nástup do školky",
+      "změna třídy",
+      "nový pedagog",
+      "návrat po delší absenci",
+      "výrazná změna režimu"
+    ],
+    "trigger_patterns": [
+      "nova trida",
+      "nastup do skolky",
+      "novy pedagog",
+      "adaptace na nove prostredi",
+      "potrebuji podporit adaptaci"
+    ],
+    "observable_bias": [
+      "OBS_J1_MORNING_SEPARATION_BREAKDOWN_001",
+      "OBS_E1_STAYS_OUT_OF_PEER_GROUP_001"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "ADAPTATION_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "podpořit adaptaci na nové prostředí"
+  },
+  {
+    "id": "NEED_019_REST_AND_PACING",
+    "label": "Upravit tempo a odpočinek dítěte",
+    "belongs_to_core": "CORE_5_ADAPTATION_AND_TRANSITIONS",
+    "description": "Obtíž vzniká z únavy, přetížení nebo neudržitelného tempa dne. Cílem je upravit rytmus dne a předcházet kolapsu místo pozdního zásahu.",
+    "typical_triggers": [
+      "rozpad až později během dne",
+      "po obědě výrazně klesá regulace",
+      "dítě je přetažené",
+      "nezvládá dlouhou zátěž bez pauzy"
+    ],
+    "trigger_patterns": [
+      "je pretazene",
+      "po obede horsi",
+      "potrebuje odpocinek",
+      "tempo dne je moc",
+      "upravit tempo a odpocinek"
+    ],
+    "observable_bias": [
+      "OBS_L4_LOW_ENERGY_FATIGUE_001",
+      "OBS_L5_PHYSIOLOGICAL_STATE_BEHAVIOR_SHIFT_001"
+    ],
+    "block_bias": ["E", "A"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "PACE_AND_REST_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "upravit tempo a odpočinek dítěte"
+  },
+  {
+    "id": "NEED_027_LIFE_STRESS_PERIOD_SUPPORT",
+    "label": "Zohlednit aktuální životní zátěže dítěte",
+    "belongs_to_core": "CORE_5_ADAPTATION_AND_TRANSITIONS",
+    "description": "Projev může souviset s událostmi mimo školku, nikoli primárně s vývojovou obtíží. Cílem je nezaměnit životní zátěž za stabilní charakteristiku dítěte.",
+    "typical_triggers": [
+      "rozvod rodičů",
+      "narození sourozence",
+      "stěhování",
+      "nemoc v rodině",
+      "úmrtí blízkého člověka",
+      "dlouhodobé napětí doma"
+    ],
+    "trigger_patterns": [
+      "rozvod doma",
+      "tezke obdobi doma",
+      "zivotni zatez",
+      "rodinna situace",
+      "zohlednit aktualni obdobi"
+    ],
+    "observable_bias": [
+      "OBS_M5_SUDDEN_BEHAVIOR_CHANGE_001"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "LIFE_CONTEXT_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "zohlednit aktuální životní zátěže dítěte"
+  },
+  {
+    "id": "NEED_028_RESPECT_DEVELOPMENTAL_PACE",
+    "label": "Respektovat individuální tempo vývoje",
+    "belongs_to_core": "CORE_5_ADAPTATION_AND_TRANSITIONS",
+    "description": "Okolí tlačí na výkon nebo srovnávání, ale dítě potřebuje jinou vývojovou trajektorii. Cílem je oddělit tempo vývoje od morálního hodnocení.",
+    "typical_triggers": [
+      "tlak na už by mělo",
+      "srovnávání se sourozenci nebo vrstevníky",
+      "pomalejší tempo je čteno jako lenost",
+      "některé oblasti dozrávají výrazně později"
+    ],
+    "trigger_patterns": [
+      "uz by melo",
+      "je pomalejsi nez ostatni",
+      "individualni tempo vyvoje",
+      "srovnavani s vrstevniky",
+      "respektovat tempo vyvoje"
+    ],
+    "observable_bias": [
+      "OBS_N1_LAZY_LABEL_GUARD"
+    ],
+    "block_bias": ["A", "C"],
+    "zone_bias": ["Z1"],
+    "response_mode_bias": "DEVELOPMENTAL_PACING",
+    "safety_override": false,
+    "notepad_label": "respektovat individuální tempo vývoje"
+  },
+  {
+    "id": "NEED_035_PREDICTABILITY_AND_CONTROL",
+    "label": "Zvýšit předvídatelnost a pocit bezpečí",
+    "belongs_to_core": "CORE_5_ADAPTATION_AND_TRANSITIONS",
+    "description": "Dítě reaguje obtížně hlavně tam, kde je vysoká nejistota nebo ztráta orientace. Cílem je zvýšit orientaci a bezpečný pocit kontroly.",
+    "typical_triggers": [
+      "rozpad při nečekané změně",
+      "neznámá situace vyvolává odpor",
+      "opakované ujišťování",
+      "bez struktury rychle ztrácí regulaci"
+    ],
+    "trigger_patterns": [
+      "potrebuje predvidatelnost",
+      "nejistota ho rozhodi",
+      "bez struktury nezvlada",
+      "pocit kontroly",
+      "zvysit predvidatelnost"
+    ],
+    "observable_bias": [
+      "OBS_J3_REJECTS_NEW_UNSAFE_ACTIVITY_001",
+      "OBS_G4_NEEDS_REASSURANCE_TO_CONTINUE_001"
+    ],
+    "block_bias": ["A", "C"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "PREDICTABILITY_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "zvýšit předvídatelnost a pocit bezpečí"
+  },
+  {
+    "id": "NEED_051_RETURN_AFTER_ABSENCE",
+    "label": "Podpořit návrat dítěte po delší absenci",
+    "belongs_to_core": "CORE_5_ADAPTATION_AND_TRANSITIONS",
+    "description": "Po nemoci nebo delší nepřítomnosti dítě nezvládá okamžitý návrat do běžného fungování. Cílem je respektovat adaptační fázi návratu.",
+    "typical_triggers": [
+      "návrat po nemoci",
+      "návrat po prázdninách",
+      "návrat po hospitalizaci",
+      "po absenci reaguje výrazně citlivěji"
+    ],
+    "trigger_patterns": [
+      "navrat po nemoci",
+      "po absenci horsi",
+      "potrebuje cas po navratu",
+      "navrat po prazdninach",
+      "podpora po delsi absenci"
+    ],
+    "observable_bias": [
+      "OBS_J1_MORNING_SEPARATION_BREAKDOWN_001"
+    ],
+    "block_bias": ["A"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "REENTRY_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "podpořit návrat dítěte po delší absenci"
+  }
+]

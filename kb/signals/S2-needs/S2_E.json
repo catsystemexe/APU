@@ -1,0 +1,34 @@
+[
+  {
+    "id": "NEED_005_REDUCE_CHILD_OVERLOAD",
+    "label": "Snížit přetížení dítěte",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Projev ukazuje spíše na zahlcení než na nevychovanost. Cílem je snížit tlak prostředí, upravit nároky a zabránit opakované eskalaci.",
+    "typical_triggers": [
+      "dítě se rychle rozpadá při změně",
+      "přestává fungovat při hluku",
+      "silně reaguje na přechody",
+      "kolabuje po delší zátěži",
+      "vypadá přetíženě spíš než vzdorovitě"
+    ],
+    "trigger_patterns": [
+      "je pretizene",
+      "zahlceni",
+      "rychle se rozpadne",
+      "moc podnetu",
+      "potrebuji snizit pretizeni",
+      "neni to nevychovanost ale overload"
+    ],
+    "observable_bias": [
+      "OBS_D3_FREEZE_UNDER_PRESSURE_001",
+      "OBS_L1_NOISE_DYSREGULATION_001",
+      "OBS_J2_TRANSITION_REGULATION_DIFFICULTY_001",
+      "OBS_H4_COLLAPSE_OF_FUNCTIONING_001"
+    ],
+    "block_bias": ["A", "E"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "OVERLOAD_REDUCTION",
+    "safety_override": false,
+    "notepad_label": "snížit přetížení dítěte"
+  }
+]

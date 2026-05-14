@@ -1,0 +1,272 @@
+{
+  "schema": "APU_CONTEXT_V1",
+  "category": "S3A_context_routines_transitions",
+  "description": "Rutiny, přechody, změny režimu a adaptační situace",
+  "items": [
+    {
+      "id": "CTX_001",
+      "label": "Ranní příchod do školky",
+      "notepad": "při ranním příchodu do školky",
+      "typical_situations": [
+        "příchod do třídy",
+        "loučení s rodičem",
+        "převzetí dítěte pedagogem",
+        "první orientace v prostoru dne"
+      ],
+      "typical_signals": [
+        "pláč",
+        "odpor vstoupit",
+        "ztuhnutí",
+        "agresivní reakce",
+        "extrémní clinginess",
+        "útěk zpět k rodiči"
+      ],
+      "meaning": "silný adaptační a separační kontext, nutné odlišit vývojovou reakci od stabilního vzorce"
+    },
+    {
+      "id": "CTX_005",
+      "label": "Přechod mezi činnostmi",
+      "notepad": "při přechodu mezi činnostmi",
+      "typical_situations": [
+        "konec hry → kruh",
+        "třída → ven",
+        "ven → oběd",
+        "aktivita → odpočinek"
+      ],
+      "typical_signals": [
+        "odpor",
+        "kolaps",
+        "útěk",
+        "afekt",
+        "nebudu"
+      ],
+      "meaning": "obtíž může být v přechodu samotném, ne v cílové aktivitě"
+    },
+    {
+      "id": "CTX_006",
+      "label": "Oblékání / příprava na přesun",
+      "notepad": "při oblékání nebo převlékání",
+      "typical_situations": [
+        "oblékání na ven",
+        "převlékání po venku",
+        "příprava na spaní",
+        "hygiena před změnou režimu"
+      ],
+      "typical_signals": [
+        "odpor",
+        "zdržování",
+        "kolaps při tlaku času",
+        "konflikt s dospělým",
+        "pasivní odmítání spolupráce"
+      ],
+      "meaning": "často kombinace přechodu, tlaku a senzorické zátěže"
+    },
+    {
+      "id": "CTX_007",
+      "label": "Jídlo / stolování",
+      "notepad": "v souvislosti s jídlem / stolováním",
+      "typical_situations": [
+        "svačina",
+        "oběd",
+        "čekání na jídlo",
+        "sezení u stolu",
+        "přechod do režimu stolování"
+      ],
+      "typical_signals": [
+        "vykřikování",
+        "neklid",
+        "odmítání jídla",
+        "konflikt kolem stolování",
+        "výrazná frustrace při čekání"
+      ],
+      "meaning": "nutné odlišit vztah k jídlu, čekání a fyziologickou regulaci"
+    },
+    {
+      "id": "CTX_008",
+      "label": "Odpočinek / poobědový klid",
+      "notepad": "při odpočinku po obědě",
+      "typical_situations": [
+        "lehání po obědě",
+        "klidový režim",
+        "nízká stimulace",
+        "nemožnost volného pohybu"
+      ],
+      "typical_signals": [
+        "neklid",
+        "odpor k ležení",
+        "rušení ostatních",
+        "afektivní reakce",
+        "zvýšená citlivost"
+      ],
+      "meaning": "často nejde o neposlušnost, ale o regulační obtíž v nízké stimulaci"
+    },
+    {
+      "id": "CTX_009",
+      "label": "Venkovní pobyt",
+      "notepad": "při venkovním pobytu",
+      "typical_situations": [
+        "zahrada",
+        "hřiště",
+        "vycházka",
+        "méně strukturovaný pohybový prostor"
+      ],
+      "typical_signals": [
+        "útěk",
+        "bezpečnostní riziko",
+        "konflikty při pravidlech",
+        "extrémní aktivace",
+        "výrazné zlepšení oproti třídě"
+      ],
+      "meaning": "silný test vztahu mezi pohybem, strukturou a regulací"
+    },
+    {
+      "id": "CTX_010",
+      "label": "Návrat z venku",
+      "notepad": "při návratu z venkovní aktivity",
+      "typical_situations": [
+        "ukončení venkovní aktivity",
+        "návrat do strukturovaného režimu",
+        "přechod z vysoké aktivace do klidu"
+      ],
+      "typical_signals": [
+        "odpor",
+        "afekt",
+        "rozpad regulace",
+        "konflikt při návratu",
+        "prudké zhoršení spolupráce"
+      ],
+      "meaning": "často jde o obtíž odpojení od aktivace, ne odpor k dospělému"
+    },
+    {
+      "id": "CTX_011",
+      "label": "Předávání dítěte rodiči",
+      "notepad": "při předávání dítěte rodiči",
+      "typical_situations": [
+        "odchod domů",
+        "příchod rodiče do třídy",
+        "změna z pedagogického režimu do rodinného"
+      ],
+      "typical_signals": [
+        "náhlá změna chování",
+        "silná emotivní reakce",
+        "kolaps po celodenním držení",
+        "demonstrativní chování před rodičem",
+        "odpor k odchodu nebo prudký útěk"
+      ],
+      "meaning": "často dochází k uvolnění dlouho držené regulace"
+    },
+    {
+      "id": "CTX_016",
+      "label": "Při změně plánu",
+      "notepad": "při změně plánu nebo narušení rutiny",
+      "typical_situations": [
+        "jiný program než bylo očekáváno",
+        "zrušená oblíbená aktivita",
+        "suplování",
+        "změna učitele",
+        "neočekávané narušení rutiny"
+      ],
+      "typical_signals": [
+        "silný odpor",
+        "pláč",
+        "vztek",
+        "zablokování",
+        "rigidní trvání na původním plánu"
+      ],
+      "meaning": "často souvisí s potřebou předvídatelnosti a kontroly"
+    },
+    {
+      "id": "CTX_017",
+      "label": "Při nové / neznámé situaci",
+      "notepad": "při nové nebo neznámé situaci",
+      "typical_situations": [
+        "nový pedagog",
+        "nová aktivita",
+        "nová skupina",
+        "výlet",
+        "změna prostředí"
+      ],
+      "typical_signals": [
+        "stažení",
+        "odmítání",
+        "úzkost",
+        "zvýšená kontrola okolí",
+        "přilnutí k dospělému",
+        "obranné chování"
+      ],
+      "meaning": "nutné odlišit adaptační reakci od stabilní obtíže"
+    },
+    {
+      "id": "CTX_024",
+      "label": "Při příchodu rodiče / odchodu domů",
+      "notepad": "při odchodu domů nebo příchodu rodiče",
+      "typical_situations": [
+        "rodič přichází",
+        "dítě čeká na vyzvednutí",
+        "změna režimu při odchodu"
+      ],
+      "typical_signals": [
+        "prudké zhoršení chování",
+        "kolaps",
+        "afekt",
+        "uvolnění napětí",
+        "konflikty"
+      ],
+      "meaning": "často jde o pozdní uvolnění regulačního tlaku"
+    },
+    {
+      "id": "CTX_042",
+      "label": "Při potřebě rychlého přepínání",
+      "notepad": "při rychlém přepínání mezi činnostmi",
+      "typical_situations": [
+        "rychlá změna aktivity",
+        "více úkolů za sebou",
+        "nutnost pružně měnit zaměření"
+      ],
+      "typical_signals": [
+        "zpomalení",
+        "odpor",
+        "ztráta orientace",
+        "afekt",
+        "zůstávání v předchozí aktivitě"
+      ],
+      "meaning": "důležité sledovat flexibilitu přechodu, ne jen neochotu"
+    },
+    {
+      "id": "CTX_049",
+      "label": "Při přechodu z oblíbené činnosti",
+      "notepad": "při ukončení oblíbené činnosti",
+      "typical_situations": [
+        "konec hry",
+        "ukončení oblíbené aktivity",
+        "přerušení silného zájmu"
+      ],
+      "typical_signals": [
+        "odpor",
+        "afekt",
+        "ignorování výzvy",
+        "vyjednávání",
+        "prudké zhoršení regulace"
+      ],
+      "meaning": "často nejde jen o nechce přestat, ale o obtíž odpojení"
+    },
+    {
+      "id": "CTX_051",
+      "label": "Respekt k tempu návratu po absenci",
+      "notepad": "podpořit návrat dítěte po delší absenci",
+      "typical_situations": [
+        "návrat po nemoci",
+        "návrat po prázdninách",
+        "návrat po hospitalizaci",
+        "návrat po delší nepřítomnosti"
+      ],
+      "typical_signals": [
+        "výrazně citlivější reakce",
+        "nižší regulační kapacita",
+        "vyšší závislost na dospělém",
+        "rychlá destabilizace"
+      ],
+      "meaning": "návratová adaptační fáze nesmí být čtena jako nový stabilní problém"
+    }
+  ]
+}

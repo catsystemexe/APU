@@ -1,0 +1,226 @@
+[
+  {
+    "id": "NEED_004_SUPPORT_CHILD_ENGAGEMENT",
+    "label": "Podpořit zapojení dítěte",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Dítě není konfliktní, ale nedaří se mu být součástí činnosti. Cílem je zvýšit dostupnost zapojení a snížit bariéru vstupu.",
+    "typical_triggers": [
+      "dítě se nezapojuje",
+      "dítě zůstává stranou",
+      "dítě činnost nedokončuje",
+      "dítě se rychle vzdává",
+      "dítě potřebuje neustálé vedení"
+    ],
+    "trigger_patterns": [
+      "nezapojuje se",
+      "nezustava v cinnosti",
+      "rychle to vzdava",
+      "nedokoncuje cinnost",
+      "potrebuji podporit zapojeni"
+    ],
+    "observable_bias": [
+      "OBS_E1_STAYS_OUT_OF_PEER_GROUP_001",
+      "OBS_G1_DOES_NOT_START_UNDER_UNCERTAINTY_001",
+      "OBS_J5_QUICKLY_GIVES_UP_001"
+    ],
+    "block_bias": ["A", "B", "C"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "ENGAGEMENT_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "podpořit zapojení dítěte"
+  },
+  {
+    "id": "NEED_009_FUNCTIONAL_SUPPORT_NOT_PUNISHMENT",
+    "label": "Hledat funkční podporu místo sankce",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Opakované selhávání vede ke skluzu do sankcí místo porozumění. Cílem je přesunout pozornost z trestu na funkci chování.",
+    "typical_triggers": [
+      "dítě je stále napomínáno",
+      "běžné postupy nefungují",
+      "učitel cítí tlak že už to musí přestat",
+      "dítě získává nálepku problémového dítěte"
+    ],
+    "trigger_patterns": [
+      "porad jen napominame",
+      "tresty nefunguji",
+      "nechci jen trestat",
+      "funkcni podpora misto sankce",
+      "co delat misto trestu"
+    ],
+    "observable_bias": [
+      "OBS_N2_NAUGHTY_LABEL_GUARD",
+      "OBS_N4_ON_PURPOSE_LABEL_GUARD"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "SUPPORT_OVER_SANCTION",
+    "safety_override": false,
+    "notepad_label": "hledat funkční podporu místo sankce"
+  },
+  {
+    "id": "NEED_013_SUPPORT_COMMUNICATION",
+    "label": "Podpořit porozumění a komunikaci",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Problém vzniká nebo se zhoršuje kvůli obtížím v porozumění nebo vyjadřování. Cílem je ověřit porozumění a snížit komunikační bariéru.",
+    "typical_triggers": [
+      "dítě nerozumí zadání",
+      "dítě neumí říct potřebu",
+      "dítě reaguje frustrací místo komunikace",
+      "působí neposlušně, ale nerozumí situaci"
+    ],
+    "trigger_patterns": [
+      "nerozumi zadani",
+      "neumi rict potrebu",
+      "problem v komunikaci",
+      "potrebuji podporit porozumeni",
+      "mozna jen nerozumi"
+    ],
+    "observable_bias": [
+      "OBS_K1_DOES_NOT_HOLD_INSTRUCTION_001"
+    ],
+    "block_bias": ["C", "D"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "COMMUNICATION_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "podpořit porozumění a komunikaci"
+  },
+  {
+    "id": "NEED_014_SUPPORT_INDEPENDENCE",
+    "label": "Podpořit samostatnost dítěte",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Dítě zvládá činnost jen s vysokou mírou vedení nebo závislosti na dospělém. Cílem je posílit dostupnou samostatnost a malé kroky autonomie.",
+    "typical_triggers": [
+      "nezačne bez přímého vedení",
+      "rychle se vzdává",
+      "stále čeká na potvrzení",
+      "nezvládá běžné rutiny samo"
+    ],
+    "trigger_patterns": [
+      "bez dospeleho nefunguje",
+      "porad potrebuje vedeni",
+      "potrebuji podporit samostatnost",
+      "zavislost na dospelem",
+      "nezvladne samo"
+    ],
+    "observable_bias": [
+      "OBS_G4_NEEDS_REASSURANCE_TO_CONTINUE_001",
+      "OBS_J4_NEEDS_EXCESSIVE_ADULT_SUPPORT_001"
+    ],
+    "block_bias": ["A", "C"],
+    "zone_bias": ["Z1", "Z2"],
+    "response_mode_bias": "INDEPENDENCE_BUILDING",
+    "safety_override": false,
+    "notepad_label": "podpořit samostatnost dítěte"
+  },
+  {
+    "id": "NEED_024_RULES_WITHOUT_POWER_STRUGGLE",
+    "label": "Nastavit hranice bez eskalace konfliktu",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Dítě odporuje pravidlům hlavně skrze vztahový střet, ne jen přes samotné pravidlo. Cílem je zachovat hranice bez mocenského boje.",
+    "typical_triggers": [
+      "zákaz automaticky vyvolá odpor",
+      "situace se mění v přetlačování",
+      "čím větší tlak, tím větší odpor",
+      "reakce hlavně na konkrétní autoritu"
+    ],
+    "trigger_patterns": [
+      "boj o kontrolu",
+      "mocensky stret",
+      "jak nastavit hranice bez konfliktu",
+      "cim vic tlacim tim horsi",
+      "bez eskalace konfliktu"
+    ],
+    "observable_bias": [
+      "OBS_F2_REPEATS_FORBIDDEN_BEHAVIOR_001",
+      "OBS_K2_CONFLICT_ON_MOST_REQUESTS_001"
+    ],
+    "block_bias": ["A", "B"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "BOUNDARY_WITHOUT_ESCALATION",
+    "safety_override": false,
+    "notepad_label": "nastavit hranice bez eskalace konfliktu"
+  },
+  {
+    "id": "NEED_025_SUPPORT_EMOTIONAL_REGULATION",
+    "label": "Podpořit emoční regulaci dítěte",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Hlavní obtíž není v pravidlech nebo výkonu, ale ve schopnosti zvládnout vlastní emoce. Cílem je podpořit návrat do regulace.",
+    "typical_triggers": [
+      "rychle přechází do afektu",
+      "nezvládá frustraci",
+      "silná reakce na drobný podnět",
+      "neumí se vrátit do klidu"
+    ],
+    "trigger_patterns": [
+      "rychle jde do afektu",
+      "nezvlada emoce",
+      "emocni regulace",
+      "potrebuji podporit navrat do klidu",
+      "silna frustrace"
+    ],
+    "observable_bias": [
+      "OBS_D2_FAST_ANGER_AFFECT_001",
+      "OBS_D5_LONG_RETURN_FROM_ACTIVATION_001"
+    ],
+    "block_bias": ["A"],
+    "zone_bias": ["Z2", "Z3"],
+    "response_mode_bias": "EMOTIONAL_REGULATION_SUPPORT",
+    "safety_override": false,
+    "notepad_label": "podpořit emoční regulaci dítěte"
+  },
+  {
+    "id": "NEED_032_RETURN_AFTER_FAILURE",
+    "label": "Podpořit návrat po selhání",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Po konfliktu, afektu nebo neúspěchu dítě zůstává zamrzlé v selhání. Cílem je obnovit možnost návratu bez stigmatizace.",
+    "typical_triggers": [
+      "po konfliktu odmítá návrat do skupiny",
+      "po neúspěchu vzdává další pokus",
+      "selhání vede k další eskalaci"
+    ],
+    "trigger_patterns": [
+      "po chybe uz nepokracuje",
+      "neumi se vratit po selhani",
+      "zamrzne v neuspechu",
+      "podporit navrat po selhani",
+      "styd po konfliktu"
+    ],
+    "observable_bias": [
+      "OBS_G2_COLLAPSES_AFTER_FAILURE_001",
+      "OBS_F5_WITHDRAWS_AFTER_CORRECTION_001"
+    ],
+    "block_bias": ["A"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "REPAIR_AND_RETURN",
+    "safety_override": false,
+    "notepad_label": "podpořit návrat po selhání"
+  },
+  {
+    "id": "NEED_038_SAFE_EXPRESSION_OF_NEED",
+    "label": "Podpořit bezpečné vyjádření potřeby",
+    "belongs_to_core": "CORE_4_SUPPORT_AND_INTERVENTION",
+    "description": "Dítě neumí potřebu sdělit přijatelným způsobem a místo toho ji hraje chováním. Cílem je najít funkci chování a nabídnout bezpečnější formu komunikace.",
+    "typical_triggers": [
+      "pozornost hledá rušením",
+      "pomoc hledá vzdorem",
+      "kontakt hledá konfliktem",
+      "přetížení vyjadřuje útěkem nebo afektem"
+    ],
+    "trigger_patterns": [
+      "hleda pozornost rusenim",
+      "pomoc pres vzdor",
+      "kontakt pres konflikt",
+      "jak bezpecne vyjadrit potrebu",
+      "chovani misto sdeleni potreby"
+    ],
+    "observable_bias": [
+      "OBS_K3_CONTACT_THROUGH_DISRUPTION_001",
+      "OBS_C3_PROVOKES_REACTION_001"
+    ],
+    "block_bias": ["B", "A"],
+    "zone_bias": ["Z2"],
+    "response_mode_bias": "NEED_TRANSLATION",
+    "safety_override": false,
+    "notepad_label": "podpořit bezpečné vyjádření potřeby"
+  }
+]

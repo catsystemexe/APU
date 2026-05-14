@@ -1,0 +1,232 @@
+{
+  "schema": "APU_TREND_INTENSITY_V1",
+  "category": "S4A_frequency_trend",
+  "description": "Frekvence, stabilita vzorce, změna v čase a reakce po intervenci",
+  "global_rules": [
+    "S4 nesmí samo vytvářet profil, blok ani zónu.",
+    "S4 pouze upravuje sílu inference, confidence, false positive risk, prioritu intervence a potřebu ověření.",
+    "Trend posiluje nebo brzdí závěr, ale nenahrazuje observable ani context."
+  ],
+  "items": [
+    {
+      "id": "T1_SINGLE_EPISODE",
+      "label": "Jednorázová epizoda",
+      "teacher_phrases": [
+        "stalo se to jednou",
+        "dnes poprvé",
+        "jednorázově",
+        "výjimečně",
+        "jen dnes"
+      ],
+      "patterns": [
+        "stalo se to jednou",
+        "dnes poprve",
+        "jednorazove",
+        "vyjimecne",
+        "jen dnes"
+      ],
+      "meaning": "Jednorázová epizoda bez potvrzeného opakování.",
+      "inference_effect": "výrazné snížení síly závěru",
+      "confidence_effect": "cap LOW",
+      "false_positive_risk": "VERY_HIGH",
+      "validation_flags": ["SINGLE_EPISODE"],
+      "recommendation": "Neuzavírat hypotézu, sledovat opakování."
+    },
+    {
+      "id": "T2_OCCASIONAL_PATTERN",
+      "label": "Občasný / nestabilní vzorec",
+      "teacher_phrases": [
+        "občas se to stává",
+        "někdy ano",
+        "sem tam",
+        "není to pravidelně",
+        "spíš výjimečně"
+      ],
+      "patterns": [
+        "obcas se to stava",
+        "nekdy ano",
+        "sem tam",
+        "neni to pravidelne",
+        "spis vyjimecne"
+      ],
+      "meaning": "Slabý nebo nestabilní opakovaný vzorec.",
+      "inference_effect": "mírné snížení síly inference",
+      "confidence_effect": "cap LOW_MEDIUM",
+      "false_positive_risk": "HIGH",
+      "validation_flags": ["OCCASIONAL_PATTERN"],
+      "recommendation": "Ověřit spouštěče a podmínky výskytu."
+    },
+    {
+      "id": "T3_REPEATED_PATTERN",
+      "label": "Opakovaný vzorec",
+      "teacher_phrases": [
+        "opakuje se to často",
+        "bývá to pravidelně",
+        "děje se to skoro každý den",
+        "je to opakovaný problém"
+      ],
+      "patterns": [
+        "opakuje se to casto",
+        "byva to pravidelne",
+        "deje se to skoro kazdy den",
+        "je to opakovany problem"
+      ],
+      "meaning": "Stabilní opakovaný vzorec.",
+      "inference_effect": "posílení inference",
+      "confidence_effect": "cap MEDIUM_HIGH",
+      "false_positive_risk": "LOWER",
+      "validation_flags": ["REPEATED_PATTERN"],
+      "recommendation": "Hledat funkční mechanismus, ne jen jednotlivé epizody."
+    },
+    {
+      "id": "T4_CHRONIC_PATTERN",
+      "label": "Dlouhodobý chronický vzorec",
+      "teacher_phrases": [
+        "je to dlouhodobé",
+        "trvá to měsíce",
+        "pořád stejné",
+        "dlouhodobě se to nemění"
+      ],
+      "patterns": [
+        "je to dlouhodobe",
+        "trva to mesice",
+        "porad stejne",
+        "dlouhodobe se to nemeni"
+      ],
+      "meaning": "Dlouhodobě stabilní vzorec bez spontánního zlepšení.",
+      "inference_effect": "silné posílení relevance",
+      "confidence_effect": "vyšší váha",
+      "false_positive_risk": "LOWER",
+      "validation_flags": ["CHRONIC_PATTERN"],
+      "recommendation": "Vyšší priorita systematické intervence."
+    },
+    {
+      "id": "T5_ESCALATION",
+      "label": "Eskalující trend",
+      "teacher_phrases": [
+        "zhoršuje se to",
+        "poslední dobou je to horší",
+        "sílí to",
+        "eskaluje to"
+      ],
+      "patterns": [
+        "zhorsuje se to",
+        "posledni dobou je to horsi",
+        "sili to",
+        "eskaluje to"
+      ],
+      "meaning": "Trend zvyšující se intenzity nebo frekvence.",
+      "inference_effect": "výrazné zvýšení priority",
+      "confidence_effect": "zvyšuje urgentnost, ne nutně jistotu příčiny",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": ["ESCALATION"],
+      "recommendation": "Řešit rychleji, hledat změnu v prostředí nebo zatížení."
+    },
+    {
+      "id": "T6_IMPROVEMENT_TREND",
+      "label": "Zlepšující se trend",
+      "teacher_phrases": [
+        "zlepšuje se to",
+        "poslední dobou je to lepší",
+        "už není tak silné",
+        "postupně ustupuje"
+      ],
+      "patterns": [
+        "zlepsuje se to",
+        "posledni dobou je to lepsi",
+        "uz neni tak silne",
+        "postupne ustupuje"
+      ],
+      "meaning": "Trend snižující se intenzity nebo frekvence.",
+      "inference_effect": "snižuje naléhavost závěru",
+      "confidence_effect": "snižuje potřebu silné intervence",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": ["IMPROVEMENT_TREND"],
+      "recommendation": "Ověřit, co změnu podpořilo — může jít o funkční klíč."
+    },
+    {
+      "id": "T7_FLUCTUATING_PATTERN",
+      "label": "Kolísavý vzorec",
+      "teacher_phrases": [
+        "někdy hodně, někdy vůbec",
+        "střídá se to",
+        "není to stabilní",
+        "jednou ano, jednou ne"
+      ],
+      "patterns": [
+        "nekdy hodne nekdy vubec",
+        "strida se to",
+        "neni to stabilni",
+        "jednou ano jednou ne"
+      ],
+      "meaning": "Nestabilní vzorec silně závislý na kontextu nebo zatížení.",
+      "inference_effect": "zvyšuje potřebu hledat spouštěč místo fixní interpretace",
+      "confidence_effect": "cap MEDIUM",
+      "false_positive_risk": "HIGH",
+      "validation_flags": ["FLUCTUATING_PATTERN"],
+      "recommendation": "Mapovat podmínky výskytu, ne dítě jako celek."
+    },
+    {
+      "id": "T8_RAPID_ONSET",
+      "label": "Náhlý začátek",
+      "teacher_phrases": [
+        "začalo to najednou",
+        "přišlo to náhle",
+        "dřív to nebylo",
+        "změna byla rychlá"
+      ],
+      "patterns": [
+        "zacalo to najednou",
+        "prislo to nahle",
+        "driv to nebylo",
+        "zmena byla rychla"
+      ],
+      "meaning": "Náhlá změna oproti předchozímu fungování.",
+      "inference_effect": "vyšší význam aktuální změny prostředí nebo bezpečnostního faktoru",
+      "confidence_effect": "nezvyšuje jistotu typu problému, ale zvyšuje význam změny",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": ["RAPID_ONSET"],
+      "recommendation": "Hledat konkrétní změnu před začátkem potíží."
+    },
+    {
+      "id": "T9_LONG_STABLE_BASELINE",
+      "label": "Dlouhodobě stabilní baseline",
+      "teacher_phrases": [
+        "je takové odjakživa",
+        "dlouhodobě funguje podobně",
+        "žádná výrazná změna nenastala"
+      ],
+      "patterns": [
+        "je takove odjakziva",
+        "dlouhodobe funguje podobne",
+        "zadna vyrazna zmena nenastala"
+      ],
+      "meaning": "Dlouhodobě stabilní baseline bez nové změny.",
+      "inference_effect": "nižší pravděpodobnost akutního spouštěče",
+      "confidence_effect": "vyšší relevance vývojového vzorce než náhlé události",
+      "false_positive_risk": "LOWER",
+      "validation_flags": ["LONG_STABLE_BASELINE"],
+      "recommendation": "Spíše vývojové mapování než hledání jedné události."
+    },
+    {
+      "id": "T10_POST_INTERVENTION_CHANGE",
+      "label": "Změna po intervenci",
+      "teacher_phrases": [
+        "po změně režimu se to zlepšilo",
+        "po zavedení podpory se to změnilo",
+        "po zásahu je rozdíl vidět"
+      ],
+      "patterns": [
+        "po zmene rezimu se to zlepsilo",
+        "po zavedeni podpory se to zmenilo",
+        "po zasahu je rozdil videt"
+      ],
+      "meaning": "Pozorovatelná změna po konkrétní intervenci.",
+      "inference_effect": "výrazně posiluje funkční hypotézu",
+      "confidence_effect": "vyšší validita pracovní interpretace",
+      "false_positive_risk": "LOWER",
+      "validation_flags": ["POST_INTERVENTION_CHANGE"],
+      "recommendation": "Velmi cenný signál — sledovat, co přesně změnu způsobilo."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "T6_PARENT_SCHOOL_001",
+    "input": "rodic rika ze doma je v klidu, ale ve skolce pri prechodech krici a odmita jit",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_zones": ["Z2", "Z4"],
+      "must_have_flags": ["MULTIPLE_HYPOTHESES", "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"]
+    }
+  }
+]

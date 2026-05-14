@@ -1,0 +1,212 @@
+[
+  {
+    "id": "OBS_PATCH_TRANSITION_CRYING_001",
+    "category": "patch_test_coverage",
+    "source": "pattern_coverage_patch_v1",
+    "patterns": [
+      "rozplace se",
+      "rozpláče se",
+      "se rozplace",
+      "se rozpláče"
+    ],
+    "observable": "při přechodu se rozpláče",
+    "observable_anchor": "Při přechodu nebo změně režimu se dítě rozpláče.",
+    "candidate_blocks": [
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "LOW",
+    "disambiguation_questions": [
+      "Jak dlouho pláč trvá a co pomáhá k návratu do klidu?"
+    ]
+  },
+  {
+    "id": "OBS_PATCH_DRESSING_REFUSAL_001",
+    "category": "patch_test_coverage",
+    "source": "pattern_coverage_patch_v1",
+    "patterns": [
+      "nechce se prevlekat",
+      "nechce se převlékat",
+      "odmita se prevlekat",
+      "odmítá se převlékat"
+    ],
+    "observable": "odmítá převlékání při přechodové situaci",
+    "observable_anchor": "Dítě odmítá převlékání při přechodu mezi prostředími nebo činnostmi.",
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z4"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "LOW",
+    "disambiguation_questions": [
+      "Je obtíž spojená s přechodem, oblečením, únavou nebo tlakem na tempo?"
+    ]
+  },
+  {
+    "id": "OBS_PATCH_TOYS_TAKING_001",
+    "category": "patch_test_coverage",
+    "source": "pattern_coverage_patch_v1",
+    "patterns": [
+      "bere detem hracky",
+      "bere dětem hračky",
+      "bere hracky bez domluvy",
+      "bere hračky bez domluvy"
+    ],
+    "observable": "bere dětem hračky bez domluvy",
+    "observable_anchor": "Ve hře bere dítě ostatním dětem hračky bez domluvy.",
+    "candidate_blocks": [
+      "B"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z4"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "LOW",
+    "disambiguation_questions": [
+      "Děje se to při konkrétní hře, u konkrétních dětí, nebo obecně ve volné hře?"
+    ]
+  },
+  {
+    "id": "OBS_PATCH_FOOD_REFUSAL_001",
+    "category": "patch_test_coverage",
+    "source": "pattern_coverage_patch_v1",
+    "patterns": [
+      "odmita nektera jidla",
+      "odmítá některá jídla",
+      "odstrkuje talir",
+      "odstrkuje talíř",
+      "zakryva si nos",
+      "zakrývá si nos"
+    ],
+    "observable": "odmítá jídlo nebo reaguje na jídlo odporem",
+    "observable_anchor": "Při jídle dítě odmítá některá jídla, odstrkuje talíř nebo si zakrývá nos.",
+    "candidate_blocks": [
+      "E",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "LOW",
+    "disambiguation_questions": [
+      "Souvisí reakce s chutí, vůní, strukturou jídla, nebo s režimem stolování?"
+    ]
+  },
+  {
+    "id": "OBS_PATCH_WITHDRAW_AFTER_CORRECTION_001",
+    "category": "patch_test_coverage",
+    "source": "pattern_coverage_patch_v1",
+    "patterns": [
+      "se stahne",
+      "se stáhne",
+      "prestane mluvit",
+      "přestane mluvit",
+      "nechce pokracovat",
+      "nechce pokračovat"
+    ],
+    "observable": "po upozornění se stáhne a přestane pokračovat",
+    "observable_anchor": "Po opravě nebo upozornění se dítě stáhne, přestane mluvit nebo nechce pokračovat.",
+    "candidate_blocks": [
+      "A",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2",
+      "Z4"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "LOW",
+    "disambiguation_questions": [
+      "Je reakce spíš stud, nejistota, odpor, nebo zahlcení opravou?"
+    ]
+  },
+  {
+    "id": "OBS_PATCH_I_CANT_DO_IT_001",
+    "category": "patch_test_coverage",
+    "source": "pattern_coverage_patch_v1",
+    "patterns": [
+      "ja to neumim",
+      "já to neumím",
+      "to neumim",
+      "to neumím",
+      "nezacne ukol",
+      "nezačne úkol"
+    ],
+    "observable": "říká, že úkol neumí, a nezačne bez podpory",
+    "observable_anchor": "Dítě říká, že úkol neumí, a nezačne pracovat bez blízké podpory dospělého.",
+    "candidate_blocks": [
+      "C",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z4"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "LOW",
+    "disambiguation_questions": [
+      "Potřebuje ujištění, rozdělení úkolu, nebo fyzickou přítomnost dospělého?"
+    ]
+  },
+  {
+    "id": "OBS_PATCH_LOW_SPEECH_SCHOOL_001",
+    "category": "patch_test_coverage",
+    "source": "pattern_coverage_patch_v1",
+    "patterns": [
+      "ve skolce skoro nemluvi",
+      "ve školce skoro nemluví",
+      "skoro nemluvi",
+      "skoro nemluví"
+    ],
+    "observable": "ve školce výrazně omezuje mluvení",
+    "observable_anchor": "Ve školce dítě výrazně omezuje mluvení, zatímco v jiném prostředí může komunikovat více.",
+    "candidate_blocks": [
+      "D",
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2",
+      "Z4"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "disambiguation_questions": [
+      "Mluví s některými dětmi nebo dospělými, nebo mlčí napříč situacemi ve školce?"
+    ]
+  },
+  {
+    "id": "OBS_PATCH_WAIT_TURN_001",
+    "patterns": [
+      "nevydrzi cekat az prijde na radu",
+      "nevydrží čekat až přijde na řadu",
+      "nevydrzi cekat, az prijde na radu",
+      "nevydrží čekat, až přijde na řadu",
+      "cekat az prijde na radu",
+      "čekat až přijde na řadu",
+      "prijde na radu",
+      "přijde na řadu",
+      "nevydrzi cekat",
+      "nevydrží čekat"
+    ],
+    "observable": "nevydrží čekat, až přijde na řadu",
+    "observable_anchor": "Dítě nevydrží čekat, až na něj přijde řada.",
+    "candidate_blocks": [
+      "B",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "confidence": "MEDIUM"
+  }
+]

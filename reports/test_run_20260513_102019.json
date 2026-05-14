@@ -1,0 +1,2086 @@
+{
+  "summary": {
+    "passed": 13,
+    "total": 39,
+    "pass_rate": 0.3333333333333333
+  },
+  "results": [
+    {
+      "id": "T10_CONF_LOW_NO_OBS_001",
+      "input": "asi ma nejaky problem",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T10_CONF_LABEL_CAP_001",
+      "input": "je manipulativni, pri rannim predani place a drzi se rodice",
+      "pass": false,
+      "fails": [
+        "overall_confidence: expected MEDIUM, got LOW",
+        "flags: missing HAS_INTERPRETATION_LABEL; actual=['CONTEXT_WITHOUT_CHILD_OBSERVABLE']",
+        "flags: missing CONTRADICTION_LABEL_VS_OBSERVABLE; actual=['CONTEXT_WITHOUT_CHILD_OBSERVABLE']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": null,
+        "flags": [
+          "CONTEXT_WITHOUT_CHILD_OBSERVABLE"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 4,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T10_CONF_WEAK_001",
+      "input": "dnes poprve beha po tride",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "flags: missing SINGLE_EPISODE; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing WEAK_INFERENCE; actual=['MISSING_OBSERVABLE_BEHAVIOR']"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T10_CONF_HIGH_001",
+      "input": "je mu 5 let, pri rannim kruhu porad beha po tride a skace do reci, potrebuji udrzet skupinu",
+      "pass": false,
+      "fails": [
+        "primary_zone: expected Z2, got Z1",
+        "overall_confidence: expected MEDIUM, got HIGH"
+      ],
+      "actual": {
+        "output_mode": "FULL",
+        "primary_zone": "Z1",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present",
+            "pedagogical_need_present",
+            "age_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "HIGH",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "HIGH",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 0,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T11_EVIDENCE_OBS_001",
+      "input": "pri rannim kruhu lita po tride a vykřikuje odpovědi",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "HIGH",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "HIGH",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T11_EVIDENCE_LABEL_001",
+      "input": "je manipulativni",
+      "pass": false,
+      "fails": [
+        "flags: missing HAS_INTERPRETATION_LABEL; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing LABEL_WITHOUT_OBSERVATION; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "evidence_min_labels: expected >= 1, got 0"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T11_EVIDENCE_TREND_001",
+      "input": "dnes poprve beha po tride",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "flags: missing SINGLE_EPISODE; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "evidence_min_observables: expected >= 1, got 0"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T12_NOTEPAD_LOW_DATA_001",
+      "input": "je problemovy",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "LABEL_WITHOUT_OBSERVATION",
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 1,
+          "level": "LOW",
+          "reasons": [
+            "pedagogical_need_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 1,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 2,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T12_NOTEPAD_OBSERVABLE_001",
+      "input": "pri rannim kruhu lita po tride a vykřikuje odpovědi",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "HIGH",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "HIGH",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T12_NOTEPAD_SAFETY_001",
+      "input": "utika ze tridy a nejde zastavit",
+      "pass": false,
+      "fails": [
+        "notepad_min_safety_notes: expected >= 1, got 0",
+        "notepad_min_safety_notes: expected >= 1, got 0"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z3",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "FALSE_POSITIVE_RISK"
+        ],
+        "blocks": [
+          "E",
+          "A",
+          "B"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z3",
+          "Z4"
+        ],
+        "specificity": {
+          "score": 3,
+          "level": "MEDIUM",
+          "reasons": [
+            "observable_present",
+            "multiple_observables"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "MEDIUM",
+          "score": 3,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "medium_specificity",
+            "false_positive_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 3,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T13_CASE_ID_CREATED_001",
+      "input": "rano place pri prichodu",
+      "pass": false,
+      "fails": [
+        "notepad_min_confirmed_observations: expected >= 1, got 0",
+        "notepad_min_confirmed_observations: expected >= 1, got 0"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": null,
+        "flags": [
+          "CONTEXT_WITHOUT_CHILD_OBSERVABLE"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 4,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T14_ACTION_PROTOCOL_EXISTS_001",
+      "input": "rano place pri prichodu",
+      "pass": false,
+      "fails": [
+        "notepad_min_confirmed_observations: expected >= 1, got 0",
+        "notepad_min_confirmed_observations: expected >= 1, got 0"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": null,
+        "flags": [
+          "CONTEXT_WITHOUT_CHILD_OBSERVABLE"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 4,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T15_ARRIVAL_OBSERVABLE_001",
+      "input": "Pepicek pri prichodu do skolky place a drzi se maminky",
+      "pass": false,
+      "fails": [
+        "blocks: missing A; actual=[]",
+        "zones: missing Z2; actual=[]",
+        "zones: missing Z3; actual=[]",
+        "notepad_min_confirmed_observations: expected >= 1, got 0",
+        "notepad_min_confirmed_observations: expected >= 1, got 0"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": null,
+        "flags": [
+          "CONTEXT_WITHOUT_CHILD_OBSERVABLE"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 4,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T16_CASE_MEMORY_ROUTING_001",
+      "input": "potrebuji zklidnit situaci",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 1,
+          "level": "LOW",
+          "reasons": [
+            "pedagogical_need_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 1,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T17_CASE_MEMORY_INTERVENTION_BASELINE_001",
+      "input": "potrebuji zklidnit situaci",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 1,
+          "level": "LOW",
+          "reasons": [
+            "pedagogical_need_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 1,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T1_LOW_001",
+      "input": "dite je manipulativni",
+      "pass": false,
+      "fails": [
+        "flags: missing HAS_INTERPRETATION_LABEL; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing LABEL_WITHOUT_OBSERVATION; actual=['MISSING_OBSERVABLE_BEHAVIOR']"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T1_PARTIAL_001",
+      "input": "porad beha po tride a skace do reci, co mam delat",
+      "pass": false,
+      "fails": [
+        "primary_zone: expected Z2, got Z1",
+        "flags: missing REPEATED_PATTERN; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']",
+        "flags: missing FREQUENCY_HIGH; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "FALSE_POSITIVE_RISK"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 4,
+          "level": "MEDIUM",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "pedagogical_need_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "MEDIUM",
+          "score": 4,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "medium_specificity",
+            "false_positive_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 0,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T1_FULL_001",
+      "input": "je mu 5 let, pri rannim kruhu porad beha po tride a skace do reci, potrebuji udrzet skupinu",
+      "pass": false,
+      "fails": [
+        "primary_zone: expected Z2, got Z1",
+        "blocks: missing A; actual=['B', 'E', 'C']"
+      ],
+      "actual": {
+        "output_mode": "FULL",
+        "primary_zone": "Z1",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present",
+            "pedagogical_need_present",
+            "age_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "HIGH",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "HIGH",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 0,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T1_SAFE_001",
+      "input": "utika ze tridy a nejde zastavit",
+      "pass": false,
+      "fails": [
+        "flags: missing LEAVES_SAFE_AREA; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']",
+        "flags: missing SAFETY_CONTEXT; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']",
+        "flags: missing HARD_TO_INTERRUPT; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']",
+        "zones: missing Z2; actual=['Z3', 'Z4']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z3",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "FALSE_POSITIVE_RISK"
+        ],
+        "blocks": [
+          "E",
+          "A",
+          "B"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z3",
+          "Z4"
+        ],
+        "specificity": {
+          "score": 3,
+          "level": "MEDIUM",
+          "reasons": [
+            "observable_present",
+            "multiple_observables"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "MEDIUM",
+          "score": 3,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "medium_specificity",
+            "false_positive_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 3,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T1_SINGLE_001",
+      "input": "dnes poprve beha po tride",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "primary_zone: expected Z2, got None",
+        "flags: missing SINGLE_EPISODE; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "zones: missing Z2; actual=[]"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T1_CONTEXT_001",
+      "input": "rodic rika ze doma to nedela a problem je jen ve skolce",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "flags: missing CONTEXT_WITHOUT_CHILD_OBSERVABLE; actual=['HAS_INTERPRETATION_LABEL', 'LABEL_WITHOUT_OBSERVATION', 'MISSING_OBSERVABLE_BEHAVIOR', 'CONTRADICTION_HOME_SCHOOL_MISMATCH']"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "LABEL_WITHOUT_OBSERVATION",
+          "MISSING_OBSERVABLE_BEHAVIOR",
+          "CONTRADICTION_HOME_SCHOOL_MISMATCH"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 2,
+          "level": "LOW",
+          "reasons": [
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 2,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 1,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T2_LABEL_001",
+      "input": "dite je liny",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "LABEL_WITHOUT_OBSERVATION",
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 1,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T2_LABEL_002",
+      "input": "je zlobivy a problemovy",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "LABEL_WITHOUT_OBSERVATION",
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 3,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T3_COLLISION_001",
+      "input": "pri uklidu odmita pracovat, krici a pak utika ze tridy",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z3",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+        ],
+        "blocks": [
+          "E",
+          "A",
+          "B",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z3",
+          "Z4",
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "HIGH",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "HIGH",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 4,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 4
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 2,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T3_COLLISION_002",
+      "input": "pri rannim kruhu nedava pozor, beha po tride a skace do reci",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "CONTRADICTION_LABEL_VS_OBSERVABLE"
+        ],
+        "blocks": [
+          "C",
+          "B",
+          "E"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity",
+            "interpretation_label_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 5,
+          "label_count": 1,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 2,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T4_FALSE_POSITIVE_001",
+      "input": "dnes poprve nedava pozor",
+      "pass": false,
+      "fails": [
+        "flags: missing SINGLE_EPISODE; actual=['HAS_INTERPRETATION_LABEL', 'CONTRADICTION_LABEL_VS_OBSERVABLE']",
+        "flags: missing WEAK_INFERENCE; actual=['HAS_INTERPRETATION_LABEL', 'CONTRADICTION_LABEL_VS_OBSERVABLE']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "CONTRADICTION_LABEL_VS_OBSERVABLE"
+        ],
+        "blocks": [
+          "C"
+        ],
+        "profiles": [
+          "P2"
+        ],
+        "zones": [
+          "Z1"
+        ],
+        "specificity": {
+          "score": 3,
+          "level": "MEDIUM",
+          "reasons": [
+            "observable_present",
+            "multiple_observables"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "MEDIUM",
+          "score": 3,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "medium_specificity",
+            "interpretation_label_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 3,
+          "label_count": 1,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 1
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 2,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T4_FALSE_POSITIVE_002",
+      "input": "nekdy je mimo",
+      "pass": false,
+      "fails": [
+        "output_mode: expected LOW_DATA, got PARTIAL",
+        "flags: missing MISSING_OBSERVABLE_BEHAVIOR; actual=['HAS_INTERPRETATION_LABEL', 'SLANG_OR_JARGON_DETECTED', 'CONTRADICTION_LABEL_VS_OBSERVABLE']",
+        "zones: forbidden Z1; actual=['Z1']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "SLANG_OR_JARGON_DETECTED",
+          "CONTRADICTION_LABEL_VS_OBSERVABLE"
+        ],
+        "blocks": [
+          "C"
+        ],
+        "profiles": [
+          "P2"
+        ],
+        "zones": [
+          "Z1"
+        ],
+        "specificity": {
+          "score": 3,
+          "level": "MEDIUM",
+          "reasons": [
+            "observable_present",
+            "multiple_observables"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "MEDIUM",
+          "score": 3,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "medium_specificity",
+            "interpretation_label_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 1,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 1
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T5_SAFETY_001",
+      "input": "utika ze tridy, neda se zastavit a bezi ke dverim ven",
+      "pass": false,
+      "fails": [
+        "flags: missing LEAVES_SAFE_AREA; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']",
+        "flags: missing SAFETY_CONTEXT; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']",
+        "flags: missing HARD_TO_INTERRUPT; actual=['MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'FALSE_POSITIVE_RISK']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z3",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "FALSE_POSITIVE_RISK"
+        ],
+        "blocks": [
+          "E",
+          "A",
+          "B"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z3",
+          "Z4"
+        ],
+        "specificity": {
+          "score": 3,
+          "level": "MEDIUM",
+          "reasons": [
+            "observable_present",
+            "multiple_observables"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "MEDIUM",
+          "score": 3,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "medium_specificity",
+            "false_positive_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T6_PARENT_SCHOOL_001",
+      "input": "rodic rika ze doma je v klidu, ale ve skolce pri prechodech krici a odmita jit",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "CONTRADICTION_HOME_SCHOOL_MISMATCH"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "A",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2",
+          "Z4"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity",
+            "medium_contradiction_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 3
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 2,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T7_LOW_DATA_001",
+      "input": "co s nim mam delat",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T7_LOW_DATA_002",
+      "input": "asi ma nejaky problem",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T8_LEX_SAFE_001",
+      "input": "pri uklidu utece ze tridy a nejde ho zastavit",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "primary_zone: expected Z3, got None",
+        "flags: missing LEAVES_SAFE_AREA; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing SAFETY_CONTEXT; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing HARD_TO_INTERRUPT; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "zones: missing Z3; actual=[]",
+        "zones: missing Z2; actual=[]"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 2,
+          "level": "LOW",
+          "reasons": [
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 2,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T8_LEX_SAFE_002",
+      "input": "vybehne ze tridy a bezi ke dverim",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "primary_zone: expected Z3, got None",
+        "flags: missing LEAVES_SAFE_AREA; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing SAFETY_CONTEXT; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "zones: missing Z3; actual=[]"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T8_LEX_ACT_001",
+      "input": "pri rannim kruhu lita po tride a vykřikuje odpovědi",
+      "pass": false,
+      "fails": [
+        "blocks: missing A; actual=['B', 'E', 'C']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "HIGH",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "HIGH",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 0,
+          "trend_intensity_count": 1,
+          "context_candidate_count": 0,
+          "zone_count": 2
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 1,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T8_LEX_ATT_001",
+      "input": "nedrzi pozornost a odbiha od ukolu",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "blocks: missing C; actual=[]",
+        "zones: missing Z2; actual=[]"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T8_LEX_BLOCK_001",
+      "input": "pri uklidu se zasekne a nechce prejit na dalsi cinnost",
+      "pass": false,
+      "fails": [
+        "output_mode: expected PARTIAL, got LOW_DATA",
+        "blocks: missing A; actual=[]",
+        "blocks: missing E; actual=[]",
+        "zones: missing Z4; actual=[]",
+        "zones: missing Z3; actual=[]"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 2,
+          "level": "LOW",
+          "reasons": [
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 2,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T9_CONTRA_HOME_SCHOOL_001",
+      "input": "doma to nedela, ale ve skolce pri prechodu krici a odmita jit",
+      "pass": false,
+      "fails": [
+        "flags: missing SETTING_DIFFERENCE; actual=['HAS_INTERPRETATION_LABEL', 'MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'CONTRADICTION_HOME_SCHOOL_MISMATCH', 'CONTRADICTION_LABEL_VS_OBSERVABLE']",
+        "flags: missing ENVIRONMENTAL_INFLUENCE_POSSIBLE; actual=['HAS_INTERPRETATION_LABEL', 'MULTIPLE_HYPOTHESES', 'DO_NOT_COLLAPSE_TO_SINGLE_CAUSE', 'CONTRADICTION_HOME_SCHOOL_MISMATCH', 'CONTRADICTION_LABEL_VS_OBSERVABLE']"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z1",
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "CONTRADICTION_HOME_SCHOOL_MISMATCH",
+          "CONTRADICTION_LABEL_VS_OBSERVABLE"
+        ],
+        "blocks": [
+          "B",
+          "E",
+          "A",
+          "C"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z1",
+          "Z2",
+          "Z4"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present"
+          ]
+        },
+        "overall_confidence": {
+          "level": "MEDIUM",
+          "raw_level": "HIGH",
+          "score": 5,
+          "cap": "MEDIUM",
+          "reasons": [
+            "observable_anchor_present",
+            "high_specificity",
+            "interpretation_label_cap_medium",
+            "medium_contradiction_cap_medium"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 2,
+          "label_count": 1,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 3
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 2,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T9_CONTRA_LABEL_OBS_001",
+      "input": "je manipulativni, pri rannim predani place a drzi se rodice",
+      "pass": false,
+      "fails": [
+        "flags: missing HAS_INTERPRETATION_LABEL; actual=['CONTEXT_WITHOUT_CHILD_OBSERVABLE']",
+        "flags: missing CONTRADICTION_LABEL_VS_OBSERVABLE; actual=['CONTEXT_WITHOUT_CHILD_OBSERVABLE']",
+        "zones: missing Z3; actual=[]"
+      ],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": null,
+        "flags": [
+          "CONTEXT_WITHOUT_CHILD_OBSERVABLE"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 4,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 0,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    },
+    {
+      "id": "T9_CONTRA_ABSOLUTE_SITUATIONAL_001",
+      "input": "nikdy se nezapoji, ale v male skupine funguje lepe",
+      "pass": false,
+      "fails": [
+        "flags: missing ABSOLUTIZING_LANGUAGE; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing LOW_LOAD_FUNCTIONING_BETTER; actual=['MISSING_OBSERVABLE_BEHAVIOR']",
+        "flags: missing CONTRADICTION_ABSOLUTE_VS_SITUATIONAL; actual=['MISSING_OBSERVABLE_BEHAVIOR']"
+      ],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        },
+        "overall_confidence": {
+          "level": "LOW",
+          "score": 0,
+          "cap": "LOW",
+          "reasons": [
+            "no_observable_anchor"
+          ]
+        },
+        "evidence_summary": {
+          "observable_count": 0,
+          "label_count": 0,
+          "trend_intensity_count": 0,
+          "context_candidate_count": 0,
+          "zone_count": 0
+        },
+        "case_id": null,
+        "notepad_summary": {
+          "case_info_observable_anchor": 0,
+          "uncertain_observations": 1,
+          "open_questions": 1,
+          "safety_notes": 0
+        }
+      }
+    }
+  ]
+}

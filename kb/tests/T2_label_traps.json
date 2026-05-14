@@ -1,0 +1,20 @@
+[
+  {
+    "id": "T2_LABEL_001",
+    "input": "dite je liny",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["HAS_INTERPRETATION_LABEL", "LABEL_WITHOUT_OBSERVATION", "MISSING_OBSERVABLE_BEHAVIOR"],
+      "must_not_include_zones": ["Z1", "Z2", "Z3", "Z4"]
+    }
+  },
+  {
+    "id": "T2_LABEL_002",
+    "input": "je zlobivy a problemovy",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["HAS_INTERPRETATION_LABEL", "LABEL_WITHOUT_OBSERVATION", "MISSING_OBSERVABLE_BEHAVIOR"],
+      "must_not_include_zones": ["Z1", "Z2", "Z3", "Z4"]
+    }
+  }
+]

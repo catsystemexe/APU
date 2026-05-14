@@ -1,0 +1,286 @@
+[
+  {
+    "id": "OBS_M1_LEAVES_SAFE_SPACE_001",
+    "category": "high_risk_safety_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "utíká ze třídy",
+      "odbíhá bez kontroly",
+      "mizí ze skupiny",
+      "odchází bez upozornění",
+      "najednou není nikde"
+    ],
+    "patterns": [
+      "utika ze tridy",
+      "odbiha bez kontroly",
+      "mizi ze skupiny",
+      "odchazi bez upozorneni",
+      "najednou neni nikde"
+    ],
+    "observable": "opakovaně opouští bezpečný prostor a vzniká okamžité riziko dohledu",
+    "observable_anchor": "Dítě opakovaně opouští bezpečný nebo očekávaný prostor bez dohody, bez zajištěného dohledu a vzniká okamžité bezpečnostní riziko.",
+    "context_hotspots": [
+      "přechody mezi aktivitami",
+      "pobyt venku",
+      "konflikt",
+      "přetížení skupinou",
+      "zákaz nebo korekce"
+    ],
+    "candidate_blocks": [
+      "E",
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "zone_tendency": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "risk": "HIGH",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Bezpečnost má absolutní prioritu před interpretací příčiny.",
+    "alternative_explanations": [
+      "úniková reakce z přetížení",
+      "impulzivní útěk",
+      "vysoká potřeba pohybového úniku",
+      "slabá bezpečnostní brzda",
+      "výrazná dysregulace"
+    ],
+    "disambiguation_questions": [
+      "Jde o útěk od přetížení, impulzivitu nebo hru?",
+      "Děje se to při konkrétních situacích?",
+      "Je dítě schopné zastavení na výzvu?",
+      "Vrací se samo, nebo je nutné aktivní dohledání?"
+    ]
+  },
+  {
+    "id": "OBS_M2_SELF_SAFETY_RISK_001",
+    "category": "high_risk_safety_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "bije hlavou o zem",
+      "schválně si ubližuje",
+      "nehlídá vlastní bezpečí",
+      "opakovaně riskuje zranění",
+      "jde proti sobě"
+    ],
+    "patterns": [
+      "bije hlavou o zem",
+      "schvalne si ublizuje",
+      "nehlida vlastni bezpeci",
+      "opakovane riskuje zraneni",
+      "jde proti sobe"
+    ],
+    "observable": "v afektu nebo dysregulaci ohrožuje vlastní tělesné bezpečí",
+    "observable_anchor": "V silné emoční aktivaci nebo dysregulaci dítě vstupuje do chování, které může vést k sebepoškození nebo výraznému fyzickému ohrožení sebe sama.",
+    "context_hotspots": [
+      "silný afekt",
+      "frustrace",
+      "zákaz",
+      "overload",
+      "náhlé odmítnutí nebo ztráta kontroly"
+    ],
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "zone_tendency": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "risk": "CRITICAL",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Vyžaduje okamžité bezpečnostní zajištění, ne pouze pedagogickou interpretaci.",
+    "alternative_explanations": [
+      "extrémní dysregulace",
+      "afektivní kolaps",
+      "overload nervového systému",
+      "impulzivní sebezraňující reakce",
+      "intenzivní frustrace bez regulační brzdy"
+    ],
+    "disambiguation_questions": [
+      "Jde o afekt, stereotypii nebo hledání podnětu?",
+      "Je přítomný konkrétní spouštěč?",
+      "Jak rychle se stav uklidní?",
+      "Dochází k opakování stejného vzorce?"
+    ]
+  },
+  {
+    "id": "OBS_M3_PHYSICAL_DANGER_TO_OTHERS_001",
+    "category": "high_risk_safety_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "ubližuje ostatním",
+      "kouše, bije, hází věcmi",
+      "děti se ho bojí",
+      "fyzicky útočí"
+    ],
+    "patterns": [
+      "ublizuje ostatnim",
+      "kouse bije hazi vecmi",
+      "deti se ho boji",
+      "fyzicky utoci"
+    ],
+    "observable": "fyzicky ohrožuje ostatní děti a bezpečí skupiny je narušeno",
+    "observable_anchor": "Dítě přechází do chování, které fyzicky ohrožuje ostatní děti nebo dospělé, a bezpečnost skupiny je narušena natolik, že je nutná okamžitá stabilizace.",
+    "context_hotspots": [
+      "konflikt s vrstevníkem",
+      "zákaz činnosti",
+      "frustrace",
+      "přechodová situace",
+      "odebrání předmětu"
+    ],
+    "candidate_blocks": [
+      "A",
+      "B",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z3"
+    ],
+    "zone_tendency": [
+      "Z3"
+    ],
+    "confidence": "HIGH",
+    "risk": "CRITICAL",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Nejdřív bezpečnost, potom funkční analýza chování.",
+    "alternative_explanations": [
+      "impulzivní afekt",
+      "obranná agrese",
+      "vysoká frustrace",
+      "přetížení systému",
+      "slabá schopnost návratu z aktivace"
+    ],
+    "disambiguation_questions": [
+      "Je chování cílené nebo impulzivní?",
+      "Předchází tomu frustrace, přechod nebo konflikt?",
+      "Je dítě po situaci schopné reflexe?",
+      "Dochází k lítosti nebo pokračuje bez změny?"
+    ]
+  },
+  {
+    "id": "OBS_M4_EXTREME_MELTDOWN_001",
+    "category": "high_risk_safety_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "úplně se rozpadne",
+      "nejde zastavit",
+      "záchvat je velmi silný",
+      "ztrácí kontrolu nad sebou",
+      "úplně vypadne z regulace"
+    ],
+    "patterns": [
+      "uplne se rozpadne",
+      "nejde zastavit",
+      "zachvat je velmi silny",
+      "ztraci kontrolu nad sebou",
+      "uplne vypadne z regulace"
+    ],
+    "observable": "vyskytují se extrémně silné meltdown reakce přesahující běžnou regulační kapacitu",
+    "observable_anchor": "Při vysoké zátěži dítě vstupuje do akutního meltdown stavu, ve kterém běžná regulace nefunguje, kontakt je výrazně oslaben a návrat vyžaduje čas a specifickou stabilizaci.",
+    "context_hotspots": [
+      "overload",
+      "silná změna",
+      "konflikt",
+      "dlouhé přetížení",
+      "kombinace více stresorů"
+    ],
+    "candidate_blocks": [
+      "A",
+      "E"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "zone_tendency": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "HIGH",
+    "risk": "HIGH",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Nejde o běžný vzdor ani „scénu“, ale o přetížení systému.",
+    "alternative_explanations": [
+      "akutní nervové přetížení",
+      "kolaps regulační kapacity",
+      "senzorický overload",
+      "extrémní frustrace",
+      "nemožnost návratu bez ko-regulace"
+    ],
+    "disambiguation_questions": [
+      "Co tomu typicky předchází?",
+      "Jak dlouho stav trvá?",
+      "Co pomáhá ke stabilizaci?",
+      "Je průběh předvídatelný, nebo náhlý?"
+    ]
+  },
+  {
+    "id": "OBS_M5_SUDDEN_PSYCH_STATE_CHANGE_001",
+    "category": "high_risk_safety_signals",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "úplně se stáhlo",
+      "přestalo komunikovat",
+      "působí jako pod velkým tlakem",
+      "něco je výrazně jinak",
+      "najednou je úplně jiné"
+    ],
+    "patterns": [
+      "uplne se stahlo",
+      "prestalo komunikovat",
+      "pusobi jako pod velkym tlakem",
+      "neco je vyrazne jinak",
+      "najednou je uplne jine"
+    ],
+    "observable": "dochází k náhlému stažení, změně chování nebo signálu psychického ohrožení",
+    "observable_anchor": "Dochází k výrazné změně v chování, kontaktu nebo emoční dostupnosti dítěte, která signalizuje možné psychické zatížení, ohrožení nebo narušení pocitu bezpečí.",
+    "context_hotspots": [
+      "po konfliktu",
+      "po změně doma",
+      "po návratu po absenci",
+      "po výrazné události",
+      "dlouhodobě rostoucí zátěž"
+    ],
+    "candidate_blocks": [
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z3",
+      "Z4"
+    ],
+    "zone_tendency": [
+      "Z3",
+      "Z4"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "HIGH",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Náhlá změna bývá často důležitější než samotný konkrétní projev.",
+    "alternative_explanations": [
+      "vysoké psychické zatížení",
+      "vztahové ohrožení",
+      "strach",
+      "dlouhodobý stres",
+      "významná změna v prostředí",
+      "vnější bezpečnostní riziko"
+    ],
+    "disambiguation_questions": [
+      "Je změna náhlá?",
+      "Týká se všech prostředí?",
+      "Objevují se další signály ohrožení nebo strachu?",
+      "Potvrzují změnu i rodiče nebo jiní dospělí?"
+    ]
+  }
+]

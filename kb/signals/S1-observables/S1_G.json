@@ -1,0 +1,280 @@
+[
+  {
+    "id": "OBS_G1_DOES_NOT_START_WHEN_UNSURE_001",
+    "category": "performance_anxiety_selfimage",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "radši nezačne",
+      "bojí se udělat chybu",
+      "když neví jistě, zastaví se",
+      "nechce to zkusit",
+      "čeká, dokud si není jisté"
+    ],
+    "patterns": [
+      "radsi nezacne",
+      "boji se udelat chybu",
+      "kdyz nevi jiste zastavi se",
+      "nechce to zkusit",
+      "ceka dokud si neni jiste"
+    ],
+    "observable": "při nejistotě nezahajuje činnost a raději zůstává pasivní",
+    "observable_anchor": "Při nejistotě ohledně správnosti nebo výsledku dítě nezahájí činnost, zůstává pasivní a potřebuje vysokou míru jistoty před prvním krokem.",
+    "context_hotspots": [
+      "nový úkol",
+      "samostatná práce",
+      "výkonová situace",
+      "otevřený úkol bez jasného řešení",
+      "situace s možností chyby"
+    ],
+    "candidate_blocks": [
+      "A",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Často bývá chybně interpretováno jako lenost nebo neochota.",
+    "alternative_explanations": [
+      "výkonová úzkost",
+      "strach z chyby",
+      "slabá tolerance nejistoty",
+      "nízká sebedůvěra",
+      "potřeba předem garantovaného úspěchu"
+    ],
+    "disambiguation_questions": [
+      "Potřebuje jistotu správnosti předem?",
+      "Pomůže bezpečný první krok?",
+      "Je silná reakce na chybu nebo opravu?",
+      "Funguje jinak u oblíbených aktivit?"
+    ]
+  },
+  {
+    "id": "OBS_G2_COLLAPSES_AFTER_FAILURE_001",
+    "category": "performance_anxiety_selfimage",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "jakmile udělá chybu, končí",
+      "rozpadne se při neúspěchu",
+      "nesnese chybu",
+      "po chybě už nepokračuje"
+    ],
+    "patterns": [
+      "jakmile udela chybu konci",
+      "rozpadne se pri neuspechu",
+      "nesnese chybu",
+      "po chybe uz nepokracuje"
+    ],
+    "observable": "při chybě nebo neúspěchu rychle kolabuje a ukončuje výkon",
+    "observable_anchor": "Po chybě, neúspěchu nebo opravě dítě rychle ztrácí schopnost pokračovat, přechází do pláče, vzteku nebo stažení a výkon ukončuje.",
+    "context_hotspots": [
+      "pracovní úkol",
+      "soutěž",
+      "veřejná odpověď",
+      "oprava učitelem",
+      "porovnání s ostatními"
+    ],
+    "candidate_blocks": [
+      "A"
+    ],
+    "candidate_zones": [
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z2"
+    ],
+    "confidence": "HIGH",
+    "risk": "MEDIUM",
+    "false_positive_risk": "LOW",
+    "not_diagnostic_warning": "Silný marker výkonové zátěže, ne přehnané reakce.",
+    "alternative_explanations": [
+      "výkonová úzkost",
+      "perfekcionismus",
+      "vysoká citlivost na chybu",
+      "nízká tolerance frustrace",
+      "ohrožení sebeobrazu"
+    ],
+    "disambiguation_questions": [
+      "Reaguje pláčem, vztekem, nebo stažením?",
+      "Je problém chyba samotná, nebo veřejnost situace?",
+      "Objevuje se to i doma?",
+      "Vrací se později zpět k úkolu?"
+    ]
+  },
+  {
+    "id": "OBS_G3_DEVALUES_TASK_WHEN_THREATENED_001",
+    "category": "performance_anxiety_selfimage",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "říká že je to blbost",
+      "shazuje úkol",
+      "dělá že ho to nezajímá",
+      "odmítá význam činnosti",
+      "to je trapné",
+      "to je zbytečné"
+    ],
+    "patterns": [
+      "rika ze je to blbost",
+      "shazuje ukol",
+      "dela ze ho to nezajima",
+      "odmita vyznam cinnosti",
+      "to je trapne",
+      "to je zbytecne"
+    ],
+    "observable": "shazuje úkol nebo jeho hodnotu ve chvíli, kdy je výkonově ohrožené",
+    "observable_anchor": "V situaci výkonového tlaku nebo nejistoty dítě snižuje hodnotu úkolu, odmítá jeho význam nebo se tváří, že o výsledek nestojí.",
+    "context_hotspots": [
+      "náročný úkol",
+      "nová činnost",
+      "veřejné hodnocení",
+      "porovnání s ostatními",
+      "aktivita mimo komfortní zónu"
+    ],
+    "candidate_blocks": [
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Často jde o obranu sebeobrazu, ne skutečný nezájem.",
+    "alternative_explanations": [
+      "strach ze selhání",
+      "obrana proti studu",
+      "potřeba zachovat kompetentní obraz",
+      "výkonová nejistota",
+      "anticipace neúspěchu"
+    ],
+    "disambiguation_questions": [
+      "Děje se to hlavně tam, kde dítě zažívá neúspěch?",
+      "Je přítomný strach z hodnocení?",
+      "U oblíbených činností funguje jinak?",
+      "Znehodnocuje úkol před výkonem, nebo až po něm?"
+    ]
+  },
+  {
+    "id": "OBS_G4_REPEATED_REASSURANCE_SEEKING_001",
+    "category": "performance_anxiety_selfimage",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "pořád se ptá jestli je to dobře",
+      "potřebuje potvrzení",
+      "neustále ověřuje",
+      "bez potvrzení nepokračuje"
+    ],
+    "patterns": [
+      "porad se pta jestli je to dobre",
+      "potrebuje potvrzeni",
+      "neustale overuje",
+      "bez potvrzeni nepokracuje"
+    ],
+    "observable": "opakovaně hledá ujištění před dalším krokem a bez potvrzení nepokračuje",
+    "observable_anchor": "Během činnosti dítě opakovaně vyžaduje potvrzení správnosti, bez ujištění obtížně pokračuje a jistota zvenčí je nutná pro udržení výkonu.",
+    "context_hotspots": [
+      "samostatná práce",
+      "nový úkol",
+      "hodnotitelná činnost",
+      "změna pravidla",
+      "práce bez okamžité zpětné vazby"
+    ],
+    "candidate_blocks": [
+      "A",
+      "C"
+    ],
+    "candidate_zones": [
+      "Z1"
+    ],
+    "zone_tendency": [
+      "Z1"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o závislost ani nesamostatnost.",
+    "alternative_explanations": [
+      "regulační mechanismus proti nejistotě",
+      "výkonová úzkost",
+      "nízká sebedůvěra",
+      "strach z chyby",
+      "slabá tolerance ambiguity"
+    ],
+    "disambiguation_questions": [
+      "Uklidní se po potvrzení, nebo potřebuje další?",
+      "Je problém ve výkonu, vztahu, nebo změně?",
+      "Objevuje se to i mimo školní úkoly?",
+      "Funguje lépe při jasně strukturovaném zadání?"
+    ]
+  },
+  {
+    "id": "OBS_G5_AVOIDS_PUBLIC_EXPOSURE_001",
+    "category": "performance_anxiety_selfimage",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "nechce vystupovat",
+      "odmítá mluvit před skupinou",
+      "schovává se",
+      "nechce být středem pozornosti",
+      "nechce ukázat výsledek"
+    ],
+    "patterns": [
+      "nechce vystupovat",
+      "odmita mluvit pred skupinou",
+      "schovava se",
+      "nechce byt stredem pozornosti",
+      "nechce ukazat vysledek"
+    ],
+    "observable": "vyhýbá se situaci, kde má být vidět, hodnoceno nebo veřejně vystaveno",
+    "observable_anchor": "Při veřejné expozici, výkonu před skupinou nebo očekávaném hodnocení dítě ustupuje, vyhýbá se situaci nebo blokuje aktivní zapojení.",
+    "context_hotspots": [
+      "vystoupení před třídou",
+      "odpověď před skupinou",
+      "prezentace práce",
+      "čtení nahlas",
+      "sociální situace se silnou pozorností okolí"
+    ],
+    "candidate_blocks": [
+      "A",
+      "B"
+    ],
+    "candidate_zones": [
+      "Z1",
+      "Z2"
+    ],
+    "zone_tendency": [
+      "Z1",
+      "Z2"
+    ],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nutné odlišit introverzi od zátěžové blokace.",
+    "alternative_explanations": [
+      "sociální úzkost",
+      "výkonová úzkost",
+      "strach z hodnocení",
+      "vysoká citlivost na chybu",
+      "vztahové ohrožení při veřejné expozici"
+    ],
+    "disambiguation_questions": [
+      "Funguje lépe v malé skupině?",
+      "Je problém publikum, výkon, nebo nejistota?",
+      "Dochází i k tělesným známkám stresu?",
+      "Vyhýbá se i oblíbeným aktivitám, pokud jsou veřejné?"
+    ]
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "schema": "APU_TREND_INTENSITY_V1",
+  "category": "S4_QA_checklist",
+  "description": "Interní validační checklist pro kalibraci trend/intensity vrstvy a kontrolu inference pipeline",
+  "purpose": "Ne pro pedagoga. Slouží pro kontrolu, že systém nehalucinuje, nepřeskakuje logické kroky a nepřechází z observable rovnou do diagnózy.",
+  "checks": [
+    {
+      "id": "CHECK_1_OBSERVABLE_EXISTS",
+      "title": "Existuje observable?",
+      "question": "Má systém skutečně konkrétní pozorovatelný projev?",
+      "correct_example": [
+        "dítě při ranním kruhu vykřikuje"
+      ],
+      "wrong_example": [
+        "dítě je ADHD",
+        "dítě je problémové"
+      ],
+      "fail_condition": "S4 pracuje bez observable anchor.",
+      "required_action": "Zastavit inference a vrátit systém k přesnějšímu pozorování."
+    },
+    {
+      "id": "CHECK_2_IS_TREND_REALLY_TREND",
+      "title": "Je trend opravdu trend?",
+      "question": "Je doložená frekvence nebo jen jedna epizoda?",
+      "correct_example": [
+        "několikrát týdně poslední měsíc"
+      ],
+      "wrong_example": [
+        "jednou minulý týden"
+      ],
+      "fail_condition": "Single episode vytváří chronic inference.",
+      "required_action": "Snížit confidence a aktivovat SINGLE_EPISODE guard."
+    },
+    {
+      "id": "CHECK_3_CONTEXT_INCLUDED",
+      "title": "Je zohledněn kontext?",
+      "question": "Ví systém kde, kdy a za jakých podmínek se to děje?",
+      "correct_example": [
+        "pouze při čekání po obědě"
+      ],
+      "wrong_example": [
+        "systém to interpretuje globálně"
+      ],
+      "fail_condition": "ONLY_SITUATIONAL není respektováno.",
+      "required_action": "Vrátit inference ke kontextové vazbě a omezit generalizaci."
+    },
+    {
+      "id": "CHECK_4_SETTING_DIFFERENCE_INCLUDED",
+      "title": "Je zohledněn setting difference?",
+      "question": "Je porovnání mezi MŠ a domovem skutečně zahrnuto?",
+      "correct_example": [
+        "ve školce výrazné, doma bez obtíží"
+      ],
+      "wrong_example": [
+        "rodiče to nevidí → rodiče popírají problém"
+      ],
+      "fail_condition": "Difference je interpretována jako odpor místo dat.",
+      "required_action": "Aktivovat SETTING_DIFFERENCE guard a zabránit znehodnocení druhé perspektivy."
+    },
+    {
+      "id": "CHECK_5_INTENSITY_NOT_CAUSE",
+      "title": "Není zaměněna intenzita za příčinu?",
+      "question": "Nevede silná situace k přehnané jistotě?",
+      "correct_example": [
+        "urgentní zásah + otevřená hypotéza"
+      ],
+      "wrong_example": [
+        "silná epizoda → definitivní závěr"
+      ],
+      "fail_condition": "HIGH_INTENSITY automaticky zvyšuje certainty.",
+      "required_action": "Oddělit urgentnost od jistoty interpretace."
+    },
+    {
+      "id": "CHECK_6_SUPPORT_VISIBLE",
+      "title": "Je vidět co pomáhá?",
+      "question": "Zachycuje systém i regulační a podpůrné faktory?",
+      "correct_example": [
+        "po pohybu výrazně lepší"
+      ],
+      "wrong_example": [
+        "evidujeme jen problém"
+      ],
+      "fail_condition": "Support data nejsou součástí inference.",
+      "required_action": "Zahrnout regulační faktory jako diagnosticky silná data."
+    },
+    {
+      "id": "CHECK_7_TEACHER_NEED_SEPARATED",
+      "title": "Je učitelská potřeba oddělená od interpretace dítěte?",
+      "question": "Rozlišuje systém potřebu pedagoga od charakteristiky dítěte?",
+      "correct_example": [
+        "potřebuji rychlé zklidnění"
+      ],
+      "wrong_example": [
+        "dítě je agresivní"
+      ],
+      "fail_condition": "Teacher need je zaměněna za child profile.",
+      "required_action": "Vrátit routing na NEED vrstvu místo inferování identity dítěte."
+    },
+    {
+      "id": "CHECK_8_FALSE_POSITIVE_GUARD_ACTIVE",
+      "title": "Je false positive guard aktivní?",
+      "question": "Snaží se systém aktivně brzdit přehnaný závěr?",
+      "correct_example": [
+        "systém testuje alternativní hypotézy"
+      ],
+      "wrong_example": [
+        "pipeline pouze potvrzuje první hypotézu"
+      ],
+      "fail_condition": "Pipeline jen potvrzuje hypotézu místo jejího testování.",
+      "required_action": "Aktivovat ochrannou vrstvu proti diagnostickému tunelu."
+    }
+  ],
+  "gold_standard": {
+    "wrong_answer": "už víme co dítě má",
+    "correct_answer": "víme, co je potřeba ověřit, a co už by byla nebezpečná zkratka"
+  }
+}

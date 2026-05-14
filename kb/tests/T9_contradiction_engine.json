@@ -1,0 +1,47 @@
+[
+  {
+    "id": "T9_CONTRA_HOME_SCHOOL_001",
+    "input": "doma to nedela, ale ve skolce pri prechodu krici a odmita jit",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_have_flags": [
+        "CONTRADICTION_HOME_SCHOOL_MISMATCH",
+        "SETTING_DIFFERENCE",
+        "ENVIRONMENTAL_INFLUENCE_POSSIBLE"
+      ]
+    }
+  },
+  {
+    "id": "T9_CONTRA_LABEL_OBS_001",
+    "input": "je manipulativni, pri rannim predani place a drzi se rodice",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_have_flags": [
+        "HAS_INTERPRETATION_LABEL",
+        "CONTRADICTION_LABEL_VS_OBSERVABLE"
+      ],
+      "must_include_zones": [
+        "Z3"
+      ]
+    }
+  },
+  {
+    "id": "T9_CONTRA_ABSOLUTE_SITUATIONAL_001",
+    "input": "nikdy se nezapoji, ale v male skupine funguje lepe",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": [
+        "MISSING_OBSERVABLE_BEHAVIOR",
+        "ABSOLUTIZING_LANGUAGE",
+        "LOW_LOAD_FUNCTIONING_BETTER",
+        "CONTRADICTION_ABSOLUTE_VS_SITUATIONAL"
+      ],
+      "must_not_include_zones": [
+        "Z1",
+        "Z2",
+        "Z3",
+        "Z4"
+      ]
+    }
+  }
+]

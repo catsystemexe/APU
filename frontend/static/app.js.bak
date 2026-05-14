@@ -1,0 +1,197 @@
+const chatEl = document.getElementById("chat");
+const inputEl = document.getElementById("input");
+const sendBtn = document.getElementById("send");
+const clearBtn = document.getElementById("btnClear");
+const personalBtn = document.getElementById("btnPersonal");
+
+const sessionStatsEl = document.getElementById("sessionStats");
+const modelStatsEl = document.getElementById("modelStats");
+const pricingStatsEl = document.getElementById("pricingStats");
+
+let lastModel = null;
+let lastPricing = null; // {in_per_1m, out_per_1m}
+
+// session aggregates (estimates)
+let session = {
+  est_in_tokens: 0,
+  est_out_tokens: 0,
+  est_total_tokens: 0,
+  est_cost_usd: null,
+};
+
+function fmtInt(n){ return (n ?? 0).toLocaleString("cs-CZ"); }
+
+function updateSessionStats(){
+  if (!sessionStatsEl) return;
+  const cost = session.est_cost_usd;
+  const costStr = (cost == null) ? "—" : `$${cost.toFixed(4)}`;
+  sessionStatsEl.textContent =
+    `Session: ~${fmtInt(session.est_total_tokens)} tok (in ~${fmtInt(session.est_in_tokens)} / out ~${fmtInt(session.est_out_tokens)}) · cost ${costStr}`;
+}
+
+function updateModelPricing(){
+  if (modelStatsEl) modelStatsEl.textContent = `Model: ${lastModel || "—"}`;
+  if (pricingStatsEl) {
+    if (!lastPricing || lastPricing.in_per_1m == null || lastPricing.out_per_1m == null) {
+      pricingStatsEl.textContent = "Price: —";
+    } else {
+      pricingStatsEl.textContent =
+        `Price: in $${lastPricing.in_per_1m}/1M · out $${lastPricing.out_per_1m}/1M`;
+    }
+  }
+}
+
+function addMessage(role, text, {loading=false} = {}) {
+  const wrap = document.createElement("div");
+  wrap.className = `msg ${role}`;
+
+  const avatar = document.createElement("div");
+  avatar.className = "avatar";
+  avatar.textContent = role === "user" ? "U" : "APU";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble" + (loading ? " loading" : "");
+  bubble.textContent = text;
+
+  wrap.appendChild(avatar);
+  wrap.appendChild(bubble);
+  chatEl.appendChild(wrap);
+  chatEl.scrollTop = chatEl.scrollHeight;
+
+  return {wrap, bubble};
+}
+
+async function sendMessage(text) {
+  const msg = (text ?? "").trim();
+  if (!msg) return;
+
+  addMessage("user", msg);
+  inputEl.value = "";
+  autoGrow();
+
+  const pending = addMessage("assistant", "…", {loading:true});
+
+  try {
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({message: msg})
+    });
+
+    const data = await res.json().catch(() => ({}));
+    const out = data.response ?? `[HTTP_${res.status}] ${await res.text()}`;
+
+    pending.bubble.classList.remove("loading");
+    pending.bubble.textContent = out;
+
+    // meta panel (kb debug) — stacked
+    if (data.meta) {
+      const meta = document.createElement("div");
+      meta.className = "meta";
+
+      if (data.meta.model) lastModel = data.meta.model;
+      if (data.meta.pricing) lastPricing = data.meta.pricing;
+      updateModelPricing();
+      
+      const head = document.createElement("div");
+      head.className = "line";
+      head.textContent = `KB: ${data.meta.kb_chars} chars · files: ${(data.meta.kb_files || []).length}`;
+      meta.appendChild(head);
+
+      const kbH = document.createElement("div");
+      kbH.className = "line kbh";
+      kbH.textContent = "KB files:";
+      meta.appendChild(kbH);
+
+      for (const f of (data.meta.kb_files || [])) {
+        const line = document.createElement("div");
+        line.className = "line";
+        line.textContent = `- ${f.name}: ${f.chars} chars`;
+        meta.appendChild(line);
+      }
+
+      // router debug
+      if (data.meta.router) {
+        const r = document.createElement("div");
+        r.className = "line kbh";
+        r.textContent = `Router: ${data.meta.router.mode} · ${data.meta.router.reason} · tier ${data.meta.router.tier}`;
+        meta.appendChild(r);
+      }
+      
+      // token/cost (odhad)
+      const tok = data.meta.tokens || null;
+      if (tok) {
+        const t1 = document.createElement("div");
+        t1.className = "line kbh";
+        t1.textContent = "Est. tokens:";
+        meta.appendChild(t1);
+
+        const tIn = document.createElement("div");
+        tIn.className = "line";
+        tIn.textContent = `- in ~${tok.est_input_tokens}`;
+        meta.appendChild(tIn);
+
+        const tOut = document.createElement("div");
+        tOut.className = "line";
+        tOut.textContent = `- out ~${tok.est_output_tokens}`;
+        meta.appendChild(tOut);
+
+        const tTot = document.createElement("div");
+        tTot.className = "line";
+        tTot.textContent = `- total ~${tok.est_total_tokens}`;
+        meta.appendChild(tTot);
+
+        if (typeof tok.est_cost_usd === "number") {
+          const c = document.createElement("div");
+          c.className = "line";
+          c.textContent = `- est. cost this msg: $${tok.est_cost_usd.toFixed(6)}`;
+          meta.appendChild(c);
+        }
+        
+        // session accumulate
+        session.est_in_tokens += tok.est_input_tokens || 0;
+        session.est_out_tokens += tok.est_output_tokens || 0;
+        session.est_total_tokens += tok.est_total_tokens || 0;
+
+        // cost accumulate (jen když server posílá)
+        if (typeof tok.est_cost_usd === "number") {
+          session.est_cost_usd = (session.est_cost_usd ?? 0) + tok.est_cost_usd;
+        }
+        updateSessionStats();
+        updateModelPricing();
+      }
+
+      pending.wrap.appendChild(meta);
+    }
+  } catch (e) {
+    pending.bubble.classList.remove("loading");
+    pending.bubble.textContent = `[NETWORK_ERROR] ${e?.message || e}`;
+  }
+
+  chatEl.scrollTop = chatEl.scrollHeight;
+}
+
+function autoGrow(){
+  inputEl.style.height = "auto";
+  inputEl.style.height = Math.min(inputEl.scrollHeight, 180) + "px";
+}
+
+sendBtn.addEventListener("click", () => sendMessage(inputEl.value));
+
+inputEl.addEventListener("input", autoGrow);
+inputEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    sendMessage(inputEl.value);
+  }
+});
+
+clearBtn.addEventListener("click", () => {
+  chatEl.innerHTML = "";
+  addMessage("assistant", "Chat vymazán. Napište zprávu nebo klikněte na personal.");
+});
+
+personalBtn.addEventListener("click", () => sendMessage("personal"));
+
+addMessage("assistant", "Ahoj, jsem APU - asistent pro učitele. S čím ti můžu pomoci?");
+autoGrow();

@@ -1,0 +1,239 @@
+[
+  {
+    "id": "OBS_A1_ATTENTION_CONTACT_001",
+    "category": "attention_task_focus",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "kouká jinam",
+      "nevnímá",
+      "nedává pozor",
+      "vypíná",
+      "je mimo",
+      "musím to opakovat několikrát"
+    ],
+    "patterns": [
+      "kouka jinam",
+      "nevnimá",
+      "nevnima",
+      "nedava pozor",
+      "vypina",
+      "je mimo",
+      "musim to opakovat nekolikrat"
+    ],
+    "observable": "ztrácí kontakt při společné instrukci",
+    "observable_anchor": "Během společné instrukce dítě ztrácí kontakt s děním, nereaguje na navazující část zadání a potřebuje opakované vracení pozornosti.",
+    "context_hotspots": [
+      "ranní kruh",
+      "společné zadávání úkolu",
+      "klidová skupinová činnost",
+      "vysvětlování nového úkolu"
+    ],
+    "candidate_blocks": ["C"],
+    "candidate_zones": ["Z1"],
+    "zone_tendency": ["Z1"],
+    "confidence": "MEDIUM",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Neznamená automaticky ADHD ani poruchu pozornosti.",
+    "alternative_explanations": [
+      "neporozumění instrukci",
+      "únava",
+      "senzorické přetížení",
+      "nízká motivace",
+      "úzkost",
+      "sociální nejistota",
+      "příliš dlouhá verbální instrukce"
+    ],
+    "disambiguation_questions": [
+      "Je stejné chování i při oblíbené aktivitě?",
+      "Pomůže kratší nebo vizuální instrukce?",
+      "Děje se to hlavně ve skupině, nebo i individuálně?",
+      "Ztrácí kontakt hned, nebo až po několika minutách?"
+    ]
+  },
+  {
+    "id": "OBS_A2_TASK_LEAVES_PLACE_001",
+    "category": "attention_task_focus",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "odchází od práce",
+      "nevydrží u stolu",
+      "uteče od úkolu",
+      "opouští místo",
+      "dlouho nevydrží sedět"
+    ],
+    "patterns": [
+      "odchazi od prace",
+      "nevydrzi u stolu",
+      "utece od ukolu",
+      "opousti misto",
+      "dlouho nevydrzi sedet"
+    ],
+    "observable": "opouští místo po zahájení činnosti",
+    "observable_anchor": "Po zahájení činnosti dítě opouští pracovní místo, přerušuje aktivitu a bez návratu nebo podpory nedokončuje úkol.",
+    "context_hotspots": [
+      "pracovní list",
+      "výtvarná činnost",
+      "stolní úkol",
+      "strukturovaná individuální práce",
+      "čekání na dokončení"
+    ],
+    "candidate_blocks": ["C", "E"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o hyperaktivitu ani neochotu spolupracovat.",
+    "alternative_explanations": [
+      "regulační přetížení",
+      "potřeba pohybu",
+      "úniková reakce před nárokem",
+      "nízká tolerance frustrace",
+      "nejasné zadání"
+    ],
+    "disambiguation_questions": [
+      "Odchází při všech činnostech, nebo jen při některých?",
+      "Odchází po určité době, nebo téměř ihned?",
+      "Pomáhá blízkost dospělého?",
+      "Je rozdíl mezi vlastní volbou a zadaným úkolem?"
+    ]
+  },
+  {
+    "id": "OBS_A3_TASK_ADULT_SUPPORT_001",
+    "category": "attention_task_focus",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "bez pomoci to nedokončí",
+      "musím u něj stát",
+      "sám to nedotáhne",
+      "bez vedení se zastaví"
+    ],
+    "patterns": [
+      "bez pomoci to nedokonci",
+      "musim u nej stat",
+      "sam to nedotahne",
+      "bez vedeni se zastavi"
+    ],
+    "observable": "nedokončí úkol bez průběžné podpory dospělého",
+    "observable_anchor": "Dítě zvládne činnost zahájit, ale bez průběžného vedení, připomínání nebo podpory nedokončí úkol.",
+    "context_hotspots": [
+      "vícekrokové úkoly",
+      "nová činnost",
+      "samostatná práce",
+      "úkol s odloženou odměnou"
+    ],
+    "candidate_blocks": ["C", "A"],
+    "candidate_zones": ["Z1"],
+    "zone_tendency": ["Z1"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o lenost ani závislost na dospělém.",
+    "alternative_explanations": [
+      "oslabené exekutivní funkce",
+      "výkonová nejistota",
+      "slabé plánování",
+      "nízká sebedůvěra",
+      "strach z chyby"
+    ],
+    "disambiguation_questions": [
+      "Neví co dál, nebo ztrácí energii pokračovat?",
+      "Pomáhá vizuální rozpad kroků?",
+      "Je obtíž hlavně u nových úkolů?",
+      "Zvládá lépe činnosti s okamžitou zpětnou vazbou?"
+    ]
+  },
+  {
+    "id": "OBS_A4_TASK_INITIATION_BLOCK_001",
+    "category": "attention_task_focus",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "nezačne pracovat",
+      "jen sedí",
+      "čeká",
+      "nerozjede se",
+      "neví co dělat"
+    ],
+    "patterns": [
+      "nezacne pracovat",
+      "jen sedi",
+      "ceka",
+      "nerozjede se",
+      "nevi co delat"
+    ],
+    "observable": "po zadání nezahajuje první krok",
+    "observable_anchor": "Po zadání činnosti dítě nezahájí první krok, zůstává pasivní a potřebuje externí spuštění aktivity.",
+    "context_hotspots": [
+      "nový úkol",
+      "samostatná práce",
+      "přechod mezi aktivitami",
+      "situace bez jasné struktury"
+    ],
+    "candidate_blocks": ["C", "A"],
+    "candidate_zones": ["Z1"],
+    "zone_tendency": ["Z1"],
+    "confidence": "MEDIUM",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Často bývá chybně interpretováno jako lenost nebo vzdor.",
+    "alternative_explanations": [
+      "výkonová úzkost",
+      "neporozumění zadání",
+      "přetížení",
+      "strach z chyby",
+      "slabá iniciační kapacita"
+    ],
+    "disambiguation_questions": [
+      "Chápe zadání, nebo ne?",
+      "Pomůže společné zahájení prvního kroku?",
+      "Děje se to i u oblíbených aktivit?",
+      "Je problém hlavně při nových situacích?"
+    ]
+  },
+  {
+    "id": "OBS_A5_TASK_SWITCHES_STIMULATION_001",
+    "category": "attention_task_focus",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "odbíhá k něčemu jinému",
+      "rychle mění aktivitu",
+      "nevydrží u jedné věci",
+      "stále hledá něco dalšího"
+    ],
+    "patterns": [
+      "odbiha k necemu jinemu",
+      "rychle meni aktivitu",
+      "nevydrzi u jedne veci",
+      "stale hleda neco dalsiho"
+    ],
+    "observable": "rychle přerušuje činnost a přechází k jiné stimulaci",
+    "observable_anchor": "Během činnosti dítě rychle opouští aktuální aktivitu a přechází k jiné stimulaci bez dokončení původního úkolu.",
+    "context_hotspots": [
+      "klidové činnosti",
+      "opakující se úkoly",
+      "čekání",
+      "nízká novost aktivity"
+    ],
+    "candidate_blocks": ["C", "E"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nejde automaticky o poruchu pozornosti ani nevychovanost.",
+    "alternative_explanations": [
+      "vysoká potřeba stimulace",
+      "regulační neklid",
+      "přetížení monotonií",
+      "úniková reakce",
+      "slabá tolerance odloženého uspokojení"
+    ],
+    "disambiguation_questions": [
+      "Hledá pohyb, sociální kontakt, nebo nový podnět?",
+      "Děje se to hlavně při klidových aktivitách?",
+      "Umí dlouho vydržet u vlastní volby?",
+      "Zlepší se situace po krátké pohybové regulaci?"
+    ]
+  }
+]

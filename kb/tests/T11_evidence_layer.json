@@ -1,0 +1,32 @@
+[
+  {
+    "id": "T11_EVIDENCE_OBS_001",
+    "input": "pri rannim kruhu lita po tride a vykřikuje odpovědi",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_include_zones": ["Z2"],
+      "evidence_min_observables": 1,
+      "evidence_min_zones": 1
+    }
+  },
+  {
+    "id": "T11_EVIDENCE_LABEL_001",
+    "input": "je manipulativni",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["HAS_INTERPRETATION_LABEL", "LABEL_WITHOUT_OBSERVATION"],
+      "evidence_min_labels": 1,
+      "evidence_min_observables": 0
+    }
+  },
+  {
+    "id": "T11_EVIDENCE_TREND_001",
+    "input": "dnes poprve beha po tride",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_have_flags": ["SINGLE_EPISODE"],
+      "evidence_min_observables": 1,
+      "evidence_min_trends": 1
+    }
+  }
+]

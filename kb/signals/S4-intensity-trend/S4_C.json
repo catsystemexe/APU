@@ -1,0 +1,252 @@
+{
+  "schema": "APU_TREND_INTENSITY_V1",
+  "category": "S4C_environment_setting_difference",
+  "description": "Rozdíly mezi prostředími a nastavením systému – školka, domov, struktura, nepředvídatelnost, veřejná korekce, tlak času, hustota skupiny, pohyb",
+  "global_rules": [
+    "Rozdíl mezi prostředími není rozpor, ale diagnosticky velmi cenné data.",
+    "Setting difference chrání systém před chybným zobecněním na dítě jako celek.",
+    "Pokud změna prostředí výrazně mění chování, APU má nejdřív analyzovat prostředí, ne dítě."
+  ],
+  "items": [
+    {
+      "id": "T21_ONLY_IN_SCHOOL",
+      "label": "Pouze ve školce",
+      "teacher_phrases": [
+        "ve školce ano, doma ne",
+        "rodiče to nevidí",
+        "problém je jen ve třídě"
+      ],
+      "patterns": [
+        "ve skolce ano doma ne",
+        "rodice to nevidi",
+        "problem je jen ve tride",
+        "jen ve skolce",
+        "doma je v pohode"
+      ],
+      "meaning": "Projev je vázaný primárně na školní prostředí.",
+      "inference_effect": "silně posiluje environmentální hypotézu",
+      "confidence_effect": "snižuje riziko přehnaného zobecnění na dítě",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "ONLY_IN_SCHOOL",
+        "SETTING_DIFFERENCE"
+      ],
+      "recommendation": "Zkoumat rozdíl nároků, hluku, struktury a sociální zátěže mezi MŠ a domovem."
+    },
+    {
+      "id": "T22_ONLY_AT_HOME",
+      "label": "Pouze doma",
+      "teacher_phrases": [
+        "doma ano, ve školce ne",
+        "ve školce funguje dobře",
+        "rodiče popisují problém, škola ne"
+      ],
+      "patterns": [
+        "doma ano ve skolce ne",
+        "ve skolce funguje dobre",
+        "rodice popisuji problem skola ne",
+        "jen doma",
+        "ve skolce bez problemu"
+      ],
+      "meaning": "Projev je vázaný primárně na domácí prostředí.",
+      "inference_effect": "zvyšuje význam rodinného režimu a domácího kontextu",
+      "confidence_effect": "omezuje školní interpretaci bez dalších dat",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": [
+        "ONLY_AT_HOME",
+        "SETTING_DIFFERENCE"
+      ],
+      "recommendation": "Nepřenášet automaticky domácí obraz do školního fungování bez ověření."
+    },
+    {
+      "id": "T23_HOME_SCHOOL_MISMATCH",
+      "label": "Rozdíl MŠ × domov",
+      "teacher_phrases": [
+        "doma úplně jiné dítě",
+        "rodiče říkají něco jiného než škola",
+        "popisy se zásadně liší"
+      ],
+      "patterns": [
+        "doma uplne jine dite",
+        "rodice rikaji neco jineho nez skola",
+        "popisy se zasadne lisi",
+        "uplne jiny doma",
+        "jinak doma jinak ve skolce"
+      ],
+      "meaning": "Významný rozdíl mezi perspektivou školy a rodiny.",
+      "inference_effect": "zvyšuje potřebu mapovat podmínky místo hledání kdo má pravdu",
+      "confidence_effect": "cap MEDIUM",
+      "false_positive_risk": "HIGH",
+      "validation_flags": [
+        "CONTRADICTION_HOME_SCHOOL_MISMATCH",
+        "SETTING_DIFFERENCE"
+      ],
+      "recommendation": "Rozdíl chápat jako data point, ne jako důkaz nepravdy jedné strany."
+    },
+    {
+      "id": "T24_BETTER_OUTSIDE_CLASSROOM",
+      "label": "Lépe venku než ve třídě",
+      "teacher_phrases": [
+        "venku funguje lépe",
+        "na zahradě je úplně jiné",
+        "ve třídě problém, venku ne"
+      ],
+      "patterns": [
+        "venku funguje lepe",
+        "na zahrade je uplne jine",
+        "ve tride problem venku ne",
+        "venku je lepsi",
+        "na zahrade bez problemu"
+      ],
+      "meaning": "Projev je vázaný na uzavřený strukturovaný prostor.",
+      "inference_effect": "zvyšuje význam pohybu, hluku, struktury a senzoriky",
+      "confidence_effect": "snižuje relevanci charakterového soudu",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "BETTER_OUTSIDE_CLASSROOM"
+      ],
+      "recommendation": "Ověřit rozdíl prostoru, pohybu a sociální hustoty, ne jen disciplínu."
+    },
+    {
+      "id": "T25_BETTER_WITH_STRUCTURE",
+      "label": "Lépe při jasné struktuře",
+      "teacher_phrases": [
+        "když ví přesně co bude, funguje dobře",
+        "jasný režim výrazně pomáhá",
+        "při pevné struktuře problém mizí"
+      ],
+      "patterns": [
+        "kdyz vi presne co bude funguje dobre",
+        "jasny rezim vyrazne pomaha",
+        "pri pevne strukture problem mizi",
+        "kdyz je jasny plan",
+        "potrebuje pevny rezim"
+      ],
+      "meaning": "Projev je silně ovlivněn mírou předvídatelnosti prostředí.",
+      "inference_effect": "výrazně podporuje environmentální a regulační interpretaci",
+      "confidence_effect": "vyšší validita pracovních hypotéz o struktuře",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "BETTER_WITH_STRUCTURE"
+      ],
+      "recommendation": "Strukturu chápat jako silný diagnostický signál, ne jako berličku."
+    },
+    {
+      "id": "T26_WORSE_WITH_UNPREDICTABILITY",
+      "label": "Horší při nepředvídatelnosti",
+      "teacher_phrases": [
+        "když se něco změní, je to horší",
+        "nečekaná změna ho rozhodí",
+        "improvizace je problém"
+      ],
+      "patterns": [
+        "kdyz se neco zmeni je to horsi",
+        "necekana zmena ho rozhodi",
+        "improvizace je problem",
+        "zmena planu je problem",
+        "neceka zmena je problem"
+      ],
+      "meaning": "Projev je silně navázán na nízkou toleranci nepředvídatelnosti.",
+      "inference_effect": "zvyšuje význam adaptační a regulační zátěže",
+      "confidence_effect": "snižuje morální interpretaci typu nechce spolupracovat",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "WORSE_WITH_UNPREDICTABILITY"
+      ],
+      "recommendation": "Sledovat změny režimu, suplování, změny osob a narušení rutiny."
+    },
+    {
+      "id": "T27_WORSE_WITH_PUBLIC_CORRECTION",
+      "label": "Horší při veřejné korekci",
+      "teacher_phrases": [
+        "když je napomenuté před ostatními, zhorší se to",
+        "veřejná korekce vede k rozpadu",
+        "před skupinou reaguje mnohem silněji"
+      ],
+      "patterns": [
+        "kdyz je napomenute pred ostatnimi zhorsi se to",
+        "verejna korekce vede k rozpadu",
+        "pred skupinou reaguje mnohem silneji",
+        "pred ostatnimi je to horsi"
+      ],
+      "meaning": "Projev je citlivý na veřejné ohrožení vztahové bezpečnosti.",
+      "inference_effect": "zvyšuje význam studu, vztahové jistoty a sociálního tlaku",
+      "confidence_effect": "snižuje jednoduchou interpretaci jako vzdor",
+      "false_positive_risk": "MEDIUM",
+      "validation_flags": [
+        "PUBLIC_CORRECTION_TRIGGER"
+      ],
+      "recommendation": "Ověřit rozdíl mezi veřejnou a individuální korekcí."
+    },
+    {
+      "id": "T28_WORSE_WITH_TIME_PRESSURE",
+      "label": "Horší pod časovým tlakem",
+      "teacher_phrases": [
+        "když spěcháme, rozpadá se",
+        "pod tlakem času je problém",
+        "rychlost situaci výrazně zhoršuje"
+      ],
+      "patterns": [
+        "kdyz spechame rozpada se",
+        "pod tlakem casu je problem",
+        "rychlost situaci vyrazne zhorsuje",
+        "kdyz je spech",
+        "pri casovem tlaku"
+      ],
+      "meaning": "Projev je citlivý na časový tlak a výkonovou naléhavost.",
+      "inference_effect": "zvyšuje význam exekutivního zatížení a stresové regulace",
+      "confidence_effect": "snižuje hodnocení typu nechce",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "TIME_PRESSURE_TRIGGER"
+      ],
+      "recommendation": "Sledovat rozdíl mezi výkonem v klidu a pod tlakem."
+    },
+    {
+      "id": "T29_WORSE_WITH_HIGH_SOCIAL_DENSITY",
+      "label": "Horší ve velké skupině",
+      "teacher_phrases": [
+        "když je kolem hodně dětí, je to horší",
+        "ve velké skupině nezvládá fungovat",
+        "přeplněná situace ho rozhodí"
+      ],
+      "patterns": [
+        "kdyz je kolem hodne deti je to horsi",
+        "ve velke skupine nezvlada fungovat",
+        "preplnena situace ho rozhodi",
+        "hodne deti kolem je problem"
+      ],
+      "meaning": "Projev je citlivý na sociální hustotu a množství podnětů.",
+      "inference_effect": "zvyšuje význam senzorické a sociální zátěže",
+      "confidence_effect": "snižuje pravděpodobnost globálního problému",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "HIGH_SOCIAL_DENSITY_TRIGGER"
+      ],
+      "recommendation": "Porovnat malou a velkou skupinu, hlučnost a nároky na sdílenou regulaci."
+    },
+    {
+      "id": "T30_BETTER_WITH_MOVEMENT",
+      "label": "Lépe při pohybu",
+      "teacher_phrases": [
+        "když se může hýbat, je to lepší",
+        "po pohybu funguje výrazně lépe",
+        "pohyb ho stabilizuje"
+      ],
+      "patterns": [
+        "kdyz se muze hybat je to lepsi",
+        "po pohybu funguje vyrazne lepe",
+        "pohyb ho stabilizuje",
+        "po pohybu je klidnejsi"
+      ],
+      "meaning": "Regulace je silně podpořena motorickou aktivací.",
+      "inference_effect": "výrazně podporuje hypotézu aktivační potřeby",
+      "confidence_effect": "vyšší validita environmentální podpory",
+      "false_positive_risk": "LOW",
+      "validation_flags": [
+        "BETTER_WITH_MOVEMENT"
+      ],
+      "recommendation": "Pohyb chápat jako regulační nástroj, ne jako odměnu nebo ústupek."
+    }
+  ]
+}

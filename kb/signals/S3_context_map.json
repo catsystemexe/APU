@@ -1,0 +1,68 @@
+[
+  {
+    "id": "CTX_PAR_001",
+    "patterns": [
+      "rodic problem nevidi",
+      "rodic bagatelizuje",
+      "rodic popira problem",
+      "doma to nedela"
+    ],
+    "observable": "nesoulad mezi školním pozorováním a rodičovským vnímáním",
+    "candidate_contexts": [
+      "obranná rodičovská reakce",
+      "odlišné prostředí škola × domov",
+      "nedostatečně sdílené konkrétní observables"
+    ],
+    "priority": "HIGH",
+    "source_cases": ["K8"],
+    "recommended_focus": [
+      "vrátit komunikaci k pozorovatelnému chování",
+      "oddělit dítě od hodnocení rodiče",
+      "sjednotit konkrétní popis situace"
+    ]
+  },
+  {
+    "id": "CTX_PAR_002",
+    "patterns": [
+      "obraci problem na skolu",
+      "chyba je podle rodice ve skole",
+      "rodic odmita spolupraci",
+      "konflikt se skolou"
+    ],
+    "observable": "obranné přesměrování odpovědnosti mimo dítě",
+    "candidate_contexts": [
+      "vztahová nedůvěra",
+      "pocit ohrožení rodiče",
+      "špatně vedená předchozí komunikace"
+    ],
+    "priority": "HIGH",
+    "source_cases": ["K8"],
+    "recommended_focus": [
+      "snížit obranný tlak",
+      "vrátit se ke společnému cíli",
+      "neeskalovat hodnotící jazyk"
+    ]
+  },
+  {
+    "id": "CTX_PAR_003",
+    "patterns": [
+      "rychle se vyhroti komunikace",
+      "rodic je citlivy na tema ditete",
+      "komunikace se polarizuje",
+      "chybi spolecny popis situace"
+    ],
+    "observable": "vysoké riziko vztahové eskalace mezi školou a rodinou",
+    "candidate_contexts": [
+      "nahromaděná nedůvěra",
+      "defenzivní komunikační rámec",
+      "absence bezpečné spolupráce"
+    ],
+    "priority": "HIGH",
+    "source_cases": ["K8"],
+    "recommended_focus": [
+      "přesun od interpretace k faktům",
+      "jasné konkrétní příklady místo obecných soudů",
+      "bezpečný společný plán místo hledání viníka"
+    ]
+  }
+]

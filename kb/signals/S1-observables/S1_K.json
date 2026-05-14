@@ -1,0 +1,240 @@
+[
+  {
+    "id": "OBS_K1_ADULT_INSTRUCTION_NOT_HELD_001",
+    "category": "adult_communication_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "jako by mě neslyšelo",
+      "nereaguje na pokyn",
+      "instrukce úplně vypouští",
+      "musím říkat všechno několikrát",
+      "pokyn hned zmizí"
+    ],
+    "patterns": [
+      "jako by me neslyselo",
+      "nereaguje na pokyn",
+      "instrukce uplne vypousti",
+      "musim rikat vsechno nekolikrat",
+      "pokyn hned zmizi"
+    ],
+    "observable": "na instrukci dospělého opakovaně nereaguje nebo ji neudrží v chování",
+    "observable_anchor": "Po zadání instrukce dítě nereaguje, nezachytí ji, nebo ji nedokáže udržet dostatečně dlouho pro provedení činnosti.",
+    "context_hotspots": [
+      "skupinové instrukce",
+      "přechod mezi aktivitami",
+      "vícekrokové zadání",
+      "stop instrukce",
+      "běžná provozní organizace dne"
+    ],
+    "candidate_blocks": ["C", "D", "A"],
+    "candidate_zones": ["Z1", "Z2"],
+    "zone_tendency": ["Z1", "Z2"],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "VERY_HIGH",
+    "not_diagnostic_warning": "Často bývá mylně interpretováno jako vzdor nebo ignorace.",
+    "alternative_explanations": [
+      "oslabené zachycení instrukce",
+      "neporozumění zadání",
+      "přetížení verbální informací",
+      "senzorické zahlcení",
+      "výkonová blokace",
+      "slabá pracovní paměť"
+    ],
+    "disambiguation_questions": [
+      "Nerozumí, nebo nereaguje?",
+      "Je rozdíl mezi individuálním a skupinovým pokynem?",
+      "Pomáhá oční kontakt nebo zkrácení instrukce?",
+      "Zlepší se situace při vizuální opoře?"
+    ]
+  },
+  {
+    "id": "OBS_K2_ADULT_REQUEST_CONFLICT_PATTERN_001",
+    "category": "adult_communication_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "na všechno říká ne",
+      "všechno je boj",
+      "pořád se vymezuje",
+      "každá dohoda je konflikt",
+      "každá prosba je problém"
+    ],
+    "patterns": [
+      "na vsechno rika ne",
+      "vsechno je boj",
+      "porad se vymezuje",
+      "kazda dohoda je konflikt",
+      "kazda prosba je problem"
+    ],
+    "observable": "na většinu požadavků reaguje odporem a vstupuje do konfliktu",
+    "observable_anchor": "Běžný požadavek dospělého opakovaně vede k obranné reakci, odporu nebo konfliktu, a spolupráce se obtížně rozbíhá bez eskalace.",
+    "context_hotspots": [
+      "přechody režimu",
+      "povinnost bez vlastní volby",
+      "ukončení oblíbené činnosti",
+      "korekce",
+      "běžné provozní požadavky"
+    ],
+    "candidate_blocks": ["A", "B"],
+    "candidate_zones": ["Z2", "Z3"],
+    "zone_tendency": ["Z2", "Z3"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Nutné rozlišit vzdor od přetížení, nejistoty nebo strachu ze selhání.",
+    "alternative_explanations": [
+      "obranná reaktivita",
+      "potřeba kontroly",
+      "vztahová nejistota",
+      "nízká tolerance frustrace",
+      "výkonová úzkost",
+      "přetížení požadavkem"
+    ],
+    "disambiguation_questions": [
+      "Týká se to všech dospělých, nebo jen některých?",
+      "Zhoršuje se to při tlaku nebo veřejném napomenutí?",
+      "Jak dítě reaguje při klidném individuálním kontaktu?",
+      "Jde o odpor ke konkrétní činnosti, nebo obecně k autoritě?"
+    ]
+  },
+  {
+    "id": "OBS_K3_NEGATIVE_CONTACT_SEEKING_ADULT_001",
+    "category": "adult_communication_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "raději zlobí než být bez pozornosti",
+      "schválně provokuje",
+      "vyrušuje hlavně když se mu nikdo nevěnuje",
+      "problém začne když není vidět"
+    ],
+    "patterns": [
+      "radeji zlobi nez byt bez pozornosti",
+      "schvalne provokuje",
+      "vyrusuje hlavne kdyz se mu nikdo nevenuje",
+      "problem zacne kdyz neni videt"
+    ],
+    "observable": "kontakt s dospělým vyhledává přes rušivé nebo negativní chování",
+    "observable_anchor": "Při oslabení kontaktu nebo pozornosti dospělého dítě vstupuje do rušivého, konfliktního nebo hraničního chování, které spolehlivě vyvolá reakci okolí.",
+    "context_hotspots": [
+      "práce pedagoga s jiným dítětem",
+      "skupinová činnost bez individuální pozornosti",
+      "čekání",
+      "volnější režim",
+      "vztahová nejistota"
+    ],
+    "candidate_blocks": ["B", "A", "E"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "LOW",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "„Provokace“ bývá často neobratná forma kontaktu, ne čistý úmysl škodit.",
+    "alternative_explanations": [
+      "potřeba vztahového potvrzení",
+      "nejistota v kontaktu",
+      "slabá schopnost žádat o pozornost přímo",
+      "regulační hledání kontaktu",
+      "anticipace odmítnutí"
+    ],
+    "disambiguation_questions": [
+      "Objevuje se to hlavně při oslabené pozornosti dospělého?",
+      "Pomáhá pozitivní předběžný kontakt?",
+      "Je rozdíl mezi individuální a skupinovou situací?",
+      "Reaguje lépe při předvídatelném vztahovém ukotvení?"
+    ]
+  },
+  {
+    "id": "OBS_K4_FEAR_TENSION_WITH_AUTHORITY_001",
+    "category": "adult_communication_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "bojí se mě oslovit",
+      "zamrzne při napomenutí",
+      "přehnaně se leká autority",
+      "je pořád v napětí",
+      "úplně ztuhne při korekci"
+    ],
+    "patterns": [
+      "boji se me oslovit",
+      "zamrzne pri napomenuti",
+      "prehane se leka autority",
+      "je porad v napeti",
+      "uplne ztuhne pri korekci"
+    ],
+    "observable": "v přítomnosti dospělého nebo korekce přechází do silného napětí a strachu",
+    "observable_anchor": "Kontakt s autoritou, napomenutí nebo i běžná interakce s dospělým vyvolává výrazné napětí, freeze reakci nebo nadměrnou stresovou odpověď.",
+    "context_hotspots": [
+      "korekce",
+      "individuální oslovení",
+      "veřejné upozornění",
+      "zvýšený hlas",
+      "výkonová situace před dospělým"
+    ],
+    "candidate_blocks": ["A", "B"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "MEDIUM",
+    "risk": "MEDIUM",
+    "false_positive_risk": "MEDIUM",
+    "not_diagnostic_warning": "Může souviset s předchozí zkušeností, temperamentem i aktuálním přetížením.",
+    "alternative_explanations": [
+      "vztahová nejistota",
+      "zvýšená citlivost na autoritu",
+      "zkušenost s přetlakovou korekcí",
+      "výkonová úzkost",
+      "anticipace ohrožení"
+    ],
+    "disambiguation_questions": [
+      "Týká se to všech dospělých, nebo konkrétních osob?",
+      "Zhoršuje se to při zvýšeném hlasu?",
+      "Je dítě stejně napjaté i mimo korekční situace?",
+      "Uklidní se při bezpečném individuálním kontaktu?"
+    ]
+  },
+  {
+    "id": "OBS_K5_TESTS_ADULT_INCONSISTENCY_001",
+    "category": "adult_communication_authority",
+    "source": "observable_master_v2",
+    "teacher_phrases": [
+      "každému říká něco jiného",
+      "zkouší hrát dospělé proti sobě",
+      "využívá rozdílných reakcí učitelů",
+      "chodí za tím, kdo povolí"
+    ],
+    "patterns": [
+      "kazdemu rika neco jineho",
+      "zkousi hrat dospele proti sobe",
+      "vyuziva rozdilnych reakci ucitelu",
+      "chodi za tim kdo povoli"
+    ],
+    "observable": "opakovaně testuje rozdíly mezi dospělými a pracuje s nekonzistencí hranic",
+    "observable_anchor": "Dítě opakovaně pracuje s rozdílnými reakcemi dospělých, vyhledává méně pevnou hranici a orientuje se podle nekonzistence systému místo stabilního pravidla.",
+    "context_hotspots": [
+      "zákaz činnosti",
+      "hranice pravidel",
+      "rozdílné vedení pedagogů",
+      "konflikt mezi požadavky",
+      "situace s vysokým nárokem"
+    ],
+    "candidate_blocks": ["B", "A"],
+    "candidate_zones": ["Z2"],
+    "zone_tendency": ["Z2"],
+    "confidence": "LOW",
+    "risk": "HIGH",
+    "false_positive_risk": "HIGH",
+    "not_diagnostic_warning": "Je potřeba opatrnost — snadno sklouzává do moralizace místo funkční analýzy.",
+    "alternative_explanations": [
+      "testování bezpečnosti systému",
+      "potřeba jistoty v pravidlech",
+      "orientace v nekonzistentním prostředí",
+      "obrana proti tlaku",
+      "vztahová strategie přežití"
+    ],
+    "disambiguation_questions": [
+      "Jde o vědomou strategii, nebo chaos v orientaci pravidel?",
+      "Jsou pravidla mezi dospělými skutečně konzistentní?",
+      "Objevuje se to hlavně při stresu nebo požadavku?",
+      "Je rozdíl mezi klidem a zátěžovou situací?"
+    ]
+  }
+]

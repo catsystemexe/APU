@@ -1,0 +1,65 @@
+[
+  {
+    "id": "T1_LOW_001",
+    "input": "dite je manipulativni",
+    "expected": {
+      "output_mode": "LOW_DATA",
+      "must_have_flags": ["HAS_INTERPRETATION_LABEL", "LABEL_WITHOUT_OBSERVATION", "MISSING_OBSERVABLE_BEHAVIOR"],
+      "must_not_include_zones": ["Z1", "Z2", "Z3", "Z4"]
+    }
+  },
+  {
+    "id": "T1_PARTIAL_001",
+    "input": "porad beha po tride a skace do reci, co mam delat",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z2",
+      "must_include_zones": ["Z2"],
+      "must_have_flags": ["REPEATED_PATTERN", "FREQUENCY_HIGH"],
+      "must_not_include_zones": ["Z3"]
+    }
+  },
+  {
+    "id": "T1_FULL_001",
+    "input": "je mu 5 let, pri rannim kruhu porad beha po tride a skace do reci, potrebuji udrzet skupinu",
+    "expected": {
+      "output_mode": "FULL",
+      "primary_zone": "Z2",
+      "must_include_blocks": ["E", "A", "B"],
+      "must_include_profiles": ["P2", "P6"],
+      "must_include_zones": ["Z2"],
+      "must_not_include_zones": ["Z3"]
+    }
+  },
+  {
+    "id": "T1_SAFE_001",
+    "input": "utika ze tridy a nejde zastavit",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z3",
+      "must_include_zones": ["Z3", "Z2"],
+      "must_have_flags": ["LEAVES_SAFE_AREA", "SAFETY_CONTEXT", "HARD_TO_INTERRUPT"],
+      "must_not_have_flags": ["MISSING_OBSERVABLE_BEHAVIOR"]
+    }
+  },
+  {
+    "id": "T1_SINGLE_001",
+    "input": "dnes poprve beha po tride",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "primary_zone": "Z2",
+      "must_include_zones": ["Z2"],
+      "must_have_flags": ["SINGLE_EPISODE"],
+      "must_not_include_zones": ["Z3"]
+    }
+  },
+  {
+    "id": "T1_CONTEXT_001",
+    "input": "rodic rika ze doma to nedela a problem je jen ve skolce",
+    "expected": {
+      "output_mode": "PARTIAL",
+      "must_have_flags": ["CONTEXT_WITHOUT_CHILD_OBSERVABLE"],
+      "must_not_include_zones": ["Z1", "Z2", "Z3", "Z4"]
+    }
+  }
+]

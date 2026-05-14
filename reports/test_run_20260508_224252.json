@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "results": [
+    {
+      "id": "T1_LOW_001",
+      "input": "dite je manipulativni",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "LOW_DATA",
+        "primary_zone": null,
+        "flags": [
+          "HAS_INTERPRETATION_LABEL",
+          "LABEL_WITHOUT_OBSERVATION",
+          "MISSING_OBSERVABLE_BEHAVIOR"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 0,
+          "level": "LOW",
+          "reasons": []
+        }
+      }
+    },
+    {
+      "id": "T1_PARTIAL_001",
+      "input": "porad beha po tride a skace do reci, co mam delat",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z2",
+        "flags": [
+          "REPEATED_PATTERN",
+          "FREQUENCY_HIGH",
+          "HAS_INTERPRETATION_LABEL",
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "FALSE_POSITIVE_RISK"
+        ],
+        "blocks": [
+          "E",
+          "A",
+          "B"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z2"
+        ],
+        "specificity": {
+          "score": 4,
+          "level": "MEDIUM",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "pedagogical_need_present"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T1_FULL_001",
+      "input": "je mu 5 let, pri rannim kruhu porad beha po tride a skace do reci, potrebuji udrzet skupinu",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "FULL",
+        "primary_zone": "Z2",
+        "flags": [
+          "REPEATED_PATTERN",
+          "FREQUENCY_HIGH",
+          "GROUP_STATIC_ACTIVITY",
+          "SITUATIONAL_LIMITED",
+          "HAS_INTERPRETATION_LABEL",
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE"
+        ],
+        "blocks": [
+          "E",
+          "A",
+          "B"
+        ],
+        "profiles": [
+          "P2",
+          "P6"
+        ],
+        "zones": [
+          "Z2"
+        ],
+        "specificity": {
+          "score": 5,
+          "level": "HIGH",
+          "reasons": [
+            "observable_present",
+            "multiple_observables",
+            "context_present",
+            "pedagogical_need_present",
+            "age_present"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T1_SAFE_001",
+      "input": "utika ze tridy a nejde zastavit",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z3",
+        "flags": [
+          "HARD_TO_INTERRUPT",
+          "ADULT_SUPPORT_NEEDED",
+          "LEAVES_SAFE_AREA",
+          "SAFETY_CONTEXT",
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "WEAK_INFERENCE",
+          "FALSE_POSITIVE_RISK"
+        ],
+        "blocks": [
+          "E",
+          "A"
+        ],
+        "profiles": [
+          "P2"
+        ],
+        "zones": [
+          "Z3",
+          "Z2"
+        ],
+        "specificity": {
+          "score": 2,
+          "level": "LOW",
+          "reasons": [
+            "observable_present"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T1_SINGLE_001",
+      "input": "dnes poprve beha po tride",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": "Z2",
+        "flags": [
+          "SINGLE_EPISODE",
+          "MULTIPLE_HYPOTHESES",
+          "DO_NOT_COLLAPSE_TO_SINGLE_CAUSE",
+          "WEAK_INFERENCE",
+          "FALSE_POSITIVE_RISK"
+        ],
+        "blocks": [
+          "E",
+          "A"
+        ],
+        "profiles": [
+          "P2"
+        ],
+        "zones": [
+          "Z2"
+        ],
+        "specificity": {
+          "score": 2,
+          "level": "LOW",
+          "reasons": [
+            "observable_present"
+          ]
+        }
+      }
+    },
+    {
+      "id": "T1_CONTEXT_001",
+      "input": "rodic rika ze doma to nedela a problem je jen ve skolce",
+      "pass": true,
+      "fails": [],
+      "actual": {
+        "output_mode": "PARTIAL",
+        "primary_zone": null,
+        "flags": [
+          "SETTING_DIFFERENCE",
+          "ENVIRONMENTAL_INFLUENCE_POSSIBLE",
+          "MULTI_SETTING_PATTERN",
+          "HAS_INTERPRETATION_LABEL",
+          "LABEL_WITHOUT_OBSERVATION",
+          "CONTEXT_WITHOUT_CHILD_OBSERVABLE"
+        ],
+        "blocks": [],
+        "profiles": [],
+        "zones": [],
+        "specificity": {
+          "score": 2,
+          "level": "LOW",
+          "reasons": [
+            "context_present"
+          ]
+        }
+      }
+    }
+  ]
+}

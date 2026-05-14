@@ -1,0 +1,28 @@
+[
+  {
+    "id": "FPG_PATCH_MANIPULATION_001",
+    "category": "false_positive_guard",
+    "type": "interpretation_guard",
+    "label": "dítě manipuluje",
+    "teacher_phrases": ["manipuluje s učitelkou", "manipuluje učitelkou", "manipuluje"],
+    "patterns": ["manipuluje s ucitelkou", "manipuluje s učitelkou", "manipuluje ucitelkou", "manipuluje učitelkou", "manipuluje"],
+    "false_positive_risk": "HIGH",
+    "problem": "Manipulace je interpretace záměru, ne pozorovatelný projev.",
+    "not_assume": ["úmysl", "záměr poškodit", "vědomá manipulace"],
+    "control_questions": ["Co přesně dítě udělalo nebo řeklo?", "Podle čeho usuzujete na manipulaci?"],
+    "do_not_infer": ["block", "zone", "profile"]
+  },
+  {
+    "id": "FPG_PATCH_INTENTIONAL_OPPOSITION_001",
+    "category": "false_positive_guard",
+    "type": "interpretation_guard",
+    "label": "dítě je schválně protivné",
+    "teacher_phrases": ["schválně protivné", "dělá to naschvál", "je protivné schválně"],
+    "patterns": ["schvalne protivne", "schválně protivné", "dela to naschval", "dělá to naschvál", "protivne schvalne", "protivné schválně"],
+    "false_positive_risk": "HIGH",
+    "problem": "Připsání záměru bez konkrétního popisu chování.",
+    "not_assume": ["úmyslné zlobení", "morální vina", "záměr provokovat"],
+    "control_questions": ["Co přesně dítě dělá?", "V jaké situaci se to stává?"],
+    "do_not_infer": ["block", "zone", "profile"]
+  }
+]
